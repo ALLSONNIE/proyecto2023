@@ -1,0 +1,27 @@
+//font: https://fonts.google.com/specimen/IBM+Plex+Sans?query=IBM
+//font: https://fonts.google.com/specimen/IBM+Plex+Serif?query=IBM+Plex+Serif
+
+//font-family
+$ff-primary: 'IBM Plex Sans', sans-serif;
+$ff-secondary: 'IBM Plex Serif', serif;
+
+//font-weight
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+//font-size
+$fs-xlg: 45px;
+$fs-lg: 36px; 
+$fs-xmed: 1.42rem;
+$fs-med: 1.32rem; 
+$fs-sm: 1.2rem; 
+$fs-xsm: 1.5rem; 
+
+//colors
+$clr-black: hsl(0, 0%, 0%);
+$clr-white: hsl(0, 0%, 100%);
+$clr-red: hsl(355, 78%, 60%);
+$clr-light-gray: hsl(0, 0%, 93%);
+$clr-dark-gray: hsl(0, 0%, 34%);

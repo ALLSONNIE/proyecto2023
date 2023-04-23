@@ -1,0 +1,16 @@
+@use 'abstracts/variables';
+@use './media-queries';
+
+@mixin btn-nav($background, $color){
+    position: relative;
+    display: table-cell;
+    place-items: center;
+    text-decoration: none;
+    border-radius: 0.938rem;
+    text-align: center;
+    font-family: variables.$ff-primary;
+    font-size: variables.$fs-xsm;
+    font-weight: variables.$fw-regular;
+    background-color: $background;
+    color: $color;
+}

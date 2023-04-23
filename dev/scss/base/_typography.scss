@@ -1,0 +1,9 @@
+@use 'abstracts/variables';
+
+//set fonts for titles and sections
+@mixin set-font($ffamily, $fsize, $fweight, $fcolor:vars.$color-black){
+    font-family: $ffamily;
+    font-size: $fsize;
+    font-weight: $fweight;
+    color: $fcolor;
+}

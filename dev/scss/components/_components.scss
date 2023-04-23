@@ -1,0 +1,42 @@
+@use 'base/typography';
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+//navbar buttons 
+
+.btn-navg{
+    @include mixins.btn-nav(variables.$clr-light-gray, variables.$clr-black);
+    width: 11.063rem;
+    height: 3.438rem;
+}
+
+.btn-search{
+    @include mixins.btn-nav(variables.$clr-black, variables.$clr-white);
+    width: 4.878rem;
+    height: 3.438rem;
+    border-bottom-left-radius: 0%;
+    border-top-left-radius: 0%;
+    border-bottom-right-radius: 0.938rem;
+    border-top-right-radius: 0.938rem;
+}
+
+.s-bar {
+    @include mixins.btn-nav(variables.$clr-light-gray, variables.$clr-dark-gray);
+    @include typography.set-font(variables.$ff-primary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-dark-gray);
+    width: 30.769rem;
+    text-align: left;
+    height: 3.438rem;
+    border-bottom-right-radius: 0%;
+    border-top-right-radius: 0%;
+    border-bottom-left-radius: 0.938rem;
+    border-top-left-radius:0.938rem;
+    border: none;
+}
+
+.card-style{
+    @include mixins.btn-nav(variables.$clr-light-gray, variables.$clr-dark-gray);
+    height: 26.375rem;
+    border: none;
+    text-align: left;
+
+}
