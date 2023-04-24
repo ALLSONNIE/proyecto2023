@@ -1,0 +1,44 @@
+@use 'abstracts/variables';
+@use 'base/typography';
+@use 'abstracts/mixins';
+@use './media-queries';
+
+.ending-bar{
+    width: auto;
+    height: 19rem;
+    background-color: variables.$clr-black;
+    border: none; 
+}
+
+.footer-info{
+    @include typography.set-font(variables.$ff-primary, variables.$fs-sm, variables.$fw-bold, variables.$clr-white);
+    text-align: left;
+}
+
+.footer-info:hover{
+    color: variables.$clr-white;
+}
+
+.footer-no-item{
+    list-style-type: none;
+}
+
+.footer-text{  
+    @include typography.set-font(variables.$ff-primary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-white);
+    text-align: left;
+    text-decoration: none;
+}
+
+.footer-text:hover{
+    opacity: 70;
+    color: variables.$clr-white;
+}
+
+.icon-sm{
+    width: 27px;
+    height: 26px;
+}
+
+.row-move{
+    text-align: center;
+}

@@ -20,6 +20,10 @@
     border-top-right-radius: 0.938rem;
 }
 
+.search-button-height{ 
+    height: 3.25rem !important;
+}
+
 .s-bar {
     @include mixins.btn-nav(variables.$clr-light-gray, variables.$clr-dark-gray);
     @include typography.set-font(variables.$ff-primary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-dark-gray);
@@ -33,10 +37,82 @@
     border: none;
 }
 
-.card-style{
+.top-card-style{
     @include mixins.btn-nav(variables.$clr-light-gray, variables.$clr-dark-gray);
     height: 26.375rem;
+    border-radius: 4.063rem;
     border: none;
     text-align: left;
+}
 
+.card-style{
+    @include mixins.btn-nav(variables.$clr-light-gray, variables.$clr-dark-gray);
+    border-radius: 4.063rem;
+    width: 23.313rem;
+    height: 30rem;
+    border: none;
+    text-align: left;
+}
+
+.img-style{
+    height: 26.375rem;
+    width: auto;
+    border-bottom-right-radius: 0%;
+    border-top-right-radius: 0%;
+    border-bottom-left-radius: 4.063rem;
+    border-top-left-radius:4.063rem;
+}
+
+.btn-badges{
+    @include mixins.btn-nav(variables.$clr-red, variables.$clr-white);
+    @include typography.set-font(variables.$ff-primary, variables.$fs-xlg, variables.$fw-bold, variables.$clr-white);
+    height: 4.75rem;
+    width: 35.625rem;
+}
+
+.badge-red{
+    background-color: variables.$clr-red;
+    color: variables.$clr-white;
+    font-family: variables.$ff-primary;
+    font-size: variables.$fs-xlg;
+    font-weight: variables.$fw-bold;
+    border-radius: 0.938rem;
+    height: 4.75rem;
+    width: 35.625rem;
+}
+
+
+.img-cards{
+    height: 14rem;
+    width: 23.313rem;
+    border-bottom-right-radius: 0%;
+    border-top-right-radius: 4.063rem;
+    border-bottom-left-radius: 0%;
+    border-top-left-radius: 4.063rem;
+}
+
+.info-title{
+    @include typography.set-font(variables.$ff-primary, variables.$fs-xlg, variables.$fw-bold, variables.$clr-red);
+}
+
+.info-desc{
+    @include typography.set-font(variables.$ff-secondary, variables.$fs-med, variables.$fw-regular, variables.$clr-black);
+}
+
+.cards-title{
+    @include typography.set-font(variables.$ff-secondary, variables.$fs-med, variables.$fw-medium, variables.$clr-black);
+}
+
+.cards-text{
+    @include typography.set-font(variables.$ff-secondary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-dark-gray);
+}
+
+.btn-view{
+    @include mixins.btn-nav(variables.$clr-black, variables.$clr-white);
+    @include typography.set-font(variables.$ff-secondary, variables.$fs-med, variables.$fw-semibold, variables.$clr-white);
+    width: 13.5rem;
+}
+
+.center-comp {
+    align-items: center;
 }

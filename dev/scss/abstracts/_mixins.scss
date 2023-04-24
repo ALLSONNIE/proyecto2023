@@ -3,7 +3,7 @@
 
 @mixin btn-nav($background, $color){
     position: relative;
-    display: table-cell;
+    display: grid;
     place-items: center;
     text-decoration: none;
     border-radius: 0.938rem;
