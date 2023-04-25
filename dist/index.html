@@ -24,6 +24,15 @@
                 <div class="d-flex justify-content-between align-items-center">
                     <a href="#"><img src="./images/logo.png" class="position-relative mt-4 ms-5" alt="Graphic identifier"></a>
                 </div>
+
+                <div class="position-absolute top-0 end-0 mx-5 mt-2 px-5">
+                    <ul class="navbar gap-4 nav">
+                        <li class="header-no-item position-relative user"><a class="header-text user" href="#">
+                            <img src="./images/user.png" class="position-relative position-relative mt-4 ms-5 p-2 user" alt="Perfil" ></a> 
+                        </li>
+                    </ul>
+                </div>
+
         </header>
 
         <!-- Navegación -->
@@ -72,186 +81,55 @@
             </div>
         </div>
 
-        <section class="mt-5 text-center justify-content-center">
-            <p class="badge-red">Mejores Recetas</p>
+        <section class="row mt-5 mb-5 text-center justify-content-center">
+            <p class="mb-5 btn-badges mt-5">Mejores Recetas</hp>
 
-            <section class="row mt-5">
-
-                <div v-for="(item, index) in recipes" class="col-md-4">
-                    <div class="card card-style pb-4">
-                        <img src="./images/pic2.jpg" class="img-cards" alt="featured recipe">
-                        <div class="card-body p-0">
-                            <h2 class="cards-title mb-1">Nombre de la receta</h2>
-                            <p class="cards-text mb-1">Categoría</p>
-                            <p class="cards-text mb-1">Ocasión</p>
-                            <p class="cards-text mb-1">Nivel</p>
-                            <a href="#" class="btn btn-view">View Recipe</a>
+                <section class="row mt-5">
+                    <div v-for="(item, index) in recipes" class="col-md-4 mt-5">
+                        <div class="card card-style">
+                            <img v-bind:src="item.image" class="img-cards" alt="featured recipe">
+                            <div class="card-body">
+                                <h2 class="cards-title mb-1">{{ item.name }}</h2>
+                                <p class="cards-text mb-1">{{ item.category }}</p>
+                                <p class="cards-text mb-1">{{ item.ocassion }}</p>
+                                <p class="cards-text mb-1">{{ item.level }}</p>
+                                <!--<p class="top-details mb-0">{{ item.likes }}</p>
+                                <button class="btn btn-danger me-2 mt-2" v-on:click="onClickLike(index)">Like</button>
+                                <button class="btn btn-success me-2 mt-2" v-on:click="onClickUnlike(index)">Unlike</button>-->
+                                <button class="btn btn-dark top-btn text-center mt-2" v-on:click="onClickViewRecipe(index)"
+                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">View Recipe</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div v-for="(item, index) in recipes" class="col-md-4">
-                    <div class="card card-style pb-4">
-                        <img src="./images/pic3.jpg" class="img-cards" alt="featured recipe">
-                        <div class="card-body p-0">
-                            <h2 class="cards-title mb-1">Nombre de la receta</h2>
-                            <p class="cards-text mb-1">Categoría</p>
-                            <p class="cards-text mb-1">Ocasión</p>
-                            <p class="cards-text mb-1">Nivel</p>
-                            <a href="#" class="btn btn-view">View Recipe</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div v-for="(item, index) in recipes" class="col-md-4">
-                    <div class="card card-style pb-4">
-                        <img src="./images/pic4.jpeg" class="img-cards" alt="featured recipe">
-                        <div class="card-body p-0">
-                            <h2 class="cards-title mb-1">Nombre de la receta</h2>
-                            <p class="cards-text mb-1">Categoría</p>
-                            <p class="cards-text mb-1">Ocasión</p>
-                            <p class="cards-text mb-1">Nivel</p>
-                            <a href="#" class="text-center btn btn-view">View Recipe</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="row mt-5">
-
-                <div v-for="(item, index) in recipes" class="col-md-4">
-                    <div class="card card-style pb-4">
-                        <img src="./images/pic5.jpg" class="img-cards" alt="featured recipe">
-                        <div class="card-body p-0">
-                            <h2 class="cards-title mb-1">Nombre de la receta</h2>
-                            <p class="cards-text mb-1">Categoría</p>
-                            <p class="cards-text mb-1">Ocasión</p>
-                            <p class="cards-text mb-1">Nivel</p>
-                            <a href="#" class="btn btn-view">View Recipe</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div v-for="(item, index) in recipes" class="col-md-4">
-                    <div class="card card-style pb-4">
-                        <img src="./images/pic6.jpg" class="img-cards" alt="featured recipe">
-                        <div class="card-body p-0">
-                            <h2 class="cards-title mb-1">Nombre de la receta</h2>
-                            <p class="cards-text mb-1">Categoría</p>
-                            <p class="cards-text mb-1">Ocasión</p>
-                            <p class="cards-text mb-1">Nivel</p>
-                            <a href="#" class="btn btn-view">View Recipe</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div v-for="(item, index) in recipes" class="col-md-4">
-                    <div class="card card-style pb-4">
-                        <img src="./images/pic7.jpg" class="img-cards" alt="featured recipe">
-                        <div class="card-body p-0">
-                            <h2 class="cards-title mb-1">Nombre de la receta</h2>
-                            <p class="cards-text mb-1">Categoría</p>
-                            <p class="cards-text mb-1">Ocasión</p>
-                            <p class="cards-text mb-1">Nivel</p>
-                            <a href="#" class="btn btn-view">View Recipe</a>
-                        </div>
-                    </div>
-                </div>
-
-            </section>
+                </section>
 
         </section>
 
-        <section class="row mt-5 mb-5 text-center">
-            <h2 class="mb-5 btn-badges mt-5">Lo más nuevo</h2>
+        <section class="row mt-5 mb-5 text-center justify-content-center">
+            <p class="mb-5 btn-badges mt-5">Lo más nuevo</hp>
 
-            <section class="row mt-5">
-
-                <div v-for="(item, index) in recipes" class="col-md-4">
-                    <div class="card card-style pb-4">
-                        <img src="./images/pic2.jpg" class="img-cards" alt="featured recipe">
-                        <div class="card-body p-0">
-                            <h2 class="cards-title mb-1">Nombre de la receta</h2>
-                            <p class="cards-text mb-1">Categoría</p>
-                            <p class="cards-text mb-1">Ocasión</p>
-                            <p class="cards-text mb-1">Nivel</p>
-                            <a href="#" class="btn btn-view">View Recipe</a>
+                <section class="row mt-5">
+                    <div v-for="(item, index) in recipes" class="col-md-4 mt-5">
+                        <div class="card card-style">
+                            <img v-bind:src="item.image" class="img-cards" alt="featured recipe">
+                            <div class="card-body p-0">
+                                <h2 class="cards-title mb-1">{{ item.name }}</h2>
+                                <p class="cards-text mb-1">{{ item.category }}</p>
+                                <p class="cards-text mb-1">{{ item.ocassion }}</p>
+                                <p class="cards-text mb-1">{{ item.level }}</p>
+                                <!--<p class="top-details mb-0">{{ item.likes }}</p>
+                                <button class="btn btn-danger me-2 mt-2" v-on:click="onClickLike(index)">Like</button>
+                                <button class="btn btn-success me-2 mt-2" v-on:click="onClickUnlike(index)">Unlike</button>-->
+                                <button class="btn btn-dark top-btn text-center mt-2" v-on:click="onClickViewRecipe(index)"
+                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">View Recipe</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div v-for="(item, index) in recipes" class="col-md-4">
-                    <div class="card card-style pb-4">
-                        <img src="./images/pic3.jpg" class="img-cards" alt="featured recipe">
-                        <div class="card-body p-0">
-                            <h2 class="cards-title mb-1">Nombre de la receta</h2>
-                            <p class="cards-text mb-1">Categoría</p>
-                            <p class="cards-text mb-1">Ocasión</p>
-                            <p class="cards-text mb-1">Nivel</p>
-                            <a href="#" class="btn btn-view">View Recipe</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div v-for="(item, index) in recipes" class="col-md-4">
-                    <div class="card card-style pb-4">
-                        <img src="./images/pic4.jpeg" class="img-cards" alt="featured recipe">
-                        <div class="card-body p-0">
-                            <h2 class="cards-title mb-1">Nombre de la receta</h2>
-                            <p class="cards-text mb-1">Categoría</p>
-                            <p class="cards-text mb-1">Ocasión</p>
-                            <p class="cards-text mb-1">Nivel</p>
-                            <a href="#" class="btn btn-view">View Recipe</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="row mt-5">
-
-                <div v-for="(item, index) in recipes" class="col-md-4">
-                    <div class="card card-style pb-4">
-                        <img src="./images/pic5.jpg" class="img-cards" alt="featured recipe">
-                        <div class="card-body p-0">
-                            <h2 class="cards-title mb-1">Nombre de la receta</h2>
-                            <p class="cards-text mb-1">Categoría</p>
-                            <p class="cards-text mb-1">Ocasión</p>
-                            <p class="cards-text mb-1">Nivel</p>
-                            <a href="#" class="btn btn-view">View Recipe</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div v-for="(item, index) in recipes" class="col-md-4">
-                    <div class="card card-style pb-4">
-                        <img src="./images/pic6.jpg" class="img-cards overflow-hidden" alt="featured recipe">
-                        <div class="card-body p-0">
-                            <h2 class="cards-title mb-1">Nombre de la receta</h2>
-                            <p class="cards-text mb-1">Categoría</p>
-                            <p class="cards-text mb-1">Ocasión</p>
-                            <p class="cards-text mb-1">Nivel</p>
-                            <a href="#" class="btn btn-view">View Recipe</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div v-for="(item, index) in recipes" class="col-md-4">
-                    <div class="card card-style pb-4">
-                        <img src="./images/pic7.jpg" class="img-cards" alt="featured recipe">
-                        <div class="card-body p-0">
-                            <h2 class="cards-title mb-1">Nombre de la receta</h2>
-                            <p class="cards-text mb-1">Categoría</p>
-                            <p class="cards-text mb-1">Ocasión</p>
-                            <p class="cards-text mb-1">Nivel</p>
-                            <a href="#" class="btn btn-view">View Recipe</a>
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-
+                </section>
+                
         </section>
-        
+
+
         <!--Footer-->
         <footer class="row mt-5 text-center ending-bar">
 
@@ -309,6 +187,15 @@
 
 
     </section>
+
+    <!-- VueJS -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- main script -->
+    <script src="./js/main.js"></script>
+    <!-- mounted -->
+    <script>
+        const mountedApp = app.mount("#app");
+    </script>
 
         
 </body>

@@ -39,7 +39,6 @@
 
 .top-card-style{
     @include mixins.btn-nav(variables.$clr-light-gray, variables.$clr-dark-gray);
-    height: 26.375rem;
     border-radius: 4.063rem;
     border: none;
     text-align: left;
@@ -47,8 +46,8 @@
 
 .card-style{
     @include mixins.btn-nav(variables.$clr-light-gray, variables.$clr-dark-gray);
+    display: block;
     border-radius: 4.063rem;
-    width: 23.313rem;
     height: 30rem;
     border: none;
     text-align: left;
@@ -84,7 +83,6 @@
 
 .img-cards{
     height: 14rem;
-    width: 23.313rem;
     border-bottom-right-radius: 0%;
     border-top-right-radius: 4.063rem;
     border-bottom-left-radius: 0%;
@@ -115,4 +113,13 @@
 
 .center-comp {
     align-items: center;
+}
+
+.widther{
+    width: 81.006rem;
+}
+
+.user{
+    width: 3rem;
+    margin-right: 23rem;
 }
