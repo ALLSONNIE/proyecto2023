@@ -1,17 +1,16 @@
-@use 'base/typography';
 @use 'abstracts/variables';
 @use 'abstracts/mixins';
 
-//navbar buttons 
+//top buttons-components
 
 .btn-navg{
-    @include mixins.btn-nav(variables.$clr-light-gray, variables.$clr-black);
+    @include mixins.btn(variables.$clr-light-gray, variables.$ff-primary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-black);
     width: 11.063rem;
     height: 3.438rem;
 }
 
 .btn-search{
-    @include mixins.btn-nav(variables.$clr-black, variables.$clr-white);
+    @include mixins.btn(variables.$clr-black, variables.$ff-primary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-white);
     width: 4.878rem;
     height: 3.438rem;
     border-bottom-left-radius: 0%;
@@ -25,8 +24,7 @@
 }
 
 .s-bar {
-    @include mixins.btn-nav(variables.$clr-light-gray, variables.$clr-dark-gray);
-    @include typography.set-font(variables.$ff-primary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-dark-gray);
+    @include mixins.btn(variables.$clr-light-gray, variables.$ff-primary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-dark-gray);
     width: 30.769rem;
     text-align: left;
     height: 3.438rem;
@@ -37,8 +35,10 @@
     border: none;
 }
 
+//cards' style and components
+
 .top-card-style{
-    @include mixins.btn-nav(variables.$clr-light-gray, variables.$clr-dark-gray);
+    background-color: variables.$clr-light-gray;
     height: 26.375rem;
     display: block;
     border-radius: 4.063rem;
@@ -63,9 +63,24 @@
     border-top-left-radius:4.063rem;
 }
 
+.img-cards{
+    border-bottom-right-radius: 0%;
+    border-top-right-radius: 4.063rem;
+    border-bottom-left-radius: 0%;
+    border-top-left-radius: 4.063rem;
+    height: 14rem;
+}
+
+.btn-view{
+    @include mixins.btn(variables.$clr-black, variables.$ff-secondary, variables.$fs-med, variables.$fw-regular, variables.$clr-white);
+    width: 80%;
+    margin: auto;
+}
+
+//miscellaneous
+
 .btn-badges{
-    @include mixins.btn-nav(variables.$clr-red, variables.$clr-white);
-    @include typography.set-font(variables.$ff-primary, variables.$fs-xlg, variables.$fw-bold, variables.$clr-white);
+    @include mixins.btn(variables.$clr-red, variables.$ff-primary, variables.$fs-xlg, variables.$fw-bold, variables.$clr-white);
     height: 4.75rem;
     width: 35.625rem;
 }
@@ -81,47 +96,10 @@
     width: 35.625rem;
 }
 
-
-.img-cards{
-    border-bottom-right-radius: 0%;
-    border-top-right-radius: 4.063rem;
-    border-bottom-left-radius: 0%;
-    border-top-left-radius: 4.063rem;
-    height: 14rem;
-}
-
-.info-title{
-    @include typography.set-font(variables.$ff-primary, variables.$fs-xlg, variables.$fw-bold, variables.$clr-red);
-}
-
-.info-desc{
-    @include typography.set-font(variables.$ff-secondary, variables.$fs-med, variables.$fw-regular, variables.$clr-black);
-}
-
-.cards-title{
-    @include typography.set-font(variables.$ff-secondary, variables.$fs-med, variables.$fw-medium, variables.$clr-black);
-}
-
-.cards-text{
-    @include typography.set-font(variables.$ff-secondary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-dark-gray);
-}
-
-.btn-view{
-    @include mixins.btn-nav(variables.$clr-black, variables.$clr-white);
-    @include typography.set-font(variables.$ff-secondary, variables.$fs-med, variables.$fw-regular, variables.$clr-white);
-    width: 80%;
-    margin: auto;
-}
-
 .center-comp {
     align-items: center;
 }
 
 .widther{
     width: 81.006rem;
-}
-
-.user{
-    width: 6rem;
-    margin-left: 19rem;
 }

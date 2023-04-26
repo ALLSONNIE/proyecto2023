@@ -2,6 +2,7 @@ const app = Vue.createApp({
 
     data() {
         return {
+            selectedIndex: 0,
             recipes: [ //array
             //objetos
                 {id:102, image:"./images/pic2.jpg", category:"Almuerzo", name:"Hamburguesas", description:"Some quick...", time:"20 mins", level:"Fácil", likes: 1},
@@ -22,20 +23,10 @@ const app = Vue.createApp({
             ]
         }
     },
-
-    methods: { //area donde se establecem todas las funciones
-        onClickLike(index){
-           // console.log("btn-click");
-           //this.likes += 1;
-           //console.log("index=" + index);
-
-           this.recipes[index].likes += 1;
-
-        },
-
-        onClickUnLike(index){
-           // if(this.likes > 0) this.likes -= 1;
-           if(this.recipes[index].likes > 0) this.recipes[index].likes -= 1;
-        }  
-    },
+    methods: {
+        onClickViewRecipe(index){
+            this.selectedIndex = index;
+        }
+    }
+    
 });

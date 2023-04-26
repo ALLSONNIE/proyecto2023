@@ -1,17 +1,25 @@
 @use 'abstracts/variables';
 @use './media-queries';
 
-@mixin btn-nav($background, $color){
+//base for all the buttons
+@mixin btn($background, $family, $size, $weight, $color){
     position: relative;
     display: block;
     place-items: center;
     text-decoration: none;
     border-radius: 0.938rem;
     text-align: center;
-    font-family: variables.$ff-primary;
-    font-size: variables.$fs-xsm;
-    font-weight: variables.$fw-regular;
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
     background-color: $background;
     color: $color;
-    
+}
+
+//set fonts for titles and sections
+@mixin set-font($ffamily, $fsize, $fweight, $fcolor:vars.$color-black){
+    font-family: $ffamily;
+    font-size: $fsize;
+    font-weight: $fweight;
+    color: $fcolor;
 }

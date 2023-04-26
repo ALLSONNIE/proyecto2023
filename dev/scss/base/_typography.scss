@@ -1,9 +1,18 @@
 @use 'abstracts/variables';
+@use 'abstracts/mixins';
 
-//set fonts for titles and sections
-@mixin set-font($ffamily, $fsize, $fweight, $fcolor:vars.$color-black){
-    font-family: $ffamily;
-    font-size: $fsize;
-    font-weight: $fweight;
-    color: $fcolor;
+.info-title{
+    @include mixins.set-font(variables.$ff-primary, variables.$fs-xlg, variables.$fw-bold, variables.$clr-red);
+}
+
+.info-desc{
+    @include mixins.set-font(variables.$ff-secondary, variables.$fs-med, variables.$fw-regular, variables.$clr-black);
+}
+
+.cards-title{
+    @include mixins.set-font(variables.$ff-secondary, variables.$fs-med, variables.$fw-medium, variables.$clr-black);
+}
+
+.cards-text{
+    @include mixins.set-font(variables.$ff-secondary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-dark-gray);
 }

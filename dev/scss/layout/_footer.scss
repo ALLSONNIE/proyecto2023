@@ -12,7 +12,7 @@
 }
 
 .footer-info{
-    @include typography.set-font(variables.$ff-primary, variables.$fs-sm, variables.$fw-bold, variables.$clr-white);
+    @include mixins.set-font(variables.$ff-primary, variables.$fs-sm, variables.$fw-bold, variables.$clr-white);
     text-align: left;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .footer-text{  
-    @include typography.set-font(variables.$ff-primary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-white);
+    @include mixins.set-font(variables.$ff-primary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-white);
     text-align: left;
     text-decoration: none;
 }

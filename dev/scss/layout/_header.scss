@@ -1,10 +1,13 @@
 @use 'abstracts/variables';
-@use 'abstracts/mixins';
-@use 'base/typography';
 @use './media-queries';
 
 .navbar1{
     width: auto;
     height: 8rem;
     background-color: variables.$clr-red;
+}
+
+.user{
+    width: 6rem;
+    margin-left: 19rem;
 }

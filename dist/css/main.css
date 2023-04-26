@@ -13394,6 +13394,34 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
 }
 
+.info-title {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 2.813rem;
+  font-weight: 700;
+  color: hsl(355deg, 78%, 60%);
+}
+
+.info-desc {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: hsl(0deg, 0%, 0%);
+}
+
+.cards-title {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: hsl(0deg, 0%, 0%);
+}
+
+.cards-text {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: hsl(0deg, 0%, 34%);
+}
+
 .btn-navg {
   position: relative;
   display: block;
@@ -13446,10 +13474,6 @@ body {
   font-weight: 400;
   background-color: hsl(0deg, 0%, 93%);
   color: hsl(0deg, 0%, 34%);
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: hsl(0deg, 0%, 34%);
   width: 30.769rem;
   text-align: left;
   height: 3.438rem;
@@ -13461,17 +13485,7 @@ body {
 }
 
 .top-card-style {
-  position: relative;
-  display: block;
-  place-items: center;
-  text-decoration: none;
-  border-radius: 0.938rem;
-  text-align: center;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
   background-color: hsl(0deg, 0%, 93%);
-  color: hsl(0deg, 0%, 34%);
   height: 26.375rem;
   display: block;
   border-radius: 4.063rem;
@@ -13495,6 +13509,30 @@ body {
   border-top-left-radius: 4.063rem;
 }
 
+.img-cards {
+  border-bottom-right-radius: 0%;
+  border-top-right-radius: 4.063rem;
+  border-bottom-left-radius: 0%;
+  border-top-left-radius: 4.063rem;
+  height: 14rem;
+}
+
+.btn-view {
+  position: relative;
+  display: block;
+  place-items: center;
+  text-decoration: none;
+  border-radius: 0.938rem;
+  text-align: center;
+  font-family: "IBM Plex Serif", serif;
+  font-size: 2rem;
+  font-weight: 400;
+  background-color: hsl(0deg, 0%, 0%);
+  color: hsl(0deg, 0%, 100%);
+  width: 80%;
+  margin: auto;
+}
+
 .btn-badges {
   position: relative;
   display: block;
@@ -13503,13 +13541,9 @@ body {
   border-radius: 0.938rem;
   text-align: center;
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  background-color: hsl(355deg, 78%, 60%);
-  color: hsl(0deg, 0%, 100%);
-  font-family: "IBM Plex Sans", sans-serif;
   font-size: 2.813rem;
   font-weight: 700;
+  background-color: hsl(355deg, 78%, 60%);
   color: hsl(0deg, 0%, 100%);
   height: 4.75rem;
   width: 35.625rem;
@@ -13526,62 +13560,6 @@ body {
   width: 35.625rem;
 }
 
-.img-cards {
-  border-bottom-right-radius: 0%;
-  border-top-right-radius: 4.063rem;
-  border-bottom-left-radius: 0%;
-  border-top-left-radius: 4.063rem;
-  height: 14rem;
-}
-
-.info-title {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 2.813rem;
-  font-weight: 700;
-  color: hsl(355deg, 78%, 60%);
-}
-
-.info-desc {
-  font-family: "IBM Plex Serif", serif;
-  font-size: 2rem;
-  font-weight: 400;
-  color: hsl(0deg, 0%, 0%);
-}
-
-.cards-title {
-  font-family: "IBM Plex Serif", serif;
-  font-size: 2rem;
-  font-weight: 500;
-  color: hsl(0deg, 0%, 0%);
-}
-
-.cards-text {
-  font-family: "IBM Plex Serif", serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: hsl(0deg, 0%, 34%);
-}
-
-.btn-view {
-  position: relative;
-  display: block;
-  place-items: center;
-  text-decoration: none;
-  border-radius: 0.938rem;
-  text-align: center;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  background-color: hsl(0deg, 0%, 0%);
-  color: hsl(0deg, 0%, 100%);
-  font-family: "IBM Plex Serif", serif;
-  font-size: 2rem;
-  font-weight: 400;
-  color: hsl(0deg, 0%, 100%);
-  width: 80%;
-  margin: auto;
-}
-
 .center-comp {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -13590,11 +13568,6 @@ body {
 
 .widther {
   width: 81.006rem;
-}
-
-.user {
-  width: 6rem;
-  margin-left: 19rem;
 }
 
 .ending-bar {
@@ -13648,4 +13621,9 @@ body {
   width: auto;
   height: 8rem;
   background-color: hsl(355deg, 78%, 60%);
+}
+
+.user {
+  width: 6rem;
+  margin-left: 19rem;
 }
