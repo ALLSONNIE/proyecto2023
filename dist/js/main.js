@@ -8,7 +8,7 @@ const app = Vue.createApp({
                 
                 {id:103, image:"./images/pic3.jpg", category:"Almuerzo", name:"Champiñones", description:"Some quick...", time:"20 mins", level:"Intermedio", likes: 2},
                 
-                {id:104, image:"./images/pic4.jpeg", category:"Postre", name:"Tiramisú", description:"Some quick...", time:"20 mins", level:"Difícil", likes: 3},
+                {id:104, image:"./images/pic4.jpeg", category:"Postre", name:"Tiramisú", description:"Some quick...", time:"20 mins", level:"Avanzado", likes: 3},
 
                 {id:105, image:"./images/pic5.jpg", category:"Postre", name:"Soufflé de chocolate", description:"Some quick...", time:"20 mins", level:"Fácil", likes: 3},
 

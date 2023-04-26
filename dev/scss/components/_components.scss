@@ -21,7 +21,7 @@
 }
 
 .search-button-height{ 
-    height: 3.25rem !important;
+    height: 3.25rem;
 }
 
 .s-bar {
@@ -39,18 +39,19 @@
 
 .top-card-style{
     @include mixins.btn-nav(variables.$clr-light-gray, variables.$clr-dark-gray);
+    height: 26.375rem;
+    display: block;
     border-radius: 4.063rem;
     border: none;
     text-align: left;
 }
 
 .card-style{
-    @include mixins.btn-nav(variables.$clr-light-gray, variables.$clr-dark-gray);
-    display: block;
+    color: variables.$clr-black;
+    background-color: variables.$clr-light-gray;
     border-radius: 4.063rem;
-    height: 30rem;
     border: none;
-    text-align: left;
+
 }
 
 .img-style{
@@ -82,11 +83,11 @@
 
 
 .img-cards{
-    height: 14rem;
     border-bottom-right-radius: 0%;
     border-top-right-radius: 4.063rem;
     border-bottom-left-radius: 0%;
     border-top-left-radius: 4.063rem;
+    height: 14rem;
 }
 
 .info-title{
@@ -107,8 +108,9 @@
 
 .btn-view{
     @include mixins.btn-nav(variables.$clr-black, variables.$clr-white);
-    @include typography.set-font(variables.$ff-secondary, variables.$fs-med, variables.$fw-semibold, variables.$clr-white);
-    width: 13.5rem;
+    @include typography.set-font(variables.$ff-secondary, variables.$fs-med, variables.$fw-regular, variables.$clr-white);
+    width: 80%;
+    margin: auto;
 }
 
 .center-comp {
@@ -120,6 +122,6 @@
 }
 
 .user{
-    width: 3rem;
-    margin-right: 23rem;
+    width: 6rem;
+    margin-left: 19rem;
 }

@@ -3,7 +3,7 @@
 
 @mixin btn-nav($background, $color){
     position: relative;
-    display: grid;
+    display: block;
     place-items: center;
     text-decoration: none;
     border-radius: 0.938rem;
@@ -13,4 +13,5 @@
     font-weight: variables.$fw-regular;
     background-color: $background;
     color: $color;
+    
 }

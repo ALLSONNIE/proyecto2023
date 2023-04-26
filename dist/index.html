@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+
     <title>Receticas</title>
 
     <!-- Google Font -->
@@ -21,17 +22,33 @@
 
     <section id="app" class="container">
         <header class="navbar1">
-                <div class="d-flex justify-content-between align-items-center">
-                    <a href="#"><img src="./images/logo.png" class="position-relative mt-4 ms-5" alt="Graphic identifier"></a>
-                </div>
 
-                <div class="position-absolute top-0 end-0 mx-5 mt-2 px-5">
-                    <ul class="navbar gap-4 nav">
-                        <li class="header-no-item position-relative user"><a class="header-text user" href="#">
-                            <img src="./images/user.png" class="position-relative position-relative mt-4 ms-5 p-2 user" alt="Perfil" ></a> 
-                        </li>
-                    </ul>
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <div class="col-8">
+                        <a href="#"><img src="./images/logo.png" class="position-relative ms-5 "
+                            alt="Graphic identifier"></a>
+                    </div>
+                    <div class="col-4">
+                        <a href="#"><img src="./images/user.png" class="position-relative position-relative mt-2 p-4 user imagen"
+                        alt="Perfil"></a>
+                    </div>
                 </div>
+            </nav>
+
+            <!--<div class="justify-content-between align-items-center">
+                <a href="#"><img src="./images/logo.png" class="position-relative mt-4 ms-5"
+                        alt="Graphic identifier"></a>
+            </div>
+
+            <div class="top-0 end-0">
+                <ul class="navbar gap-4 nav">
+                    <li class="header-no-item position-relative user"><a class="header-text user" href="#">
+                            <img src="./images/user.png" class="position-relative position-relative mt-4 ms-5 p-2 user"
+                                alt="Perfil"></a>
+                    </li>
+                </ul>
+            </div>-->
 
         </header>
 
@@ -43,22 +60,23 @@
                 <div class="container-fluid">
 
                     <ul class="navbar-nav me-auto mb-2 mt-3 mb-lg-0 ms-5">
-                            <li class="nav-item me-3">
-                                <a class="nav-link btn-navg" aria-current="page" href="#">Categorías</a>
-                            </li>
-                            <li class="nav-item me-3">
-                                <a class="nav-link btn-navg" href="#">Ocasiones</a>
-                            </li>
-                            <li class="nav-item me-3">
-                                <a class="nav-link btn-navg" href="#">Niveles</a>
-                            </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link btn-navg" aria-current="page" href="#">Categorías</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link btn-navg" href="#">Ocasiones</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link btn-navg" href="#">Niveles</a>
+                        </li>
                     </ul>
-    
-                    <form class="d-flex mt-3 mx-5 mt-2 px-2" role="search">
+
+                    <form class="d-flex mt-3 mx-5 mt-2" role="search">
                         <input class="form-control s-bar" type="search" placeholder="Buscar..." aria-label="Search">
-                        <button class="btn btn-search search-button-height mb-1" type="submit"><img src="./images/lupa.png" class="mt-0" alt="Lense"></button>
+                        <button class="btn btn-search search-button-height mb-1" type="submit"><img
+                                src="./images/lupa.png" class="mt-0" alt="Lense"></button>
                     </form>
-    
+
                 </div>
 
             </nav>
@@ -66,67 +84,70 @@
         </div>
         <!-- Navegación -->
 
-        <div class="card top-card-style mb-5" style="">
-            <div class="row g-0">
-              <div class="col-md-6">
-                <img src="./images/pic1.png" class="img-fluid img-style" alt="...">
-              </div>
-              <div class="col-md-5 mt-2 ms-5">
-                <div class="card-body">
-                  <h2 class="info-title mb-3">¡Despierta tu paladar!</h2>
-                  <p class="info-desc">Descubre todo tipo de recetas, desde desayunos, almuerzos <br>y entradas hasta postres, <br>bebidas y sopas.</p>
-                  <p class="info-desc">No esperes más, y empieza a cocinar.</p>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <section class="row mt-5 mb-5 text-center justify-content-center">
-            <p class="mb-5 btn-badges mt-5">Mejores Recetas</hp>
-
-                <section class="row mt-5">
-                    <div v-for="(item, index) in recipes" class="col-md-4 mt-5">
-                        <div class="card card-style">
-                            <img v-bind:src="item.image" class="img-cards" alt="featured recipe">
-                            <div class="card-body">
-                                <h2 class="cards-title mb-1">{{ item.name }}</h2>
-                                <p class="cards-text mb-1">{{ item.category }}</p>
-                                <p class="cards-text mb-1">{{ item.ocassion }}</p>
-                                <p class="cards-text mb-1">{{ item.level }}</p>
-                                <!--<p class="top-details mb-0">{{ item.likes }}</p>
-                                <button class="btn btn-danger me-2 mt-2" v-on:click="onClickLike(index)">Like</button>
-                                <button class="btn btn-success me-2 mt-2" v-on:click="onClickUnlike(index)">Unlike</button>-->
-                                <button class="btn btn-dark top-btn text-center mt-2" v-on:click="onClickViewRecipe(index)"
-                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">View Recipe</button>
-                            </div>
+        <section class="ps-5 pe-5">
+            <div class="card top-card-style mb-5" style="">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="./images/pic1.png" class="img-fluid img-style" alt="...">
+                    </div>
+                    <div class="col-md-5 mt-2 ms-5">
+                        <div class="card-body">
+                            <h2 class="info-title mb-3">¡Despierta tu paladar!</h2>
+                            <p class="info-desc">Descubre todo tipo de recetas, desde desayunos, almuerzos <br>y
+                                entradas hasta postres, <br>bebidas y sopas.</p>
+                            <p class="info-desc">No esperes más, y empieza a cocinar.</p>
                         </div>
                     </div>
-                </section>
+                </div>
+            </div>
+        </section>
+
+        <section class="row mt-5 justify-content-center">
+            <p class="mt-5 btn-badges">Mejores Recetas</hp>
+
+            <section class="row mt-5">
+                <div v-for="(item, index) in recipes" class="col-md-4 p-5">
+                    <div class="d-flex card card-style">
+                        <img v-bind:src="item.image" class="img-cards" alt="featured recipe">
+                        <div class="card-body">
+                            <h2 class="cards-title mb-1">{{ item.name }}</h2>
+                            <p class="cards-text mb-1">{{ item.category }}</p>
+                            <p class="cards-text mb-1">{{ item.ocassion }}</p>
+                            <p class="cards-text mb-1">{{ item.level }}</p>
+                            <!--<p class="top-details mb-0">{{ item.likes }}</p>
+                                <button class="btn btn-danger me-2 mt-2" v-on:click="onClickLike(index)">Like</button>
+                                <button class="btn btn-success me-2 mt-2" v-on:click="onClickUnlike(index)">Unlike</button>-->
+                            <button class="btn btn-view text-center mt-2" v-on:click="onClickViewRecipe(index)"
+                                data-bs-toggle="modal" data-bs-target="#staticBackdrop">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         </section>
 
-        <section class="row mt-5 mb-5 text-center justify-content-center">
-            <p class="mb-5 btn-badges mt-5">Lo más nuevo</hp>
+        <section class="row mt-5 justify-content-center pb-5">
+            <p class="mt-5 btn-badges">Lo más nuevo</hp>
 
-                <section class="row mt-5">
-                    <div v-for="(item, index) in recipes" class="col-md-4 mt-5">
-                        <div class="card card-style">
-                            <img v-bind:src="item.image" class="img-cards" alt="featured recipe">
-                            <div class="card-body p-0">
-                                <h2 class="cards-title mb-1">{{ item.name }}</h2>
-                                <p class="cards-text mb-1">{{ item.category }}</p>
-                                <p class="cards-text mb-1">{{ item.ocassion }}</p>
-                                <p class="cards-text mb-1">{{ item.level }}</p>
-                                <!--<p class="top-details mb-0">{{ item.likes }}</p>
+            <section class="row mt-5">
+                <div v-for="(item, index) in recipes" class="col-md-4 p-5">
+                    <div class="d-flex card card-style">
+                        <img v-bind:src="item.image" class="img-cards" alt="featured recipe">
+                        <div class="card-body">
+                            <h2 class="cards-title mb-1">{{ item.name }}</h2>
+                            <p class="cards-text mb-1">{{ item.category }}</p>
+                            <p class="cards-text mb-1">{{ item.ocassion }}</p>
+                            <p class="cards-text mb-1">{{ item.level }}</p>
+                            <!--<p class="top-details mb-0">{{ item.likes }}</p>
                                 <button class="btn btn-danger me-2 mt-2" v-on:click="onClickLike(index)">Like</button>
                                 <button class="btn btn-success me-2 mt-2" v-on:click="onClickUnlike(index)">Unlike</button>-->
-                                <button class="btn btn-dark top-btn text-center mt-2" v-on:click="onClickViewRecipe(index)"
-                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop">View Recipe</button>
-                            </div>
+                            <button class="btn btn-view text-center mt-2" v-on:click="onClickViewRecipe(index)"
+                                data-bs-toggle="modal" data-bs-target="#staticBackdrop">View Recipe</button>
                         </div>
                     </div>
-                </section>
-                
+                </div>
+            </section>
+
         </section>
 
 
@@ -136,7 +157,8 @@
             <div class="mt-5 ms-xl-5">
                 <div class="row row-move">
                     <div class="col-md-4 mb-5 d-flex justify-content-between align-items-center ms-2">
-                        <a href="#"><img src="./images/logo.png" class="position-relative mt-4 ms-5" alt="Graphic identifier"></a>
+                        <a href="#"><img src="./images/logo.png" class="position-relative mt-4 ms-5"
+                                alt="Graphic identifier"></a>
                     </div>
 
                     <div class="col-md-2 ms-2 hide-mb hide-tab">
@@ -144,7 +166,8 @@
                             <p class="nav-link active footer-info">Secciones</p>
                             <div class="col p-0">
                                 <ul class="p-0 text-start">
-                                    <li class="footer-no-item mb-1"><a class="footer-text" href="#">Mejores Recetas</a></li>
+                                    <li class="footer-no-item mb-1"><a class="footer-text" href="#">Mejores Recetas</a>
+                                    </li>
                                     <li class="footer-no-item mb-1"><a class="footer-text" href="#">Categorias</a></li>
                                     <li class="footer-no-item mb-1"><a class="footer-text" href="#">Ocasiones</a></li>
                                     <li class="footer-no-item mb-1"><a class="footer-text" href="#">Niveles</a></li>
@@ -158,10 +181,18 @@
                             <p class="nav-link active footer-info">Social</p>
                             <div class="col p-0">
                                 <ul class="p-0 text-start">
-                                    <li class="footer-no-item mb-1"><a class="footer-text" href="#"><img src="./images/instagram.png" class="me-3 icon-sm" alt="Instagram">ReceTicas</a></li>
-                                    <li class="footer-no-item mb-1"><a class="footer-text" href="#"><img src="./images/facebook.png" class="me-3 icon-sm" alt="Facebokk">ReceTicas</a></li>
-                                    <li class="footer-no-item mb-1"><a class="footer-text" href="#"><img src="./images/whatsapp.png" class="me-3 icon-sm" alt="WhatsApp">2222 2222</a></li>
-                                    <li class="footer-no-item mb-1"><a class="footer-text" href="#"><img src="./images/correo.png" class="me-3 icon-sm" alt="Correo">rt@gmail.com</a></li>
+                                    <li class="footer-no-item mb-1"><a class="footer-text" href="#"><img
+                                                src="./images/instagram.png" class="me-3 icon-sm"
+                                                alt="Instagram">ReceTicas</a></li>
+                                    <li class="footer-no-item mb-1"><a class="footer-text" href="#"><img
+                                                src="./images/facebook.png" class="me-3 icon-sm"
+                                                alt="Facebokk">ReceTicas</a></li>
+                                    <li class="footer-no-item mb-1"><a class="footer-text" href="#"><img
+                                                src="./images/whatsapp.png" class="me-3 icon-sm" alt="WhatsApp">2222
+                                            2222</a></li>
+                                    <li class="footer-no-item mb-1"><a class="footer-text" href="#"><img
+                                                src="./images/correo.png" class="me-3 icon-sm"
+                                                alt="Correo">rt@gmail.com</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -172,7 +203,8 @@
                             <p class="nav-link active footer-info">Acerca de <br>nosotros</p>
                             <div class="col p-0">
                                 <ul class="p-0 text-start">
-                                    <li class="footer-no-item mb-1"><a class="footer-text" href="#">Terminos y sus <br>políticas</a></li>
+                                    <li class="footer-no-item mb-1"><a class="footer-text" href="#">Terminos y sus
+                                            <br>políticas</a></li>
                                     <li class="footer-no-item mb-1"><a class="footer-text" href="#">Equipo</a></li>
                                 </ul>
                             </div>
@@ -197,7 +229,7 @@
         const mountedApp = app.mount("#app");
     </script>
 
-        
+
 </body>
 
 </html>

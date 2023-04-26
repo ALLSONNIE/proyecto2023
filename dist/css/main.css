@@ -13396,8 +13396,7 @@ body {
 
 .btn-navg {
   position: relative;
-  display: -ms-grid;
-  display: grid;
+  display: block;
   place-items: center;
   text-decoration: none;
   border-radius: 0.938rem;
@@ -13413,8 +13412,7 @@ body {
 
 .btn-search {
   position: relative;
-  display: -ms-grid;
-  display: grid;
+  display: block;
   place-items: center;
   text-decoration: none;
   border-radius: 0.938rem;
@@ -13433,13 +13431,12 @@ body {
 }
 
 .search-button-height {
-  height: 3.25rem !important;
+  height: 3.25rem;
 }
 
 .s-bar {
   position: relative;
-  display: -ms-grid;
-  display: grid;
+  display: block;
   place-items: center;
   text-decoration: none;
   border-radius: 0.938rem;
@@ -13465,8 +13462,7 @@ body {
 
 .top-card-style {
   position: relative;
-  display: -ms-grid;
-  display: grid;
+  display: block;
   place-items: center;
   text-decoration: none;
   border-radius: 0.938rem;
@@ -13477,29 +13473,17 @@ body {
   background-color: hsl(0deg, 0%, 93%);
   color: hsl(0deg, 0%, 34%);
   height: 26.375rem;
+  display: block;
   border-radius: 4.063rem;
   border: none;
   text-align: left;
 }
 
 .card-style {
-  position: relative;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  text-decoration: none;
-  border-radius: 0.938rem;
-  text-align: center;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
+  color: hsl(0deg, 0%, 0%);
   background-color: hsl(0deg, 0%, 93%);
-  color: hsl(0deg, 0%, 34%);
   border-radius: 4.063rem;
-  width: 23.313rem;
-  height: 30rem;
   border: none;
-  text-align: left;
 }
 
 .img-style {
@@ -13513,8 +13497,7 @@ body {
 
 .btn-badges {
   position: relative;
-  display: -ms-grid;
-  display: grid;
+  display: block;
   place-items: center;
   text-decoration: none;
   border-radius: 0.938rem;
@@ -13544,12 +13527,11 @@ body {
 }
 
 .img-cards {
-  height: 14rem;
-  width: 23.313rem;
   border-bottom-right-radius: 0%;
   border-top-right-radius: 4.063rem;
   border-bottom-left-radius: 0%;
   border-top-left-radius: 4.063rem;
+  height: 14rem;
 }
 
 .info-title {
@@ -13582,8 +13564,7 @@ body {
 
 .btn-view {
   position: relative;
-  display: -ms-grid;
-  display: grid;
+  display: block;
   place-items: center;
   text-decoration: none;
   border-radius: 0.938rem;
@@ -13595,9 +13576,10 @@ body {
   color: hsl(0deg, 0%, 100%);
   font-family: "IBM Plex Serif", serif;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 400;
   color: hsl(0deg, 0%, 100%);
-  width: 13.5rem;
+  width: 80%;
+  margin: auto;
 }
 
 .center-comp {
@@ -13606,11 +13588,21 @@ body {
           align-items: center;
 }
 
+.widther {
+  width: 81.006rem;
+}
+
+.user {
+  width: 6rem;
+  margin-left: 19rem;
+}
+
 .ending-bar {
   width: auto;
   height: 19rem;
   background-color: hsl(0deg, 0%, 0%);
   border: none;
+  margin-top: 10rem;
 }
 
 .footer-info {
