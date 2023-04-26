@@ -13422,6 +13422,23 @@ body {
   color: hsl(0deg, 0%, 34%);
 }
 
+.space-register {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 2.125rem;
+  font-weight: 600;
+  color: hsl(355deg, 78%, 60%);
+  text-align: left;
+  width: 23.375rem;
+  margin-top: 0.5rem;
+}
+
+.box-register {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: hsl(0deg, 0%, 34%);
+}
+
 .btn-navg {
   position: relative;
   display: block;
@@ -13568,6 +13585,48 @@ body {
 
 .widther {
   width: 81.006rem;
+}
+
+.input-size {
+  width: 29.5rem;
+  height: 4.75rem;
+  border-radius: 0.938rem;
+  background-color: hsl(0deg, 0%, 100%);
+  border-color: hsl(355deg, 78%, 60%);
+  border-width: 0.188rem;
+}
+
+.textarea-size {
+  width: 29.5rem;
+  border-radius: 0.938rem;
+  background-color: hsl(0deg, 0%, 100%);
+  border-color: hsl(355deg, 78%, 60%);
+  border-width: 0.188rem;
+}
+
+.btn-add {
+  position: relative;
+  display: block;
+  place-items: center;
+  text-decoration: none;
+  border-radius: 0.938rem;
+  text-align: center;
+  font-family: "IBM Plex Serif", serif;
+  font-size: 2.25rem;
+  font-weight: 600;
+  background-color: hsl(0deg, 0%, 0%);
+  color: hsl(0deg, 0%, 100%);
+  width: 23.375rem;
+  height: 5.375rem;
+  margin: auto;
+}
+
+.spacer {
+  margin-left: 7rem;
+}
+
+.img-fit {
+  height: 10.125rem;
 }
 
 .ending-bar {

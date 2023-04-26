@@ -77,6 +77,8 @@
     margin: auto;
 }
 
+//modal style
+
 //miscellaneous
 
 .btn-badges{
@@ -102,4 +104,38 @@
 
 .widther{
     width: 81.006rem;
+}
+
+//registro receta-forms
+
+.input-size{
+    width: 29.5rem;
+    height: 4.75rem;
+    border-radius: 0.938rem;
+    background-color: variables.$clr-white;
+    border-color: variables.$clr-red;
+    border-width: 0.188rem;
+}
+
+.textarea-size{
+    width: 29.5rem;
+    border-radius: 0.938rem;
+    background-color: variables.$clr-white;
+    border-color: variables.$clr-red;
+    border-width: 0.188rem;
+}
+
+.btn-add{
+    @include mixins.btn(variables.$clr-black, variables.$ff-secondary, variables.$fs-lg, variables.$fw-semibold, variables.$clr-white);
+    width: 23.375rem;
+    height: 5.375rem;
+    margin: auto;
+}
+
+.spacer{
+    margin-left: 7rem;
+}
+
+.img-fit{
+    height: 10.125rem;
 }

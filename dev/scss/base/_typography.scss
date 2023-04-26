@@ -16,3 +16,14 @@
 .cards-text{
     @include mixins.set-font(variables.$ff-secondary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-dark-gray);
 }
+
+.space-register{
+    @include mixins.set-font(variables.$ff-primary, variables.$fs-xmed, variables.$fw-semibold, variables.$clr-red);
+    text-align: left;
+    width: 23.375rem;
+    margin-top: 0.5rem;
+}
+
+.box-register{
+    @include mixins.set-font(variables.$ff-primary, variables.$fs-med, variables.$fw-regular, variables.$clr-dark-gray);
+}
