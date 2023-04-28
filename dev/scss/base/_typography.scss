@@ -27,3 +27,17 @@
 .box-register{
     @include mixins.set-font(variables.$ff-primary, variables.$fs-med, variables.$fw-regular, variables.$clr-dark-gray);
 }
+
+.modal-titles{
+    @include mixins.set-font(variables.$ff-primary, variables.$fs-xsm, variables.$fw-semibold, variables.$clr-red);
+    width: auto;
+    text-align: left;
+    margin-top: 0.5rem;
+}
+
+.modal-info{
+    @include mixins.set-font(variables.$ff-primary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-black);
+    width: auto;
+    text-align: left;
+    margin-top: 0.5rem;
+}

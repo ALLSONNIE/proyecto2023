@@ -13439,6 +13439,26 @@ body {
   color: hsl(0deg, 0%, 34%);
 }
 
+.modal-titles {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: hsl(355deg, 78%, 60%);
+  width: auto;
+  text-align: left;
+  margin-top: 0.5rem;
+}
+
+.modal-info {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: hsl(0deg, 0%, 0%);
+  width: auto;
+  text-align: left;
+  margin-top: 0.5rem;
+}
+
 .btn-navg {
   position: relative;
   display: block;
@@ -13627,6 +13647,34 @@ body {
 
 .img-fit {
   height: 10.125rem;
+}
+
+.img-modal {
+  width: 48.813rem;
+  border-bottom-right-radius: 0%;
+  border-top-right-radius: 4.063rem;
+  border-bottom-left-radius: 0%;
+  border-top-left-radius: 4.063rem;
+}
+
+.spacer-modal {
+  margin-left: 6rem;
+}
+
+.btn-modal {
+  position: relative;
+  display: block;
+  place-items: center;
+  text-decoration: none;
+  border-radius: 0.938rem;
+  text-align: center;
+  font-family: "IBM Plex Serif", serif;
+  font-size: 1.813rem;
+  font-weight: 600;
+  background-color: hsl(0deg, 0%, 0%);
+  color: hsl(0deg, 0%, 100%);
+  width: 12rem;
+  height: 4rem;
 }
 
 .ending-bar {

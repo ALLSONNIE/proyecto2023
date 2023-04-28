@@ -139,3 +139,21 @@
 .img-fit{
     height: 10.125rem;
 }
+
+.img-modal{
+    width: 48.813rem;
+    border-bottom-right-radius: 0%;
+    border-top-right-radius: 4.063rem;
+    border-bottom-left-radius: 0%;
+    border-top-left-radius: 4.063rem;
+}
+
+.spacer-modal{
+    margin-left: 6rem;
+}
+
+.btn-modal{
+    @include mixins.btn(variables.$clr-black, variables.$ff-secondary, variables.$fs-sm, variables.$fw-semibold, variables.$clr-white);
+    width: 12rem;
+    height: 4rem;
+}

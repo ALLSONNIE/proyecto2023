@@ -28,16 +28,109 @@
         <!-- Modal -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">{{ recipes[selectedIndex].name }}</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="m-auto mb-5">
+                            <p class="mt-5 btn-badges" id="staticBackdropLabel">{{ recipes[selectedIndex].name }}</p>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <img class="d-block m-auto img-fluid" v-bind:src="recipes[selectedIndex].image" alt="{{ recipes[selectedIndex].name }}">
-                        <p class="text-center f-6">{{ recipes[selectedIndex].category }}</p>
-                        <p class="fst-italic fw-light fs-5">{{ recipes[selectedIndex].description }}</p>
+                    <div class="modal-body p-0 card card-style m-2">
+                        <img class="d-flex m-auto img-fluid img-modal" v-bind:src="recipes[selectedIndex].image" alt="{{ recipes[selectedIndex].name }}">
+                        
+
+                        <section class="row mt-5 margin-content margin-right ms-5">
+
+                            <div class="mb-2 col-md">
+                                <p class="col-md-6 d-flex modal-titles mb-0">Tiempo de preparación:</p>
+                                <p class="modal-info mt-0">{{ recipes[selectedIndex].preptime }}</p>
+                            </div>
+
+                            <div class="mb-2 col-md spacer-modal">
+                                <p class="col-md-6 d-flex modal-titles mb-0">Tiempo de la cocción:</p>
+                                <p class="modal-info mt-0">{{ recipes[selectedIndex].cooktime }}</p>
+                            </div>
+
+                        </section>
+
+                        <section class="row margin-content margin-right ms-5">
+
+                            <div class="mb-2 col-md">
+                                <p class="col-md-6 d-flex modal-titles mb-0">Tiempo total de receta:</p>
+                                <p class="modal-info mt-0">{{ recipes[selectedIndex].totaltime }}</p>
+                            </div>
+
+                            <div class="mb-2 col-md spacer-modal">
+                                <p class="col-md-6 d-flex modal-titles mb-0">Total de las porciones:</p>
+                                <p class="modal-info mt-0">{{ recipes[selectedIndex].portions }}</p>
+                            </div>
+
+                        </section>
+
+                        <section class="row margin-content margin-right ms-5">
+
+                            <div class="mb-2 col-md">
+                                <p class="col-md-6 d-flex modal-titles mb-0">Categoría de la receta:</p>
+                                <p class="modal-info mt-0">{{ recipes[selectedIndex].category }}</p>
+                            </div>
+
+                            <div class="mb-2 col-md spacer-modal">
+                                <p class="col-md-6 d-flex modal-titles mb-0">Ocasión de la receta:</p>
+                                <p class="modal-info mt-0">{{ recipes[selectedIndex].occasion }}</p>
+                            </div>
+
+                        </section>
+
+                        <section class="row margin-content margin-right ms-5">
+
+                            <div class="mb-2 col-md">
+                                <p class="col-md-6 d-flex modal-titles mb-0">Nivel de complejidad:</p>
+                                <p class="modal-info mt-0">{{ recipes[selectedIndex].level }}</p>
+                            </div>
+
+                            <div class="mb-2 col-md spacer-modal">
+                                <p class="col-md-6 d-flex modal-titles mb-0">Cantidad de votos:</p>
+                                <p class="modal-info mt-0">{{ recipes[selectedIndex].likes }}</p>
+                            </div>
+
+                        </section>
+
+                        <section class="row margin-content margin-right ms-5 me-5">
+
+                            <div class="mb-2 col-md">
+                                <p class="col-md-12 d-flex modal-titles mb-0">Descripción:</p>
+                                <p class="modal-info mt-0">{{ recipes[selectedIndex].description }}</p>
+                            </div>
+
+                        </section>
+
+                        <section class="row margin-content margin-right ms-5 me-5">
+
+                            <div class="mb-2 col-md">
+                                <p class="col-md-12 d-flex modal-titles mb-0">Ingredientes:</p>
+                                <p class="modal-info mt-0">{{ recipes[selectedIndex].ingredients }}</p>
+                            </div>
+
+                        </section>
+
+                        <section class="row mb-5 margin-content margin-right ms-5 me-5">
+
+                            <div class="mb-2 col-md">
+                                <p class="col-md-12 d-flex modal-titles mb-0">Instrucciones:</p>
+                                <p class="modal-info mt-0">{{ recipes[selectedIndex].steps }}</p>
+                            </div>
+
+                        </section>
+
+                        <section class="row mb-5 ms-5 me-5">
+
+                            <div class="mb-2 col-md">
+                                <button type="button" class="btn-modal">Me gusta</button>
+                                <button type="button" class="btn-modal">Descargar</button>
+                            </div>
+
+                        </section>
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
