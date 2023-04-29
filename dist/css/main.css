@@ -13459,6 +13459,42 @@ body {
   margin-top: 0.5rem;
 }
 
+.users-titles {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 2.813rem;
+  font-weight: 600;
+  color: hsl(355deg, 78%, 60%);
+  width: 40rem;
+  text-align: left;
+  margin-top: 0.5rem;
+}
+
+.users-info {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: hsl(0deg, 0%, 0%);
+  width: auto;
+  text-align: left;
+  margin-top: 0.5rem;
+}
+
+.table-info {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.813rem;
+  font-weight: 500;
+  color: hsl(0deg, 0%, 0%);
+  background-color: hsl(355deg, 78%, 60%);
+}
+
+.table-titles {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(355deg, 78%, 60%);
+}
+
 .btn-navg {
   position: relative;
   display: block;
@@ -13675,6 +13711,34 @@ body {
   color: hsl(0deg, 0%, 100%);
   width: 12rem;
   height: 4rem;
+}
+
+.users-img {
+  width: 11.063rem;
+  margin-top: 5rem;
+  margin-left: 8rem;
+}
+
+.table-style {
+  background-color: hsl(0deg, 0%, 93%);
+  border-radius: 4.063rem;
+  border-color: hsl(355deg, 78%, 60%);
+}
+
+.btn-register {
+  position: relative;
+  display: block;
+  place-items: center;
+  text-decoration: none;
+  border-radius: 0.938rem;
+  text-align: center;
+  font-family: "IBM Plex Serif", serif;
+  font-size: 2.25rem;
+  font-weight: 600;
+  background-color: hsl(0deg, 0%, 0%);
+  color: hsl(0deg, 0%, 100%);
+  width: 23.375rem;
+  height: 5.375rem;
 }
 
 .ending-bar {

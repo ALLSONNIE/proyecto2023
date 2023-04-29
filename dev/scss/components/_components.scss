@@ -157,3 +157,21 @@
     width: 12rem;
     height: 4rem;
 }
+
+.users-img{
+    width: 11.063rem;
+    margin-top: 5rem;
+    margin-left: 8rem;
+}
+
+.table-style{
+    background-color: variables.$clr-light-gray;
+    border-radius: 4.063rem;
+    border-color: variables.$clr-red;
+}
+
+.btn-register{
+    @include mixins.btn(variables.$clr-black, variables.$ff-secondary, variables.$fs-lg, variables.$fw-semibold, variables.$clr-white);
+    width: 23.375rem;
+    height: 5.375rem;
+}

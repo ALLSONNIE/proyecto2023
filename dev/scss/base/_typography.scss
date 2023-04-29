@@ -41,3 +41,27 @@
     text-align: left;
     margin-top: 0.5rem;
 }
+
+.users-titles{
+    @include mixins.set-font(variables.$ff-primary, variables.$fs-xlg, variables.$fw-semibold, variables.$clr-red);
+    width: 40rem;
+    text-align: left;
+    margin-top: 0.5rem;
+}
+
+.users-info{
+    @include mixins.set-font(variables.$ff-secondary, variables.$fs-lg, variables.$fw-regular, variables.$clr-black);
+    width: auto;
+    text-align: left;
+    margin-top: 0.5rem;
+}
+
+.table-info{
+    @include mixins.set-font(variables.$ff-primary, variables.$fs-sm, variables.$fw-medium, variables.$clr-black);
+    background-color: variables.$clr-red;
+}
+
+.table-titles{
+    @include mixins.set-font(variables.$ff-primary, variables.$fs-med, variables.$fw-semibold, variables.$clr-white);
+    background-color: variables.$clr-red;
+}
