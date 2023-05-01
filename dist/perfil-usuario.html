@@ -162,7 +162,7 @@
 
             <nav id="navbar-main" class="navbar navbar-expand-lg offcanvas-mb">
 
-                <div class="container-fluid mb-5">
+                <div class="container-fluid">
 
                     <ul class="navbar-nav me-auto mb-2 mt-3 mb-lg-0 ms-5">
                         <li class="nav-item me-3">
@@ -190,47 +190,60 @@
         <!-- Navegación -->
 
 
-        <section class="mt-5 ps-5 pe-5">
-            <div class="m-auto mb-5">
-                <p class="m-auto btn-badges" id="staticBackdropLabel">Perfil de Usuario</p>
-            </div>
-            <div class="card card-style">
-                <div class="row g-0">
-                    <div class="col-md-3">
-                        <img src="./images/user-black.png" class="img-fluid users-img" alt="...">
-                    </div>
-                    <div class="col-md-7 mt-2 ms-5">
-                        <div class="card-body">
-                            <section class="row margin-content margin-right ms-5 me-5">
-
-                                <div class="mb-2 col-md">
-                                    <p class="d-flex users-titles mb-0">Nombre del usuario:</p>
-                                    <p class="users-info mt-0">Allison Benavides Sánchez</p>
-                                </div>
+        <section class="row mt-5 justify-content-center ps-5 pe-5">
+            <p class="mt-5 mb-5 btn-badges">Perfil de Usuario</p>
+            <div class="card card-style mt-5 mb-5">
+                <div class="card-body m-auto">
+                    <div class="row g-0">
+                        <div class="col-md-3">
+                            <img src="./images/user-black.png" class="img-fluid users-img" alt="...">
+                        </div>
+                        <div class="col-md-7 mt-2 ms-5">
+                            <div class="card-body">
+                                <section class="row margin-content margin-right ms-5 me-5">
     
-                            </section>
-    
-                            <section class="row margin-content margin-right ms-5 me-5">
-    
-                                <div class="mb-2 col-md">
-                                    <p class="d-flex users-titles mb-0">Accesos permitidos al sistema:</p>
-                                    <p class="users-info mt-0">Página principal y perfil</p>
-                                </div>
-    
-                            </section>
+                                    <div class="mb-2 col-md">
+                                        <p class="d-flex users-titles mb-0">Nombre del usuario:</p>
+                                        <p class="users-info mt-0">Allison Benavides Sánchez</p>
+                                    </div>
+        
+                                </section>
+        
+                                <section class="row margin-content margin-right ms-5 me-5">
+        
+                                    <div class="mb-2 col-md">
+                                        <p class="d-flex users-titles mb-0">Accesos permitidos al sistema:</p>
+                                        <p class="users-info mt-0">Página principal y perfil</p>
+                                    </div>
+        
+                                </section>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </section>
 
-        <section class="mt-5 ps-5 pe-5">
-            <div class="m-auto mb-5">
-                <p class="m-auto btn-badges" id="staticBackdropLabel">Recetas coleccionadas</p>
-            </div>
-        </section>
+        <section class="row mt-5 justify-content-center">
+            <p class="mt-5 mb-5 btn-badges">Recetas Coleccionadas</p>
+            <section class="row mt-5 mb-5">
+                <div v-for="(item, index) in relatedRecipes" class="col-md-4 p-5">
+                    <div class="d-flex card card-style">
+                        <img v-bind:src="item.image" class="img-cards" alt="featured recipe">
+                        <div class="card-body">
+                            <h2 class="cards-title mb-1">{{ item.name }}</h2>
+                            <p class="cards-text mb-1">{{ item.category }}</p>
+                            <p class="cards-text mb-1">{{ item.ocassion }}</p>
+                            <p class="cards-text mb-1">{{ item.level }}</p>
+                            <button class="btn btn-view text-center mt-2" v-on:click="onClickViewRecipe(index)"
+                                data-bs-toggle="modal" data-bs-target="#staticBackdrop">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        
+        </section>
 
 
         <!--Footer-->

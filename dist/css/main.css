@@ -13477,6 +13477,7 @@ body {
   width: auto;
   text-align: left;
   margin-top: 0.5rem;
+  background-color: transparent;
 }
 
 .table-info {
@@ -13721,8 +13722,8 @@ body {
 
 .table-style {
   background-color: hsl(0deg, 0%, 93%);
-  border-radius: 4.063rem;
-  border-color: hsl(355deg, 78%, 60%);
+  border-radius: 0.938rem;
+  border: hsl(355deg, 78%, 60%);
 }
 
 .btn-register {
@@ -13741,12 +13742,29 @@ body {
   height: 5.375rem;
 }
 
+.btn-sign {
+  position: relative;
+  display: block;
+  place-items: center;
+  text-decoration: none;
+  border-radius: 0.938rem;
+  text-align: center;
+  font-family: "IBM Plex Serif", serif;
+  font-size: 2.25rem;
+  font-weight: 600;
+  background-color: hsl(0deg, 0%, 0%);
+  color: hsl(0deg, 0%, 100%);
+  width: 29.5rem;
+  height: 5.375rem;
+  margin: auto;
+}
+
 .ending-bar {
   width: auto;
   height: 19rem;
   background-color: hsl(0deg, 0%, 0%);
   border: none;
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 
 .footer-info {
@@ -13786,6 +13804,10 @@ body {
 
 .row-move {
   text-align: center;
+}
+
+.margin-plus {
+  margin-top: 10rem;
 }
 
 .navbar1 {
