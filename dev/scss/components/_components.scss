@@ -175,3 +175,10 @@
     width: 23.375rem;
     height: 5.375rem;
 }
+
+.btn-sign{
+    @include mixins.btn(variables.$clr-black, variables.$ff-secondary, variables.$fs-lg, variables.$fw-semibold, variables.$clr-white);
+    width: 29.5rem;
+    height: 5.375rem;
+    margin: auto;
+}
