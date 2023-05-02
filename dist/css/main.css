@@ -13400,12 +13400,22 @@ body {
   font-weight: 700;
   color: hsl(355deg, 78%, 60%);
 }
+@media only screen and (max-width: 480px) {
+  .info-title {
+    font-size: 2rem;
+  }
+}
 
 .info-desc {
   font-family: "IBM Plex Serif", serif;
   font-size: 2rem;
   font-weight: 400;
   color: hsl(0deg, 0%, 0%);
+}
+@media only screen and (max-width: 480px) {
+  .info-desc {
+    font-size: 1.5rem;
+  }
 }
 
 .cards-title {
@@ -13485,7 +13495,7 @@ body {
   font-size: 1.813rem;
   font-weight: 500;
   color: hsl(0deg, 0%, 0%);
-  background-color: hsl(355deg, 78%, 60%);
+  background-color: hsl(0deg, 0%, 93%) !important;
 }
 
 .table-titles {
@@ -13494,6 +13504,17 @@ body {
   font-weight: 600;
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(355deg, 78%, 60%);
+}
+
+.logo {
+  width: 25%;
+  margin-left: 3rem;
+}
+@media only screen and (max-width: 480px) {
+  .logo {
+    width: 60%;
+    margin-left: 5rem;
+  }
 }
 
 .btn-navg {
@@ -13566,6 +13587,20 @@ body {
   border: none;
   text-align: left;
 }
+@media only screen and (max-width: 480px) {
+  .top-card-style {
+    height: auto;
+  }
+}
+
+.margin-top-card {
+  margin-left: 3rem;
+}
+@media only screen and (max-width: 480px) {
+  .margin-top-card {
+    margin-left: 0;
+  }
+}
 
 .card-style {
   color: hsl(0deg, 0%, 0%);
@@ -13581,6 +13616,15 @@ body {
   border-top-right-radius: 0%;
   border-bottom-left-radius: 4.063rem;
   border-top-left-radius: 4.063rem;
+}
+@media only screen and (max-width: 480px) {
+  .img-style {
+    height: auto;
+    border-bottom-right-radius: 0%;
+    border-top-right-radius: 4.063rem;
+    border-bottom-left-radius: 0%;
+    border-top-left-radius: 4.063rem;
+  }
 }
 
 .img-cards {
@@ -13621,6 +13665,14 @@ body {
   color: hsl(0deg, 0%, 100%);
   height: 4.75rem;
   width: 35.625rem;
+}
+@media only screen and (max-width: 480px) {
+  .btn-badges {
+    font-size: 2rem;
+    height: auto;
+    width: 21.938rem;
+    padding: 0.5rem;
+  }
 }
 
 .badge-red {
@@ -13721,8 +13773,8 @@ body {
 }
 
 .table-style {
-  background-color: hsl(0deg, 0%, 93%);
-  border-radius: 0.938rem;
+  background-color: hsl(0deg, 0%, 93%) !important;
+  border-radius: 0.938rem !important;
   border: hsl(355deg, 78%, 60%);
 }
 
@@ -13759,12 +13811,73 @@ body {
   margin: auto;
 }
 
+.offcanvas-header {
+  display: none;
+}
+@media only screen and (max-width: 480px) {
+  .offcanvas-header {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .bar-mb {
+    width: 100%;
+  }
+  .icon-mb {
+    width: 35%;
+    padding-bottom: 1.25rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+  }
+  .hide {
+    pointer-events: none;
+  }
+  .offcanvas-mb {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: hsl(0deg, 0%, 100%);
+    -webkit-box-shadow: 0px 73px 99px rgba(0, 0, 0, 0.0901960784);
+            box-shadow: 0px 73px 99px rgba(0, 0, 0, 0.0901960784);
+    z-index: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: -webkit-transform 0.6s ease-in-out;
+    transition: -webkit-transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+  }
+  .show-mb-nav {
+    visibility: visible;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .center-comp {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-sizer {
+    height: 50px;
+  }
+}
 .ending-bar {
   width: auto;
   height: 19rem;
   background-color: hsl(0deg, 0%, 0%);
   border: none;
   margin-top: 5rem;
+}
+@media only screen and (max-width: 480px) {
+  .ending-bar {
+    height: auto;
+  }
 }
 
 .footer-info {
@@ -13773,6 +13886,11 @@ body {
   font-weight: 700;
   color: hsl(0deg, 0%, 100%);
   text-align: left;
+}
+@media only screen and (max-width: 480px) {
+  .footer-info {
+    height: auto;
+  }
 }
 
 .footer-info:hover {
@@ -13790,6 +13908,11 @@ body {
   color: hsl(0deg, 0%, 100%);
   text-align: left;
   text-decoration: none;
+}
+@media only screen and (max-width: 480px) {
+  .footer-text {
+    height: auto;
+  }
 }
 
 .footer-text:hover {
@@ -13812,8 +13935,12 @@ body {
 
 .navbar1 {
   width: auto;
-  height: 8rem;
   background-color: hsl(355deg, 78%, 60%);
+}
+@media only screen and (max-width: 480px) {
+  .navbar1 {
+    padding: 0%;
+  }
 }
 
 .user {

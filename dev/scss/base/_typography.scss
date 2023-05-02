@@ -1,12 +1,19 @@
 @use 'abstracts/variables';
 @use 'abstracts/mixins';
+@use './media-queries';
 
 .info-title{
     @include mixins.set-font(variables.$ff-primary, variables.$fs-xlg, variables.$fw-bold, variables.$clr-red);
+    @include media-queries.respond-to(media-queries.$phone) {
+        font-size: variables.$fs-med;
+    }
 }
 
 .info-desc{
     @include mixins.set-font(variables.$ff-secondary, variables.$fs-med, variables.$fw-regular, variables.$clr-black);
+    @include media-queries.respond-to(media-queries.$phone) {
+        font-size: variables.$fs-xsm;
+    }
 }
 
 .cards-title{
@@ -59,7 +66,7 @@
 
 .table-info{
     @include mixins.set-font(variables.$ff-primary, variables.$fs-sm, variables.$fw-medium, variables.$clr-black);
-    background-color: variables.$clr-red;
+    background-color: variables.$clr-light-gray !important;
 }
 
 .table-titles{

@@ -1,7 +1,17 @@
 @use 'abstracts/variables';
 @use 'abstracts/mixins';
+@use 'media-queries';
 
 //top buttons-components
+
+.logo{
+    width: 25%;
+    margin-left: 3rem;
+    @include media-queries.respond-to(media-queries.$phone) {
+        width: 60%;
+        margin-left: 5rem;
+    }
+}
 
 .btn-navg{
     @include mixins.btn(variables.$clr-light-gray, variables.$ff-primary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-black);
@@ -44,6 +54,16 @@
     border-radius: 4.063rem;
     border: none;
     text-align: left;
+    @include media-queries.respond-to(media-queries.$phone) {
+        height: auto;
+    }
+}
+
+.margin-top-card{
+    margin-left: 3rem;
+    @include media-queries.respond-to(media-queries.$phone) {
+        margin-left: 0;
+    }
 }
 
 .card-style{
@@ -61,6 +81,13 @@
     border-top-right-radius: 0%;
     border-bottom-left-radius: 4.063rem;
     border-top-left-radius:4.063rem;
+    @include media-queries.respond-to(media-queries.$phone) {
+        height: auto;
+        border-bottom-right-radius: 0%;
+        border-top-right-radius: 4.063rem;
+        border-bottom-left-radius: 0%;
+        border-top-left-radius: 4.063rem;
+    }
 }
 
 .img-cards{
@@ -85,6 +112,12 @@
     @include mixins.btn(variables.$clr-red, variables.$ff-primary, variables.$fs-xlg, variables.$fw-bold, variables.$clr-white);
     height: 4.75rem;
     width: 35.625rem;
+    @include media-queries.respond-to(media-queries.$phone) {
+        font-size: variables.$fs-med;
+        height: auto;
+        width: 21.938rem;
+        padding: 0.5rem;
+    }
 }
 
 .badge-red{
@@ -165,8 +198,8 @@
 }
 
 .table-style{
-    background-color: variables.$clr-light-gray;
-    border-radius: 0.938rem;
+    background-color: variables.$clr-light-gray !important;
+    border-radius: 0.938rem !important;
     border: variables.$clr-red;
 }
 
@@ -181,4 +214,62 @@
     width: 29.5rem;
     height: 5.375rem;
     margin: auto;
+}
+
+//RESPONSIVE
+
+.offcanvas-header {
+    display: none;
+    @include media-queries.respond-to(media-queries.$phone) {
+        display: block;
+    }
+}
+
+//navbar media-queries
+
+@include media-queries.respond-to(media-queries.$phone) {
+
+    .bar-mb {
+        width: 100%;
+    }
+
+    .icon-mb {
+        width: 35%;
+        padding-bottom: 1.25rem;
+        padding-top: 1rem;
+        padding-left: 1rem;
+    }
+
+    .hide{
+        pointer-events: none;
+    }
+
+    .offcanvas-mb {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100%;
+        background-color: variables.$clr-white;
+        box-shadow: 0px 73px 99px #00000017;
+        z-index: 1;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        transform: translateX(-100%);
+        transition: transform .6s ease-in-out;
+    }
+
+    .show-mb-nav {
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .center-comp {
+        align-items: center;
+    }
+
+    .nav-sizer {
+        height: 50px;
+    }
 }

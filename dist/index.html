@@ -23,7 +23,7 @@
 
 <body>
 
-    <section id="app" class="container">
+    <section id="app" class="container p-0">
 
         <!-- Modal -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -124,9 +124,9 @@
 
                         <section class="row mb-5 ms-5 me-5">
 
-                            <div class="mb-2 col-md">
-                                <button type="button" class="btn-modal">Me gusta</button>
-                                <button type="button" class="btn-modal">Descargar</button>
+                            <div class="mb-2 col-md text-center">
+                                <button type="button" class="btn-modal d-inline-block">Me gusta</button>
+                                <button type="button" class="btn-modal d-inline-block ms-5">Descargar</button>
                             </div>
 
                         </section>
@@ -140,15 +140,16 @@
         </div>
         <!-- Modal -->
 
-        <header class="navbar1">
 
-            <nav class="navbar">
+        <header class="navbar1 bar-mb">
+
+            <nav class="navbar p-0">
                 <div class="container-fluid">
                     <div class="col-8">
-                        <a href="#"><img src="./images/logo.png" class="position-relative ms-5 "
+                        <a href="#"><img src="./images/logo.png" class="position-relative logo logo-mb"
                             alt="Graphic identifier"></a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 hide">
                         <a href="#"><img src="./images/user.png" class="position-relative position-relative mt-2 p-4 user imagen"
                         alt="Perfil"></a>
                     </div>
@@ -171,10 +172,17 @@
 
         </header>
 
+        <div class="position-absolute top-0 start-0 pt-3 pb-0 pt-0 ps-3">
+            <img class="icon-mb" src="./images/bars.svg" alt="menu bar">
+        </div>
+
         <!-- Navegación -->
         <div class="row mb-5">
 
             <nav id="navbar-main" class="navbar navbar-expand-lg offcanvas-mb">
+                <div class="offcanvas-header">  
+                    <button id="btn-close" class="btn btn-dark float-end me-3">X</button>
+                 </div>
 
                 <div class="container-fluid">
 
@@ -209,7 +217,7 @@
                     <div class="col-md-6">
                         <img src="./images/pic1.png" class="img-fluid img-style" alt="...">
                     </div>
-                    <div class="col-md-5 mt-2 ms-5">
+                    <div class="col-md-5 mt-2 margin-top-card">
                         <div class="card-body">
                             <h2 class="info-title mb-3">¡Despierta tu paladar!</h2>
                             <p class="info-desc">Descubre todo tipo de recetas, desde desayunos, almuerzos <br>y
@@ -343,6 +351,18 @@
     <!-- mounted -->
     <script>
         const mountedApp = app.mount("#app");
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+
+            document.querySelector('.icon-mb').addEventListener('click', function(event){
+                document.getElementById('navbar-main').classList.add('show-mb-nav');
+            });
+
+            document.querySelector('#btn-close').addEventListener('click', function(event){
+                document.getElementById('navbar-main').classList.remove('show-mb-nav');
+            });
+        });
     </script>
 
 

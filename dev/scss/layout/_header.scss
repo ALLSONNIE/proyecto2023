@@ -3,8 +3,10 @@
 
 .navbar1{
     width: auto;
-    height: 8rem;
     background-color: variables.$clr-red;
+    @include media-queries.respond-to(media-queries.$phone) {
+        padding: 0%;
+    }
 }
 
 .user{
