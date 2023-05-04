@@ -13434,6 +13434,11 @@ body {
   font-weight: 500;
   color: hsl(0deg, 0%, 0%);
 }
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .cards-title {
+    font-size: 1.813rem;
+  }
+}
 
 .cards-text {
   font-family: "IBM Plex Serif", serif;

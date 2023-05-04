@@ -24,6 +24,9 @@
 
 .cards-title{
     @include mixins.set-font(variables.$ff-secondary, variables.$fs-med, variables.$fw-medium, variables.$clr-black);
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        font-size: variables.$fs-sm;
+    }
 }
 
 .cards-text{

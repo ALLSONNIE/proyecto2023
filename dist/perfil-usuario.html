@@ -124,13 +124,31 @@
 
                         <div class="row mb-5 ms-5 me-5">
 
-                            <div class="mb-2 col-md">
-                                <button type="button" class="btn-modal">Me gusta</button>
-                                <button type="button" class="btn-modal">Descargar</button>
+                            <div class="mb-2 col-md text-center">
+                                <button type="button" class="btn-modal d-inline-block">Me gusta</button>
+                                <button type="button" class="btn-modal d-inline-block add-margin">Descargar</button>
                             </div>
 
                         </div>
 
+                    </div>
+                    <div class="row mt-5 justify-content-center">
+                        <p class="mt-5 mb-5 btn-badges">Recetas Relacionadas</p>
+                        <div class="row mt-5 mb-5">
+                            <div v-for="(item, index) in relatedRecipes" class="col-md-6 custom-col-modal mt-5">
+                                <div class="card card-style display-forms">
+                                    <img v-bind:src="item.image" class="img-cards img-resizer" alt="featured recipe">
+                                    <div class="card-body">
+                                        <h2 class="cards-title mb-1">{{ item.name }}</h2>
+                                        <p class="cards-text mb-1">{{ item.category }}</p>
+                                        <p class="cards-text mb-1">{{ item.ocassion }}</p>
+                                        <p class="cards-text mb-1">{{ item.level }}</p>
+                                        <button class="btn btn-view text-center mt-2" v-on:click="onClickViewRecipe(index)"
+                                            data-bs-toggle="modal" data-bs-target="#staticBackdrop">View Recipe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
