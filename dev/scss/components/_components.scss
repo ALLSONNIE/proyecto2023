@@ -151,6 +151,20 @@
 
 //registro receta-forms
 
+.display-forms{
+    display: flex;
+    @include media-queries.respond-to(media-queries.$phone) {
+        display: block;
+    }
+}
+
+.margin-user{
+    margin-left: 6rem;
+    @include media-queries.respond-to(media-queries.$phone) {
+        margin-left: 0;
+    }
+}
+
 .input-size{
     width: 29.5rem;
     height: 4.75rem;
@@ -158,6 +172,10 @@
     background-color: variables.$clr-white;
     border-color: variables.$clr-red;
     border-width: 0.188rem;
+    @include media-queries.respond-to(media-queries.$phone) {
+        width: auto;
+        height: auto;
+    }
 }
 
 .textarea-size{
@@ -177,6 +195,10 @@
 
 .spacer{
     margin-left: 7rem;
+    @include media-queries.respond-to(media-queries.$phone) {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
 }
 
 .img-fit{
@@ -213,8 +235,12 @@
 
 .users-img{
     width: 11.063rem;
-    margin-top: 5rem;
-    margin-left: 8rem;
+    margin-top: 4.5rem;
+    margin-left: 5rem;
+    @include media-queries.respond-to(media-queries.$phone) {
+        margin-top: 1rem;
+        margin-left: 4.3rem;
+    }
 }
 
 .custom-table{

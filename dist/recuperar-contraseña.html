@@ -94,7 +94,7 @@
 
                             <div class="mb-5 mt-3 margin-content title-medium text-center">
 
-                                <div class="form-group mt-5 d-flex">
+                                <div class="form-group display-forms">
                                     <label for="correo" class="col-md-4 d-flex space-register">Correo electrónico:</label>
                                     <div class="col-md-5">
                                         <input type="text" name="correo"
@@ -128,7 +128,7 @@
                                 alt="Graphic identifier"></a>
                     </div>
 
-                    <div class="col-md-2 ms-2 hide-mb hide-tab">
+                    <div class="col-md-2 hide-mb hide-tab">
                         <div class="row">
                             <p class="nav-link active footer-info">Secciones</p>
                             <div class="col p-0">
@@ -194,6 +194,18 @@
     <!-- mounted -->
     <script>
         const mountedApp = app.mount("#app");
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+
+            document.querySelector('.icon-mb').addEventListener('click', function(event){
+                document.getElementById('navbar-main').classList.add('show-mb-nav');
+            });
+
+            document.querySelector('#btn-close').addEventListener('click', function(event){
+                document.getElementById('navbar-main').classList.remove('show-mb-nav');
+            });
+        });
     </script>
 
 

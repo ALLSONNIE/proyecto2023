@@ -204,21 +204,21 @@
                         <div class="col-md-3">
                             <img src="./images/user-black.png" class="img-fluid users-img" alt="...">
                         </div>
-                        <div class="col-md-7 mt-2 ms-5">
-                            <div class="card-body">
-                                <div class="row margin-content margin-right ms-5 me-5">
+                        <div class="col-md-7 mt-2">
+                            <div class="card-body p-0 m-auto">
+                                <div class="margin-user">
     
                                     <div class="mb-2 col-md">
-                                        <p class="d-flex users-titles mb-0">Nombre del usuario:</p>
+                                        <p class="users-titles mb-0">Nombre del usuario:</p>
                                         <p class="users-info mt-0">Allison Benavides Sánchez</p>
                                     </div>
         
                                 </div>
         
-                                <div class="row margin-content margin-right ms-5 me-5">
+                                <div class="margin-user">
         
                                     <div class="mb-2 col-md">
-                                        <p class="d-flex users-titles mb-0">Accesos permitidos al sistema:</p>
+                                        <p class="users-titles mb-0">Accesos permitidos al sistema:</p>
                                         <p class="users-info mt-0">Página principal y perfil</p>
                                     </div>
         
@@ -261,7 +261,7 @@
                                 alt="Graphic identifier"></a>
                     </div>
 
-                    <div class="col-md-2 ms-2 hide-mb hide-tab">
+                    <div class="col-md-2 hide-mb hide-tab">
                         <div class="row">
                             <p class="nav-link active footer-info">Secciones</p>
                             <div class="col p-0">
@@ -327,6 +327,18 @@
     <!-- mounted -->
     <script>
         const mountedApp = app.mount("#app");
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+
+            document.querySelector('.icon-mb').addEventListener('click', function(event){
+                document.getElementById('navbar-main').classList.add('show-mb-nav');
+            });
+
+            document.querySelector('#btn-close').addEventListener('click', function(event){
+                document.getElementById('navbar-main').classList.remove('show-mb-nav');
+            });
+        });
     </script>
 
 

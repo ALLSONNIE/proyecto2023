@@ -38,6 +38,8 @@
     @include mixins.set-font(variables.$ff-primary, variables.$fs-med, variables.$fw-regular, variables.$clr-dark-gray);
     @include media-queries.respond-to(media-queries.$phone) {
         font-size: variables.$fs-xsm;
+        width: 18.2rem !important;
+        margin-right: 11rem;
     }
 }
 
@@ -60,14 +62,22 @@
     width: 40rem;
     text-align: left;
     margin-top: 0.5rem;
+    @include media-queries.respond-to(media-queries.$phone) {
+        width: 21.25rem;
+        font-size: variables.$fs-sm;
+    }
 }
 
 .users-info{
     @include mixins.set-font(variables.$ff-secondary, variables.$fs-lg, variables.$fw-regular, variables.$clr-black);
-    width: auto;
+    width: 40rem;
     text-align: left;
     margin-top: 0.5rem;
     background-color: transparent;
+    @include media-queries.respond-to(media-queries.$phone) {
+        width: 21.25rem;
+        font-size: variables.$fs-xsm;
+    }
 }
 
 .custom-style{

@@ -13456,6 +13456,8 @@ body {
 @media only screen and (max-width: 480px) {
   .box-register {
     font-size: 1.5rem;
+    width: 18.2rem !important;
+    margin-right: 11rem;
   }
 }
 
@@ -13488,16 +13490,28 @@ body {
   text-align: left;
   margin-top: 0.5rem;
 }
+@media only screen and (max-width: 480px) {
+  .users-titles {
+    width: 21.25rem;
+    font-size: 1.813rem;
+  }
+}
 
 .users-info {
   font-family: "IBM Plex Serif", serif;
   font-size: 2.25rem;
   font-weight: 400;
   color: hsl(0deg, 0%, 0%);
-  width: auto;
+  width: 40rem;
   text-align: left;
   margin-top: 0.5rem;
   background-color: transparent;
+}
+@media only screen and (max-width: 480px) {
+  .users-info {
+    width: 21.25rem;
+    font-size: 1.5rem;
+  }
 }
 
 .custom-style {
@@ -13720,6 +13734,26 @@ body {
   width: 81.006rem;
 }
 
+.display-forms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media only screen and (max-width: 480px) {
+  .display-forms {
+    display: block;
+  }
+}
+
+.margin-user {
+  margin-left: 6rem;
+}
+@media only screen and (max-width: 480px) {
+  .margin-user {
+    margin-left: 0;
+  }
+}
+
 .input-size {
   width: 29.5rem;
   height: 4.75rem;
@@ -13727,6 +13761,12 @@ body {
   background-color: hsl(0deg, 0%, 100%);
   border-color: hsl(355deg, 78%, 60%);
   border-width: 0.188rem;
+}
+@media only screen and (max-width: 480px) {
+  .input-size {
+    width: auto;
+    height: auto;
+  }
 }
 
 .textarea-size {
@@ -13756,6 +13796,12 @@ body {
 
 .spacer {
   margin-left: 7rem;
+}
+@media only screen and (max-width: 480px) {
+  .spacer {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
 }
 
 .img-fit {
@@ -13806,8 +13852,14 @@ body {
 
 .users-img {
   width: 11.063rem;
-  margin-top: 5rem;
-  margin-left: 8rem;
+  margin-top: 4.5rem;
+  margin-left: 5rem;
+}
+@media only screen and (max-width: 480px) {
+  .users-img {
+    margin-top: 1rem;
+    margin-left: 4.3rem;
+  }
 }
 
 .custom-table {

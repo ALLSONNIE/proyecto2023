@@ -95,7 +95,7 @@
 
                             <div class="mb-5 mt-3 margin-content title-medium text-center">
 
-                                <div class="form-group mt-5 d-flex">
+                                <div class="form-group display-forms">
                                     <label for="nombre-receta" class="col-md-4 d-flex space-register">Nombre de la receta:</label>
                                     <div class="col-md-5">
                                         <input type="text" name="nombre-receta"
@@ -104,7 +104,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group mt-5 d-flex">
+                                <div class="form-group mt-5 display-forms">
                                     <label for="tiempo-prep" class="col-md-4 d-flex space-register">Tiempo de preparación:</label>
                                     <div class="col-md-5">
                                         <input type="text" name="tiempo-prep"
@@ -113,7 +113,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group mt-5 d-flex">
+                                <div class="form-group mt-5 display-forms">
                                     <label for="tiempo-coccion" class="col-md-4 d-flex space-register">Tiempo de la cocción:</label>
                                     <div class="col-md-5">
                                         <input type="text" name="tiempo-coccion"
@@ -122,7 +122,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group mt-5 d-flex">
+                                <div class="form-group mt-5 display-forms">
                                     <label for="tiempo-total" class="col-md-4 d-flex space-register">Tiempo total de receta:</label>
                                     <div class="col-md-5">
                                         <input type="text" name="tiempo-total"
@@ -131,7 +131,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group mt-5 d-flex">
+                                <div class="form-group mt-5 display-forms">
                                     <label for="porciones" class="col-md-4 d-flex space-register">Porciones de la receta:</label>
                                     <div class="col-md-5">
                                         <input type="text" name="porciones"
@@ -140,14 +140,14 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group margin-right mt-5 mb-5 d-flex">
+                                <div class="form-group margin-right mt-5 mb-5 display-forms">
                                     <label for="nivel" class="col-md-4 d-flex space-register">Nivel de complejidad:</label>
                                     <select name="nivel"
                                         class="form-control-lg input-size box-register spacer col-md-5" id="nivel" placeholder="Fácil...   ">
                                     </select>
                                 </div>
 
-                                <div class="form-group margin-right mt-5 mb-5 d-flex">
+                                <div class="form-group margin-right mt-5 mb-5 display-forms">
                                     <label for="categoria" class="col-md-4 d-flex space-register">Categoría de la receta:</label>
                                     <select name="categoria"
                                         class="form-control-lg input-size box-register spacer col-md-5"
@@ -155,28 +155,28 @@
                                     </select>
                                 </div>
 
-                                <div class="form-group margin-right mt-5 mb-5 d-flex">
+                                <div class="form-group margin-right mt-5 mb-5 display-forms">
                                     <label for="ocasion" class="col-md-4 d-flex space-register">Ocasión de la receta:</label>
                                     <select name="ocasion"
                                         class="form-control-lg input-size box-register spacer col-md-5" id="ocasion" placeholder="Todas...   ">
                                     </select>
                                 </div>
 
-                                <div class="form-group margin-right mt-5 mb-4 d-flex">
+                                <div class="form-group margin-right mt-5 mb-4 display-forms">
                                     <label for="descripcion" class="col-md-4 d-flex space-register">Descripción de receta:</label>
                                     <textarea name="descripcion"
                                         class="form-control textarea-size box-register spacer col-md-5"
                                         rows="5" id="descripcion" placeholder="Descripción...   "></textarea>
                                 </div>
 
-                                <div class="form-group margin-right mt-5 mb-4 d-flex">
+                                <div class="form-group margin-right mt-5 mb-4 display-forms">
                                     <label for="ingredientes" class="col-md-4 d-flex space-register">Ingredientes de receta:</label>
                                     <textarea name="ingredientes"
                                         class="form-control textarea-size box-register spacer col-md-5"
                                         rows="5" id="ingredientes" placeholder="Ingredientes...   "></textarea>
                                 </div>
 
-                                <div class="form-group margin-right mt-5 mb-4 d-flex">
+                                <div class="form-group margin-right mt-5 mb-4 display-forms">
                                     <label for="pasos" class="col-md-4 d-flex space-register">Instrucciones receta:</label>
                                     <textarea name="pasos"
                                         class="form-control textarea-size box-register spacer col-md-5"
@@ -185,18 +185,17 @@
 
                             </div>
 
-                            <div class="custom-file title-medium mb-5 d-flex margin-content">
+                            <div class="custom-file title-medium mb-5 display-forms margin-content">
                                 <label class="custom-file-label col-md-4 d-flex space-register" for="recipe_img">Seleccionar foto</label>
                                 <input type="image" src="./images/up-loading.png" name="recipe_img" class="form-control textarea-size box-register spacer col-md-5" id="recipe_img">
                             </div>
-
-
-                            <input type="submit" class="btn-add d-inline-block mt-5 mb-5" value="Agregar receta">
 
                     </div>
                 </div>
             </div>
 
+            <input type="submit" class="btn-add mt-5 mb-5" value="Agregar receta">
+            
         </div>
         <!--  Registrar receta end -->
 
@@ -214,7 +213,7 @@
                                 alt="Graphic identifier"></a>
                     </div>
 
-                    <div class="col-md-2 ms-2 hide-mb hide-tab">
+                    <div class="col-md-2 hide-mb hide-tab">
                         <div class="row">
                             <p class="nav-link active footer-info">Secciones</p>
                             <div class="col p-0">
@@ -281,7 +280,18 @@
     <script>
         const mountedApp = app.mount("#app");
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
 
+            document.querySelector('.icon-mb').addEventListener('click', function(event){
+                document.getElementById('navbar-main').classList.add('show-mb-nav');
+            });
+
+            document.querySelector('#btn-close').addEventListener('click', function(event){
+                document.getElementById('navbar-main').classList.remove('show-mb-nav');
+            });
+        });
+    </script>
 
 </body>
 
