@@ -19,6 +19,9 @@
     text-align: left;
     @include media-queries.respond-to(media-queries.$phone) {
         height: auto;
+        text-align: center;
+        margin: auto;
+        margin-top: 1rem;
     }
 }
 
@@ -36,6 +39,8 @@
     text-decoration: none;
     @include media-queries.respond-to(media-queries.$phone) {
         height: auto;
+        text-align: center;
+        margin: auto;
     }
 }
 
@@ -55,4 +60,21 @@
 
 .margin-plus{
     margin-top: 10rem;
+}
+
+.margin-footer{
+    margin-left: 3rem !important;
+    @include media-queries.respond-to(media-queries.$phone) {
+        margin-left: 0 !important;
+    }
+}
+
+@include media-queries.respond-to(media-queries.$phone) {
+    .text-start{
+        text-align: center !important;
+    }
+
+    .icon-move{
+        align-items: center;
+    }
 }

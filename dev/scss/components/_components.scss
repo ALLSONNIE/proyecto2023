@@ -17,6 +17,12 @@
     @include mixins.btn(variables.$clr-light-gray, variables.$ff-primary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-black);
     width: 11.063rem;
     height: 3.438rem;
+    @include media-queries.respond-to(media-queries.$phone) {
+        width: 9rem;
+        height: 3.438rem;
+        margin-top: 1rem;
+        margin-left: 0;
+    }
 }
 
 .btn-search{
@@ -43,6 +49,10 @@
     border-bottom-left-radius: 0.938rem;
     border-top-left-radius:0.938rem;
     border: none;
+    @include media-queries.respond-to(media-queries.$phone) {
+        width: 12rem;
+        height: 3.438rem;
+    }
 }
 
 //cards' style and components
@@ -183,6 +193,9 @@
 
 .spacer-modal{
     margin-left: 6rem;
+    @include media-queries.respond-to(media-queries.$phone) {
+        margin-left: 0;
+    }
 }
 
 .btn-modal{
@@ -191,16 +204,27 @@
     height: 4rem;
 }
 
+.add-margin{
+    margin-left: 10rem;
+    @include media-queries.respond-to(media-queries.$phone) {
+        margin-left: 0;
+    }
+}
+
 .users-img{
     width: 11.063rem;
     margin-top: 5rem;
     margin-left: 8rem;
 }
 
-.table-style{
+.custom-table{
     background-color: variables.$clr-light-gray !important;
-    border-radius: 0.938rem !important;
+    border-radius: 0.938rem;
     border: variables.$clr-red;
+}
+
+table{
+    background-color: blue !important;
 }
 
 .btn-register{
@@ -214,6 +238,16 @@
     width: 29.5rem;
     height: 5.375rem;
     margin: auto;
+    @include media-queries.respond-to(media-queries.$phone) {
+        font-size: variables.$fs-sm;
+    }
+}
+
+.cancel-margin{
+    margin-left: 3rem;
+    @include media-queries.respond-to(media-queries.$phone) {
+        margin-left: 0;
+    }
 }
 
 //RESPONSIVE
@@ -271,5 +305,14 @@
 
     .nav-sizer {
         height: 50px;
+    }
+
+    .margin-card-mb{
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+
+    .margin-bcard-mb{
+        padding: 0;
     }
 }

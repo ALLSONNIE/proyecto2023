@@ -25,56 +25,41 @@
 
 <body>
 
-    <section id="app" class="container">
+    <section id="app" class="container p-0">
 
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">{{ recipes[selectedIndex].name }}</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img class="d-block m-auto img-fluid" v-bind:src="recipes[selectedIndex].image"
-                            alt="{{ recipes[selectedIndex].name }}">
-                        <p class="text-center f-6">{{ recipes[selectedIndex].category }}</p>
-                        <p class="fst-italic fw-light fs-5">{{ recipes[selectedIndex].description }}</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal -->
 
-        <header class="navbar1">
+        <header class="navbar1 bar-mb">
 
-            <nav class="navbar">
+            <nav class="navbar p-0">
                 <div class="container-fluid">
                     <div class="col-8">
-                        <a href="#"><img src="./images/logo.png" class="position-relative ms-5 "
-                                alt="Graphic identifier"></a>
+                        <a href="#"><img src="./images/logo.png" class="position-relative logo logo-mb"
+                            alt="Graphic identifier"></a>
                     </div>
-                    <div class="col-4">
-                        <a href="#"><img src="./images/user.png"
-                                class="position-relative position-relative mt-2 p-4 user imagen" alt="Perfil"></a>
+                    <div class="col-4 hide">
+                        <a href="#"><img src="./images/user.png" class="position-relative position-relative mt-2 p-4 user imagen"
+                        alt="Perfil"></a>
                     </div>
                 </div>
             </nav>
 
         </header>
 
+        <div class="position-absolute top-0 start-0 pt-3 pb-0 pt-0 ps-3">
+            <img class="icon-mb" src="./images/bars.svg" alt="menu bar">
+        </div>
+
         <!-- Navegación -->
         <div class="row mb-5">
 
             <nav id="navbar-main" class="navbar navbar-expand-lg offcanvas-mb">
+                <div class="offcanvas-header">  
+                    <button id="btn-close" class="btn btn-dark float-end me-3">X</button>
+                 </div>
 
                 <div class="container-fluid">
 
-                    <ul class="navbar-nav me-auto mb-2 mt-3 mb-lg-0 ms-5">
+                    <ul class="navbar-nav me-auto mb-2 mt-3 mb-lg-0 cancel-margin">
                         <li class="nav-item me-3">
                             <a class="nav-link btn-navg" aria-current="page" href="#">Categorías</a>
                         </li>
@@ -86,7 +71,7 @@
                         </li>
                     </ul>
 
-                    <form class="d-flex mt-3 mx-5 mt-2" role="search">
+                    <form class="d-flex mt-3 me-5 mt-2" role="search">
                         <input class="form-control s-bar" type="search" placeholder="Buscar..." aria-label="Search">
                         <button class="btn btn-search search-button-height mb-1" type="submit"><img
                                 src="./images/lupa.png" class="mt-0" alt="Lense"></button>
@@ -100,8 +85,8 @@
         <!-- Navegación -->
 
         <!--  Registrar receta -->
-        <section class="row mt-5 justify-content-center ps-5 pe-5">
-            <p class="mt-5 mb-5 btn-badges">Registrar receta</hp>
+        <div class="row mt-5 justify-content-center ps-5 pe-5">
+            <p class="mt-5 mb-5 btn-badges">Registrar receta</p>
             <div class="card card-style mt-5">
                 <div class="card-body m-auto">
                     <div class="row align-menu text-center mt-4 d-flex">
@@ -212,7 +197,7 @@
                 </div>
             </div>
 
-        </section>
+        </div>
         <!--  Registrar receta end -->
 
 
@@ -220,12 +205,12 @@
 
 
         <!--Footer-->
-        <footer class="row text-center ending-bar margin-plus">
+        <footer class="row mt-5 text-center ending-bar">
 
             <div class="mt-5 ms-xl-5">
                 <div class="row row-move">
-                    <div class="col-md-4 mb-5 d-flex justify-content-between align-items-center ms-2">
-                        <a href="#"><img src="./images/logo.png" class="position-relative mt-4 ms-5"
+                    <div class="col-md-4 mb-5 d-flex justify-content-center align-items-center">
+                        <a href="#"><img src="./images/logo.png" class="position-relative mt-4 margin-footer icon-move"
                                 alt="Graphic identifier"></a>
                     </div>
 
@@ -244,7 +229,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-2 ms-5 hide-mb hide-tab">
+                    <div class="col-md-2 margin-footer hide-mb hide-tab">
                         <div class="row">
                             <p class="nav-link active footer-info">Social</p>
                             <div class="col p-0">
@@ -266,7 +251,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-2 ms-5 hide-mb hide-tab">
+                    <div class="col-md-2 margin-footer hide-mb hide-tab">
                         <div class="row">
                             <p class="nav-link active footer-info">Acerca de <br>nosotros</p>
                             <div class="col p-0">

@@ -13441,12 +13441,22 @@ body {
   width: 23.375rem;
   margin-top: 0.5rem;
 }
+@media only screen and (max-width: 480px) {
+  .space-register {
+    font-size: 1.5rem;
+  }
+}
 
 .box-register {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 2rem;
   font-weight: 400;
   color: hsl(0deg, 0%, 34%);
+}
+@media only screen and (max-width: 480px) {
+  .box-register {
+    font-size: 1.5rem;
+  }
 }
 
 .modal-titles {
@@ -13490,7 +13500,7 @@ body {
   background-color: transparent;
 }
 
-.table-info {
+.custom-style {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 1.813rem;
   font-weight: 500;
@@ -13531,6 +13541,14 @@ body {
   color: hsl(0deg, 0%, 0%);
   width: 11.063rem;
   height: 3.438rem;
+}
+@media only screen and (max-width: 480px) {
+  .btn-navg {
+    width: 9rem;
+    height: 3.438rem;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
 }
 
 .btn-search {
@@ -13577,6 +13595,12 @@ body {
   border-bottom-left-radius: 0.938rem;
   border-top-left-radius: 0.938rem;
   border: none;
+}
+@media only screen and (max-width: 480px) {
+  .s-bar {
+    width: 12rem;
+    height: 3.438rem;
+  }
 }
 
 .top-card-style {
@@ -13749,6 +13773,11 @@ body {
 .spacer-modal {
   margin-left: 6rem;
 }
+@media only screen and (max-width: 480px) {
+  .spacer-modal {
+    margin-left: 0;
+  }
+}
 
 .btn-modal {
   position: relative;
@@ -13766,16 +13795,29 @@ body {
   height: 4rem;
 }
 
+.add-margin {
+  margin-left: 10rem;
+}
+@media only screen and (max-width: 480px) {
+  .add-margin {
+    margin-left: 0;
+  }
+}
+
 .users-img {
   width: 11.063rem;
   margin-top: 5rem;
   margin-left: 8rem;
 }
 
-.table-style {
+.custom-table {
   background-color: hsl(0deg, 0%, 93%) !important;
-  border-radius: 0.938rem !important;
+  border-radius: 0.938rem;
   border: hsl(355deg, 78%, 60%);
+}
+
+table {
+  background-color: blue !important;
 }
 
 .btn-register {
@@ -13809,6 +13851,20 @@ body {
   width: 29.5rem;
   height: 5.375rem;
   margin: auto;
+}
+@media only screen and (max-width: 480px) {
+  .btn-sign {
+    font-size: 1.813rem;
+  }
+}
+
+.cancel-margin {
+  margin-left: 3rem;
+}
+@media only screen and (max-width: 480px) {
+  .cancel-margin {
+    margin-left: 0;
+  }
 }
 
 .offcanvas-header {
@@ -13866,6 +13922,13 @@ body {
   .nav-sizer {
     height: 50px;
   }
+  .margin-card-mb {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+  .margin-bcard-mb {
+    padding: 0;
+  }
 }
 .ending-bar {
   width: auto;
@@ -13890,6 +13953,9 @@ body {
 @media only screen and (max-width: 480px) {
   .footer-info {
     height: auto;
+    text-align: center;
+    margin: auto;
+    margin-top: 1rem;
   }
 }
 
@@ -13912,6 +13978,8 @@ body {
 @media only screen and (max-width: 480px) {
   .footer-text {
     height: auto;
+    text-align: center;
+    margin: auto;
   }
 }
 
@@ -13933,6 +14001,25 @@ body {
   margin-top: 10rem;
 }
 
+.margin-footer {
+  margin-left: 3rem !important;
+}
+@media only screen and (max-width: 480px) {
+  .margin-footer {
+    margin-left: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .text-start {
+    text-align: center !important;
+  }
+  .icon-move {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .navbar1 {
   width: auto;
   background-color: hsl(355deg, 78%, 60%);

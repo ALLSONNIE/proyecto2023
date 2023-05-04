@@ -23,7 +23,7 @@
 
 <body>
 
-    <section id="app" class="container">
+    <section id="app" class="container p-0">
 
         <!-- Modal -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -39,7 +39,7 @@
                         <img class="d-flex m-auto img-fluid img-modal" v-bind:src="recipes[selectedIndex].image" alt="{{ recipes[selectedIndex].name }}">
                         
 
-                        <section class="row mt-5 margin-content margin-right ms-5">
+                        <div class="row mt-5 margin-content margin-right ms-5">
 
                             <div class="mb-2 col-md">
                                 <p class="col-md-6 d-flex modal-titles mb-0">Tiempo de preparación:</p>
@@ -51,9 +51,9 @@
                                 <p class="modal-info mt-0">{{ recipes[selectedIndex].cooktime }}</p>
                             </div>
 
-                        </section>
+                        </div>
 
-                        <section class="row margin-content margin-right ms-5">
+                        <div class="row margin-content margin-right ms-5">
 
                             <div class="mb-2 col-md">
                                 <p class="col-md-6 d-flex modal-titles mb-0">Tiempo total de receta:</p>
@@ -65,9 +65,9 @@
                                 <p class="modal-info mt-0">{{ recipes[selectedIndex].portions }}</p>
                             </div>
 
-                        </section>
+                        </div>
 
-                        <section class="row margin-content margin-right ms-5">
+                        <div class="row margin-content margin-right ms-5">
 
                             <div class="mb-2 col-md">
                                 <p class="col-md-6 d-flex modal-titles mb-0">Categoría de la receta:</p>
@@ -79,9 +79,9 @@
                                 <p class="modal-info mt-0">{{ recipes[selectedIndex].occasion }}</p>
                             </div>
 
-                        </section>
+                        </div>
 
-                        <section class="row margin-content margin-right ms-5">
+                        <div class="row margin-content margin-right ms-5">
 
                             <div class="mb-2 col-md">
                                 <p class="col-md-6 d-flex modal-titles mb-0">Nivel de complejidad:</p>
@@ -93,43 +93,43 @@
                                 <p class="modal-info mt-0">{{ recipes[selectedIndex].likes }}</p>
                             </div>
 
-                        </section>
+                        </div>
 
-                        <section class="row margin-content margin-right ms-5 me-5">
+                        <div class="row margin-content margin-right ms-5 me-5">
 
                             <div class="mb-2 col-md">
                                 <p class="col-md-12 d-flex modal-titles mb-0">Descripción:</p>
                                 <p class="modal-info mt-0">{{ recipes[selectedIndex].description }}</p>
                             </div>
 
-                        </section>
+                        </div>
 
-                        <section class="row margin-content margin-right ms-5 me-5">
+                        <div class="row margin-content margin-right ms-5 me-5">
 
                             <div class="mb-2 col-md">
                                 <p class="col-md-12 d-flex modal-titles mb-0">Ingredientes:</p>
                                 <p class="modal-info mt-0">{{ recipes[selectedIndex].ingredients }}</p>
                             </div>
 
-                        </section>
+                        </div>
 
-                        <section class="row mb-5 margin-content margin-right ms-5 me-5">
+                        <div class="row mb-5 margin-content margin-right ms-5 me-5">
 
                             <div class="mb-2 col-md">
                                 <p class="col-md-12 d-flex modal-titles mb-0">Instrucciones:</p>
                                 <p class="modal-info mt-0">{{ recipes[selectedIndex].steps }}</p>
                             </div>
 
-                        </section>
+                        </div>
 
-                        <section class="row mb-5 ms-5 me-5">
+                        <div class="row mb-5 ms-5 me-5">
 
                             <div class="mb-2 col-md">
                                 <button type="button" class="btn-modal">Me gusta</button>
                                 <button type="button" class="btn-modal">Descargar</button>
                             </div>
 
-                        </section>
+                        </div>
 
                     </div>
                     <div class="modal-footer">
@@ -140,15 +140,15 @@
         </div>
         <!-- Modal -->
 
-        <header class="navbar1">
+        <header class="navbar1 bar-mb">
 
-            <nav class="navbar">
+            <nav class="navbar p-0">
                 <div class="container-fluid">
                     <div class="col-8">
-                        <a href="#"><img src="./images/logo.png" class="position-relative ms-5 "
+                        <a href="#"><img src="./images/logo.png" class="position-relative logo logo-mb"
                             alt="Graphic identifier"></a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 hide">
                         <a href="#"><img src="./images/user.png" class="position-relative position-relative mt-2 p-4 user imagen"
                         alt="Perfil"></a>
                     </div>
@@ -157,14 +157,21 @@
 
         </header>
 
+        <div class="position-absolute top-0 start-0 pt-3 pb-0 pt-0 ps-3">
+            <img class="icon-mb" src="./images/bars.svg" alt="menu bar">
+        </div>
+
         <!-- Navegación -->
         <div class="row mb-5">
 
             <nav id="navbar-main" class="navbar navbar-expand-lg offcanvas-mb">
+                <div class="offcanvas-header">  
+                    <button id="btn-close" class="btn btn-dark float-end me-3">X</button>
+                 </div>
 
                 <div class="container-fluid">
 
-                    <ul class="navbar-nav me-auto mb-2 mt-3 mb-lg-0 ms-5">
+                    <ul class="navbar-nav me-auto mb-2 mt-3 mb-lg-0 cancel-margin">
                         <li class="nav-item me-3">
                             <a class="nav-link btn-navg" aria-current="page" href="#">Categorías</a>
                         </li>
@@ -176,7 +183,7 @@
                         </li>
                     </ul>
 
-                    <form class="d-flex mt-3 mx-5 mt-2" role="search">
+                    <form class="d-flex mt-3 me-5 mt-2" role="search">
                         <input class="form-control s-bar" type="search" placeholder="Buscar..." aria-label="Search">
                         <button class="btn btn-search search-button-height mb-1" type="submit"><img
                                 src="./images/lupa.png" class="mt-0" alt="Lense"></button>
@@ -189,8 +196,7 @@
         </div>
         <!-- Navegación -->
 
-
-        <section class="row mt-5 justify-content-center ps-5 pe-5">
+        <div class="row mt-5 justify-content-center ps-5 pe-5">
             <p class="mt-5 mb-5 btn-badges">Perfil de Usuario</p>
             <div class="card card-style mt-5 mb-5">
                 <div class="card-body m-auto">
@@ -200,35 +206,35 @@
                         </div>
                         <div class="col-md-7 mt-2 ms-5">
                             <div class="card-body">
-                                <section class="row margin-content margin-right ms-5 me-5">
+                                <div class="row margin-content margin-right ms-5 me-5">
     
                                     <div class="mb-2 col-md">
                                         <p class="d-flex users-titles mb-0">Nombre del usuario:</p>
                                         <p class="users-info mt-0">Allison Benavides Sánchez</p>
                                     </div>
         
-                                </section>
+                                </div>
         
-                                <section class="row margin-content margin-right ms-5 me-5">
+                                <div class="row margin-content margin-right ms-5 me-5">
         
                                     <div class="mb-2 col-md">
                                         <p class="d-flex users-titles mb-0">Accesos permitidos al sistema:</p>
                                         <p class="users-info mt-0">Página principal y perfil</p>
                                     </div>
         
-                                </section>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-        </section>
+        </div>
 
-        <section class="row mt-5 justify-content-center">
+        <div class="row mt-5 justify-content-center">
             <p class="mt-5 mb-5 btn-badges">Recetas Coleccionadas</p>
-            <section class="row mt-5 mb-5">
-                <div v-for="(item, index) in relatedRecipes" class="col-md-4 p-5">
+            <div class="row mt-5 mb-5">
+                <div v-for="(item, index) in colectedRecipes" class="col-md-4 p-5">
                     <div class="d-flex card card-style">
                         <img v-bind:src="item.image" class="img-cards" alt="featured recipe">
                         <div class="card-body">
@@ -241,8 +247,8 @@
                         </div>
                     </div>
                 </div>
-            </section>
-        </section>
+            </div>
+        </div>
 
 
         <!--Footer-->
@@ -250,8 +256,8 @@
 
             <div class="mt-5 ms-xl-5">
                 <div class="row row-move">
-                    <div class="col-md-4 mb-5 d-flex justify-content-between align-items-center ms-2">
-                        <a href="#"><img src="./images/logo.png" class="position-relative mt-4 ms-5"
+                    <div class="col-md-4 mb-5 d-flex justify-content-center align-items-center">
+                        <a href="#"><img src="./images/logo.png" class="position-relative mt-4 margin-footer icon-move"
                                 alt="Graphic identifier"></a>
                     </div>
 
@@ -270,7 +276,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-2 ms-5 hide-mb hide-tab">
+                    <div class="col-md-2 margin-footer hide-mb hide-tab">
                         <div class="row">
                             <p class="nav-link active footer-info">Social</p>
                             <div class="col p-0">
@@ -292,7 +298,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-2 ms-5 hide-mb hide-tab">
+                    <div class="col-md-2 margin-footer hide-mb hide-tab">
                         <div class="row">
                             <p class="nav-link active footer-info">Acerca de <br>nosotros</p>
                             <div class="col p-0">
