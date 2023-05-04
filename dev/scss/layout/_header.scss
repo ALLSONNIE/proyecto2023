@@ -7,6 +7,9 @@
     @include media-queries.respond-to(media-queries.$phone) {
         padding: 0%;
     }
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        padding: 0%;
+    }
 }
 
 .user{

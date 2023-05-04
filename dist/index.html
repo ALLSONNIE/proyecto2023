@@ -135,9 +135,9 @@
                     <div class="row mt-5 justify-content-center">
                         <p class="mt-5 mb-5 btn-badges">Recetas Relacionadas</p>
                         <div class="row mt-5 mb-5">
-                            <div v-for="(item, index) in relatedRecipes" class="col-md-6 mt-5">
-                                <div class="d-flex card card-style">
-                                    <img v-bind:src="item.image" class="img-cards" alt="featured recipe">
+                            <div v-for="(item, index) in relatedRecipes" class="col-md-6 custom-col-modal mt-5">
+                                <div class="card card-style display-forms">
+                                    <img v-bind:src="item.image" class="img-cards img-resizer" alt="featured recipe">
                                     <div class="card-body">
                                         <h2 class="cards-title mb-1">{{ item.name }}</h2>
                                         <p class="cards-text mb-1">{{ item.category }}</p>
@@ -159,7 +159,7 @@
         <!-- Modal -->
 
 
-        <header class="navbar1 bar-mb">
+        <header class="container-fluid navbar1 bar-mb">
 
             <nav class="navbar p-0">
                 <div class="container-fluid">
@@ -176,7 +176,7 @@
 
         </header>
 
-        <div class="position-absolute top-0 start-0 pt-3 pb-0 pt-0 ps-3">
+        <div class="position-absolute top-0 start-0 pt-3 pb-0 pt-0 ps-3 margin-header">
             <img class="icon-mb" src="./images/bars.svg" alt="menu bar">
         </div>
 
@@ -218,10 +218,10 @@
         <div class="ps-5 pe-5 margin-card-mb">
             <div class="card top-card-style mb-5">
                 <div class="row g-0">
-                    <div class="col-md-6">
+                    <div class="col-md-6 custom-col">
                         <img src="./images/pic1.png" class="img-fluid img-style" alt="...">
                     </div>
-                    <div class="col-md-5 mt-2 margin-top-card">
+                    <div class="col-md-5 custom-col mt-2 margin-top-card">
                         <div class="card-body">
                             <h2 class="info-title mb-3">¡Despierta tu paladar!</h2>
                             <p class="info-desc">Descubre todo tipo de recetas, desde desayunos, almuerzos <br>y
@@ -237,7 +237,7 @@
             <p class="mt-5 btn-badges">Mejores Recetas</p>
 
             <div class="row mt-5">
-                <div v-for="(item, index) in recipes" class="col-md-4 p-5">
+                <div v-for="(item, index) in recipes" class="col-md-4 p-cards">
                     <div class="d-flex card card-style">
                         <img v-bind:src="item.image" class="img-cards" alt="featured recipe">
                         <div class="card-body">
@@ -258,7 +258,7 @@
             <p class="mt-5 btn-badges">Lo más nuevo</p>
 
             <div class="row mt-5">
-                <div v-for="(item, index) in recipes" class="col-md-4 p-5">
+                <div v-for="(item, index) in recipes" class="col-md-4 p-cards">
                     <div class="d-flex card card-style">
                         <img v-bind:src="item.image" class="img-cards" alt="featured recipe">
                         <div class="card-body">
@@ -284,7 +284,7 @@
 
             <div class="mt-5 ms-xl-5">
                 <div class="row row-move">
-                    <div class="col-md-4 mb-5 d-flex justify-content-center align-items-center">
+                    <div class="col-md-4  footer-icon mb-5 d-flex justify-content-center align-items-center">
                         <a href="#"><img src="./images/logo.png" class="position-relative mt-4 margin-footer icon-move"
                                 alt="Graphic identifier"></a>
                     </div>

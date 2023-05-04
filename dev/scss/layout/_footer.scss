@@ -12,12 +12,22 @@
     @include media-queries.respond-to(media-queries.$phone) {
         height: auto;
     }
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        height: auto;
+    }
 }
 
 .footer-info{
     @include mixins.set-font(variables.$ff-primary, variables.$fs-sm, variables.$fw-bold, variables.$clr-white);
     text-align: left;
     @include media-queries.respond-to(media-queries.$phone) {
+        height: auto;
+        text-align: center;
+        margin: auto;
+        margin-top: 1rem;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        font-size: variables.$fs-xsm;
         height: auto;
         text-align: center;
         margin: auto;
@@ -38,6 +48,11 @@
     text-align: left;
     text-decoration: none;
     @include media-queries.respond-to(media-queries.$phone) {
+        height: auto;
+        text-align: center;
+        margin: auto;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
         height: auto;
         text-align: center;
         margin: auto;
@@ -67,6 +82,9 @@
     @include media-queries.respond-to(media-queries.$phone) {
         margin-left: 0 !important;
     }
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        margin-left: 0 !important;
+    }
 }
 
 @include media-queries.respond-to(media-queries.$phone) {
@@ -76,5 +94,22 @@
 
     .icon-move{
         align-items: center;
+    }
+}
+
+@include media-queries.respond-to(media-queries.$tablet-landscape) {
+    .text-start{
+        text-align: center !important;
+    }
+
+    .icon-move{
+        align-items: center;
+    }
+
+    .footer-icon{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: 100%;
     }
 }

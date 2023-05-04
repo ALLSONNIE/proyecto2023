@@ -7,12 +7,18 @@
     @include media-queries.respond-to(media-queries.$phone) {
         font-size: variables.$fs-med;
     }
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        font-size: variables.$fs-med;
+    }
 }
 
 .info-desc{
     @include mixins.set-font(variables.$ff-secondary, variables.$fs-med, variables.$fw-regular, variables.$clr-black);
     @include media-queries.respond-to(media-queries.$phone) {
         font-size: variables.$fs-xsm;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        font-size: variables.$fs-sm;
     }
 }
 
@@ -32,6 +38,10 @@
     @include media-queries.respond-to(media-queries.$phone) {
         font-size: variables.$fs-xsm;
     }
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        font-size: variables.$fs-sm;
+        width: 23.375rem !important;
+    }
 }
 
 .box-register{
@@ -40,6 +50,9 @@
         font-size: variables.$fs-xsm;
         width: 18.2rem !important;
         margin-right: 11rem;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        font-size: variables.$fs-sm;
     }
 }
 
@@ -66,6 +79,10 @@
         width: 21.25rem;
         font-size: variables.$fs-sm;
     }
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        width: 21.25rem;
+        font-size: variables.$fs-sm;
+    }
 }
 
 .users-info{
@@ -75,6 +92,10 @@
     margin-top: 0.5rem;
     background-color: transparent;
     @include media-queries.respond-to(media-queries.$phone) {
+        width: 21.25rem;
+        font-size: variables.$fs-xsm;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
         width: 21.25rem;
         font-size: variables.$fs-xsm;
     }
