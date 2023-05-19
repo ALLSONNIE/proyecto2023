@@ -3,7 +3,7 @@
 @use './media-queries';
 
 .info-title{
-    @include mixins.set-font(variables.$ff-primary, variables.$fs-xlg, variables.$fw-bold, variables.$clr-red);
+    @include mixins.set-font(variables.$ff-primary, variables.$fs-lg, variables.$fw-semibold, variables.$clr-red);
     @include media-queries.respond-to(media-queries.$phone) {
         font-size: variables.$fs-med;
     }
@@ -13,12 +13,23 @@
 }
 
 .info-desc{
-    @include mixins.set-font(variables.$ff-secondary, variables.$fs-med, variables.$fw-regular, variables.$clr-black);
+    @include mixins.set-font(variables.$ff-secondary, variables.$fs-sm, variables.$fw-regular, variables.$clr-black);
     @include media-queries.respond-to(media-queries.$phone) {
-        font-size: variables.$fs-xsm;
+        font-size: variables.$fs-sm;
     }
     @include media-queries.respond-to(media-queries.$tablet-landscape) {
         font-size: variables.$fs-sm;
+    }
+}
+
+.page-title{
+    @include mixins.set-font(variables.$ff-primary, variables.$fs-lg, variables.$fw-bold, variables.$clr-red);
+    width: auto;
+    @include media-queries.respond-to(media-queries.$phone) {
+        font-size: variables.$fs-med;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        font-size: variables.$fs-med;
     }
 }
 
@@ -30,16 +41,16 @@
 }
 
 .cards-text{
-    @include mixins.set-font(variables.$ff-secondary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-dark-gray);
+    @include mixins.set-font(variables.$ff-secondary, variables.$fs-sm, variables.$fw-regular, variables.$clr-dark-gray);
 }
 
 .space-register{
-    @include mixins.set-font(variables.$ff-primary, variables.$fs-xmed, variables.$fw-semibold, variables.$clr-red);
+    @include mixins.set-font(variables.$ff-primary, variables.$fs-sm, variables.$fw-semibold, variables.$clr-red);
     text-align: left;
     width: 23.375rem;
     margin-top: 0.5rem;
     @include media-queries.respond-to(media-queries.$phone) {
-        font-size: variables.$fs-xsm;
+        font-size: variables.$fs-sm;
     }
     @include media-queries.respond-to(media-queries.$tablet-landscape) {
         font-size: variables.$fs-sm;
@@ -48,9 +59,9 @@
 }
 
 .box-register{
-    @include mixins.set-font(variables.$ff-primary, variables.$fs-med, variables.$fw-regular, variables.$clr-dark-gray);
+    @include mixins.set-font(variables.$ff-primary, variables.$fs-sm, variables.$fw-semibold, variables.$clr-dark-gray);
     @include media-queries.respond-to(media-queries.$phone) {
-        font-size: variables.$fs-xsm;
+        font-size: variables.$fs-sm;
         width: 18.2rem !important;
         margin-right: 11rem;
     }
@@ -60,21 +71,21 @@
 }
 
 .modal-titles{
-    @include mixins.set-font(variables.$ff-primary, variables.$fs-xsm, variables.$fw-semibold, variables.$clr-red);
+    @include mixins.set-font(variables.$ff-primary, variables.$fs-sm, variables.$fw-semibold, variables.$clr-red);
     width: auto;
     text-align: left;
     margin-top: 0.5rem;
 }
 
 .modal-info{
-    @include mixins.set-font(variables.$ff-primary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-black);
+    @include mixins.set-font(variables.$ff-primary, variables.$fs-sm, variables.$fw-regular, variables.$clr-black);
     width: auto;
     text-align: left;
     margin-top: 0.5rem;
 }
 
 .users-titles{
-    @include mixins.set-font(variables.$ff-primary, variables.$fs-xlg, variables.$fw-semibold, variables.$clr-red);
+    @include mixins.set-font(variables.$ff-primary, variables.$fs-med, variables.$fw-semibold, variables.$clr-red);
     width: 40rem;
     text-align: left;
     margin-top: 0.5rem;
@@ -89,18 +100,18 @@
 }
 
 .users-info{
-    @include mixins.set-font(variables.$ff-secondary, variables.$fs-lg, variables.$fw-regular, variables.$clr-black);
+    @include mixins.set-font(variables.$ff-secondary, variables.$fs-sm, variables.$fw-semibold, variables.$clr-black);
     width: 40rem;
     text-align: left;
     margin-top: 0.5rem;
     background-color: transparent;
     @include media-queries.respond-to(media-queries.$phone) {
         width: 21.25rem;
-        font-size: variables.$fs-xsm;
+        font-size: variables.$fs-sm;
     }
     @include media-queries.respond-to(media-queries.$tablet-landscape) {
         width: 21.25rem;
-        font-size: variables.$fs-xsm;
+        font-size: variables.$fs-sm;
     }
 }
 

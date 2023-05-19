@@ -3,6 +3,7 @@
 
 .navbar1{
     width: auto;
+    height: 5.813;
     background-color: variables.$clr-red;
     @include media-queries.respond-to(media-queries.$phone) {
         padding: 0%;
@@ -13,6 +14,6 @@
 }
 
 .user{
-    width: 6rem;
-    margin-left: 19rem;
+    width: 5rem;
+    margin-left: 21.5rem;
 }

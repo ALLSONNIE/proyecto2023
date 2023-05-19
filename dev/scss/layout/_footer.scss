@@ -5,7 +5,7 @@
 
 .ending-bar{
     width: auto;
-    height: 19rem;
+    height: 15.25rem;
     background-color: variables.$clr-black;
     border: none; 
     margin-top: 5rem;
@@ -17,8 +17,12 @@
     }
 }
 
+.logo-footer{
+    width: 70%;
+}
+
 .footer-info{
-    @include mixins.set-font(variables.$ff-primary, variables.$fs-sm, variables.$fw-bold, variables.$clr-white);
+    @include mixins.set-font(variables.$ff-primary, variables.$fs-med, variables.$fw-bold, variables.$clr-white);
     text-align: left;
     @include media-queries.respond-to(media-queries.$phone) {
         height: auto;
@@ -27,7 +31,7 @@
         margin-top: 1rem;
     }
     @include media-queries.respond-to(media-queries.$tablet-landscape) {
-        font-size: variables.$fs-xsm;
+        font-size: variables.$fs-sm;
         height: auto;
         text-align: center;
         margin: auto;
@@ -44,7 +48,7 @@
 }
 
 .footer-text{  
-    @include mixins.set-font(variables.$ff-primary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-white);
+    @include mixins.set-font(variables.$ff-primary, variables.$fs-sm, variables.$fw-regular, variables.$clr-white);
     text-align: left;
     text-decoration: none;
     @include media-queries.respond-to(media-queries.$phone) {

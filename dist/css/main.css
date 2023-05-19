@@ -13396,60 +13396,78 @@ body {
 
 .info-title {
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 2.813rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 600;
   color: hsl(355deg, 78%, 60%);
 }
 @media only screen and (max-width: 480px) {
   .info-title {
-    font-size: 2rem;
+    font-size: 1.25rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .info-title {
-    font-size: 2rem;
+    font-size: 1.25rem;
   }
 }
 
 .info-desc {
   font-family: "IBM Plex Serif", serif;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 400;
   color: hsl(0deg, 0%, 0%);
 }
 @media only screen and (max-width: 480px) {
   .info-desc {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .info-desc {
-    font-size: 1.813rem;
+    font-size: 1rem;
+  }
+}
+
+.page-title {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(355deg, 78%, 60%);
+  width: auto;
+}
+@media only screen and (max-width: 480px) {
+  .page-title {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .page-title {
+    font-size: 1.25rem;
   }
 }
 
 .cards-title {
   font-family: "IBM Plex Serif", serif;
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: hsl(0deg, 0%, 0%);
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .cards-title {
-    font-size: 1.813rem;
+    font-size: 1rem;
   }
 }
 
 .cards-text {
   font-family: "IBM Plex Serif", serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 400;
   color: hsl(0deg, 0%, 34%);
 }
 
 .space-register {
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 2.125rem;
+  font-size: 1rem;
   font-weight: 600;
   color: hsl(355deg, 78%, 60%);
   text-align: left;
@@ -13458,38 +13476,38 @@ body {
 }
 @media only screen and (max-width: 480px) {
   .space-register {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .space-register {
-    font-size: 1.813rem;
+    font-size: 1rem;
     width: 23.375rem !important;
   }
 }
 
 .box-register {
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 2rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 600;
   color: hsl(0deg, 0%, 34%);
 }
 @media only screen and (max-width: 480px) {
   .box-register {
-    font-size: 1.5rem;
+    font-size: 1rem;
     width: 18.2rem !important;
     margin-right: 11rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .box-register {
-    font-size: 1.813rem;
+    font-size: 1rem;
   }
 }
 
 .modal-titles {
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   color: hsl(355deg, 78%, 60%);
   width: auto;
@@ -13499,7 +13517,7 @@ body {
 
 .modal-info {
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 400;
   color: hsl(0deg, 0%, 0%);
   width: auto;
@@ -13509,7 +13527,7 @@ body {
 
 .users-titles {
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 2.813rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: hsl(355deg, 78%, 60%);
   width: 40rem;
@@ -13519,20 +13537,20 @@ body {
 @media only screen and (max-width: 480px) {
   .users-titles {
     width: 21.25rem;
-    font-size: 1.813rem;
+    font-size: 1rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .users-titles {
     width: 21.25rem;
-    font-size: 1.813rem;
+    font-size: 1rem;
   }
 }
 
 .users-info {
   font-family: "IBM Plex Serif", serif;
-  font-size: 2.25rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 600;
   color: hsl(0deg, 0%, 0%);
   width: 40rem;
   text-align: left;
@@ -13542,19 +13560,19 @@ body {
 @media only screen and (max-width: 480px) {
   .users-info {
     width: 21.25rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .users-info {
     width: 21.25rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 
 .custom-style {
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1.813rem;
+  font-size: 1rem;
   font-weight: 500;
   color: hsl(0deg, 0%, 0%);
   background-color: hsl(0deg, 0%, 93%) !important;
@@ -13562,7 +13580,7 @@ body {
 
 .table-titles {
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(355deg, 78%, 60%);
@@ -13593,12 +13611,12 @@ body {
   border-radius: 0.938rem;
   text-align: center;
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 400;
   background-color: hsl(0deg, 0%, 93%);
   color: hsl(0deg, 0%, 0%);
-  width: 11.063rem;
-  height: 3.438rem;
+  width: 8.688rem;
+  height: 2.688rem;
 }
 @media only screen and (max-width: 480px) {
   .btn-navg {
@@ -13625,12 +13643,11 @@ body {
   border-radius: 0.938rem;
   text-align: center;
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 400;
   background-color: hsl(0deg, 0%, 0%);
   color: hsl(0deg, 0%, 100%);
-  width: 4.878rem;
-  height: 3.438rem;
+  height: 2.688rem;
   border-bottom-left-radius: 0%;
   border-top-left-radius: 0%;
   border-bottom-right-radius: 0.938rem;
@@ -13638,7 +13655,12 @@ body {
 }
 
 .search-button-height {
-  height: 3.25rem;
+  height: 2.688rem;
+  width: 70px;
+}
+
+.lens-icon {
+  width: 90%;
 }
 
 .s-bar {
@@ -13649,13 +13671,13 @@ body {
   border-radius: 0.938rem;
   text-align: center;
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 400;
   background-color: hsl(0deg, 0%, 93%);
   color: hsl(0deg, 0%, 34%);
-  width: 30.769rem;
+  width: 25.3rem;
   text-align: left;
-  height: 3.438rem;
+  height: 2.688rem;
   border-bottom-right-radius: 0%;
   border-top-right-radius: 0%;
   border-bottom-left-radius: 0.938rem;
@@ -13684,30 +13706,17 @@ body {
   text-align: left;
 }
 
-.margin-top-card {
-  margin-left: 3rem;
-}
-@media only screen and (max-width: 480px) {
-  .margin-top-card {
-    margin-left: 0;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  .margin-top-card {
-    margin-left: 0.5rem;
-  }
-}
-
 .card-style {
   color: hsl(0deg, 0%, 0%);
   background-color: hsl(0deg, 0%, 93%);
   border-radius: 4.063rem;
   border: none;
+  width: auto;
 }
 
 .img-style {
-  height: 26.375rem;
-  width: auto;
+  height: 16.8rem;
+  width: 35.125rem;
   border-bottom-right-radius: 0%;
   border-top-right-radius: 0%;
   border-bottom-left-radius: 4.063rem;
@@ -13732,21 +13741,17 @@ body {
   }
 }
 
+.padding-card {
+  padding-top: 0.5rem;
+}
+
 .img-cards {
   border-bottom-right-radius: 0%;
   border-top-right-radius: 4.063rem;
   border-bottom-left-radius: 0%;
   border-top-left-radius: 4.063rem;
-  height: 14rem;
-}
-
-.p-cards {
-  padding: 3rem;
-}
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  .p-cards {
-    padding: 1rem;
-  }
+  width: auto;
+  height: 9.688rem;
 }
 
 .btn-view {
@@ -13757,51 +13762,19 @@ body {
   border-radius: 0.938rem;
   text-align: center;
   font-family: "IBM Plex Serif", serif;
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: 400;
   background-color: hsl(0deg, 0%, 0%);
   color: hsl(0deg, 0%, 100%);
-  width: 80%;
+  width: 100%;
   margin: auto;
-}
-
-.btn-badges {
-  position: relative;
-  display: block;
-  place-items: center;
-  text-decoration: none;
-  border-radius: 0.938rem;
-  text-align: center;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 2.813rem;
-  font-weight: 700;
-  background-color: hsl(355deg, 78%, 60%);
-  color: hsl(0deg, 0%, 100%);
-  height: 4.75rem;
-  width: 35.625rem;
-}
-@media only screen and (max-width: 480px) {
-  .btn-badges {
-    font-size: 2rem;
-    height: auto;
-    width: 21.938rem;
-    padding: 0.5rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  .btn-badges {
-    font-size: 2rem;
-    height: auto;
-    width: 21.938rem;
-    padding: 0.5rem;
-  }
 }
 
 .badge-red {
   background-color: hsl(355deg, 78%, 60%);
   color: hsl(0deg, 0%, 100%);
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 2.813rem;
+  font-size: 1.5rem;
   font-weight: 700;
   border-radius: 0.938rem;
   height: 4.75rem;
@@ -13874,7 +13847,7 @@ body {
   border-radius: 0.938rem;
   text-align: center;
   font-family: "IBM Plex Serif", serif;
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   background-color: hsl(0deg, 0%, 0%);
   color: hsl(0deg, 0%, 100%);
@@ -13933,7 +13906,7 @@ body {
   border-radius: 0.938rem;
   text-align: center;
   font-family: "IBM Plex Serif", serif;
-  font-size: 1.813rem;
+  font-size: 1rem;
   font-weight: 600;
   background-color: hsl(0deg, 0%, 0%);
   color: hsl(0deg, 0%, 100%);
@@ -13991,7 +13964,7 @@ table {
   border-radius: 0.938rem;
   text-align: center;
   font-family: "IBM Plex Serif", serif;
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   background-color: hsl(0deg, 0%, 0%);
   color: hsl(0deg, 0%, 100%);
@@ -14007,7 +13980,7 @@ table {
   border-radius: 0.938rem;
   text-align: center;
   font-family: "IBM Plex Serif", serif;
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   background-color: hsl(0deg, 0%, 0%);
   color: hsl(0deg, 0%, 100%);
@@ -14017,7 +13990,7 @@ table {
 }
 @media only screen and (max-width: 480px) {
   .btn-sign {
-    font-size: 1.813rem;
+    font-size: 1rem;
   }
 }
 
@@ -14190,7 +14163,7 @@ table {
 }
 .ending-bar {
   width: auto;
-  height: 19rem;
+  height: 15.25rem;
   background-color: hsl(0deg, 0%, 0%);
   border: none;
   margin-top: 5rem;
@@ -14206,9 +14179,13 @@ table {
   }
 }
 
+.logo-footer {
+  width: 70%;
+}
+
 .footer-info {
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1.813rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: hsl(0deg, 0%, 100%);
   text-align: left;
@@ -14223,7 +14200,7 @@ table {
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .footer-info {
-    font-size: 1.5rem;
+    font-size: 1rem;
     height: auto;
     text-align: center;
     margin: auto;
@@ -14241,7 +14218,7 @@ table {
 
 .footer-text {
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 400;
   color: hsl(0deg, 0%, 100%);
   text-align: left;
@@ -14322,6 +14299,7 @@ table {
 }
 .navbar1 {
   width: auto;
+  height: 5.813;
   background-color: hsl(355deg, 78%, 60%);
 }
 @media only screen and (max-width: 480px) {
@@ -14336,6 +14314,6 @@ table {
 }
 
 .user {
-  width: 6rem;
-  margin-left: 19rem;
+  width: 5rem;
+  margin-left: 21.5rem;
 }

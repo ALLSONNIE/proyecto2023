@@ -18,9 +18,9 @@
 }
 
 .btn-navg{
-    @include mixins.btn(variables.$clr-light-gray, variables.$ff-primary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-black);
-    width: 11.063rem;
-    height: 3.438rem;
+    @include mixins.btn(variables.$clr-light-gray, variables.$ff-primary, variables.$fs-sm, variables.$fw-regular, variables.$clr-black);
+    width: 8.688rem;
+    height: 2.688rem;
     @include media-queries.respond-to(media-queries.$phone) {
         width: 9rem;
         height: 3.438rem;
@@ -36,9 +36,8 @@
 }
 
 .btn-search{
-    @include mixins.btn(variables.$clr-black, variables.$ff-primary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-white);
-    width: 4.878rem;
-    height: 3.438rem;
+    @include mixins.btn(variables.$clr-black, variables.$ff-primary, variables.$fs-sm, variables.$fw-regular, variables.$clr-white);
+    height: 2.688rem;
     border-bottom-left-radius: 0%;
     border-top-left-radius: 0%;
     border-bottom-right-radius: 0.938rem;
@@ -46,14 +45,19 @@
 }
 
 .search-button-height{ 
-    height: 3.25rem;
+    height: 2.688rem;
+    width: 70px;
+}
+
+.lens-icon{
+    width: 90%;
 }
 
 .s-bar {
-    @include mixins.btn(variables.$clr-light-gray, variables.$ff-primary, variables.$fs-xsm, variables.$fw-regular, variables.$clr-dark-gray);
-    width: 30.769rem;
+    @include mixins.btn(variables.$clr-light-gray, variables.$ff-primary, variables.$fs-sm, variables.$fw-regular, variables.$clr-dark-gray);
+    width: 25.3rem;
     text-align: left;
-    height: 3.438rem;
+    height: 2.688rem;
     border-bottom-right-radius: 0%;
     border-top-right-radius: 0%;
     border-bottom-left-radius: 0.938rem;
@@ -80,27 +84,18 @@
     text-align: left;
 }
 
-.margin-top-card{
-    margin-left: 3rem;
-    @include media-queries.respond-to(media-queries.$phone) {
-        margin-left: 0;
-    }
-    @include media-queries.respond-to(media-queries.$tablet-landscape) {
-        margin-left: 0.5rem;
-    }
-}
-
 .card-style{
     color: variables.$clr-black;
     background-color: variables.$clr-light-gray;
     border-radius: 4.063rem;
     border: none;
+    width: auto;
 
 }
 
 .img-style{
-    height: 26.375rem;
-    width: auto;
+    height: 16.8rem;
+    width: 35.125rem;
     border-bottom-right-radius: 0%;
     border-top-right-radius: 0%;
     border-bottom-left-radius: 4.063rem;
@@ -121,24 +116,22 @@
     }
 }
 
+.padding-card{
+    padding-top: 0.5rem;
+}
+
 .img-cards{
     border-bottom-right-radius: 0%;
     border-top-right-radius: 4.063rem;
     border-bottom-left-radius: 0%;
     border-top-left-radius: 4.063rem;
-    height: 14rem;
-}
-
-.p-cards{
-    padding: 3rem;
-    @include media-queries.respond-to(media-queries.$tablet-landscape) {
-        padding: 1rem;
-    }
+    width: auto;
+    height: 9.688rem;
 }
 
 .btn-view{
     @include mixins.btn(variables.$clr-black, variables.$ff-secondary, variables.$fs-med, variables.$fw-regular, variables.$clr-white);
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
 
@@ -146,29 +139,11 @@
 
 //miscellaneous
 
-.btn-badges{
-    @include mixins.btn(variables.$clr-red, variables.$ff-primary, variables.$fs-xlg, variables.$fw-bold, variables.$clr-white);
-    height: 4.75rem;
-    width: 35.625rem;
-    @include media-queries.respond-to(media-queries.$phone) {
-        font-size: variables.$fs-med;
-        height: auto;
-        width: 21.938rem;
-        padding: 0.5rem;
-    }
-    @include media-queries.respond-to(media-queries.$tablet-landscape) {
-        font-size: variables.$fs-med;
-        height: auto;
-        width: 21.938rem;
-        padding: 0.5rem;
-    }
-}
-
 .badge-red{
     background-color: variables.$clr-red;
     color: variables.$clr-white;
     font-family: variables.$ff-primary;
-    font-size: variables.$fs-xlg;
+    font-size: variables.$fs-lg;
     font-weight: variables.$fw-bold;
     border-radius: 0.938rem;
     height: 4.75rem;
