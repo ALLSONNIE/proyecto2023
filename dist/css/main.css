@@ -13906,12 +13906,12 @@ body {
   border-radius: 0.938rem;
   text-align: center;
   font-family: "IBM Plex Serif", serif;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 600;
   background-color: hsl(0deg, 0%, 0%);
   color: hsl(0deg, 0%, 100%);
   width: 12rem;
-  height: 4rem;
+  height: 2.75rem;
 }
 
 .add-margin {

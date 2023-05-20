@@ -29,10 +29,10 @@
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
-                <div class="modal-content">
+                <div class="modal-content ps-5 pe-5 ">
                     <div class="modal-header">
-                        <div class="m-auto mb-5">
-                            <p class="mt-5 page-title" id="staticBackdropLabel">{{ recipes[selectedIndex].name }}</p>
+                        <div class="m-auto">
+                            <p class="page-title" id="staticBackdropLabel">{{ recipes[selectedIndex].name }}</p>
                         </div>
                     </div>
                     <div class="modal-body p-0 card card-style m-2">
@@ -113,7 +113,7 @@
 
                         </div>
 
-                        <div class="row mb-5 margin-content margin-right ms-5 me-5">
+                        <div class="row mb-4 margin-content margin-right ms-5 me-5">
 
                             <div class="mb-2 col-md">
                                 <p class="col-md-12 d-flex modal-titles mb-0">Instrucciones:</p>
@@ -126,16 +126,16 @@
 
                             <div class="mb-2 col-md text-center">
                                 <button type="button" class="btn-modal d-inline-block">Me gusta</button>
-                                <button type="button" class="btn-modal d-inline-block add-margin">Descargar</button>
+                                <button type="button" class="btn-modal d-inline-block add-margin">Coleccionar</button>
                             </div>
 
                         </div>
 
                     </div>
-                    <div class="row mt-5 justify-content-center">
-                        <p class="mt-5 mb-5 page-title">Recetas Relacionadas</p>
-                        <div class="row mt-5 mb-5">
-                            <div v-for="(item, index) in relatedRecipes" class="col-md-4 custom-col-modal mt-5">
+                    <div class="row justify-content-center">
+                        <p class="mt-5 page-title">Recetas Relacionadas</p>
+                        <div class="row mt-3 mb-5">
+                            <div v-for="(item, index) in relatedRecipes" class="col-md-4 custom-col-modal">
                                 <div class="card card-style display-forms">
                                     <img v-bind:src="item.image" class="img-cards img-resizer" alt="featured recipe">
                                     <div class="card-body m-2 padding-card">
@@ -239,7 +239,7 @@
             <p class="page-title">Mejores Recetas</p>
 
             <div class="row mt-3 ps-5 pe-5">
-                <div v-for="(item, index) in recipes" class="col-md-3 ">
+                <div v-for="(item, index) in recipes" class="col-md-3">
                     <div class="d-flex card card-style mb-5">
                         <img v-bind:src="item.image" class="img-cards mb-0" alt="featured recipe">
                         <div class="card-body m-2 padding-card">
@@ -260,7 +260,7 @@
             <p class="page-title">Lo más nuevo</p>
 
             <div class="row mt-3 ps-5 pe-5">
-                <div v-for="(item, index) in recipes" class="col-md-3 ">
+                <div v-for="(item, index) in recipes" class="col-md-3">
                     <div class="d-flex card card-style mb-5">
                         <img v-bind:src="item.image" class="img-cards" alt="featured recipe">
                         <div class="card-body m-2 padding-card">

@@ -240,9 +240,9 @@
 }
 
 .btn-modal{
-    @include mixins.btn(variables.$clr-black, variables.$ff-secondary, variables.$fs-sm, variables.$fw-semibold, variables.$clr-white);
+    @include mixins.btn(variables.$clr-black, variables.$ff-secondary, variables.$fs-med, variables.$fw-semibold, variables.$clr-white);
     width: 12rem;
-    height: 4rem;
+    height: 2.75rem;
 }
 
 .add-margin{
