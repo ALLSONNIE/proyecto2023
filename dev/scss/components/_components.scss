@@ -178,9 +178,9 @@
 }
 
 .input-size{
-    width: 29.5rem;
-    height: 4.75rem;
-    border-radius: 0.938rem;
+    width: 48.313rem;
+    height: 2.688rem;
+    border-radius: 0.625rem;
     background-color: variables.$clr-white;
     border-color: variables.$clr-red;
     border-width: 0.188rem;
@@ -191,31 +191,26 @@
 }
 
 .textarea-size{
-    width: 29.5rem;
-    border-radius: 0.938rem;
+    width: 48.313rem;
+    border-radius: 0.625rem;
     background-color: variables.$clr-white;
     border-color: variables.$clr-red;
     border-width: 0.188rem;
 }
 
+.upload-img{
+    margin: auto;
+    width: 48.313rem;
+
+}
+
 .btn-add{
-    @include mixins.btn(variables.$clr-black, variables.$ff-secondary, variables.$fs-lg, variables.$fw-semibold, variables.$clr-white);
-    width: 23.375rem;
-    height: 5.375rem;
+    @include mixins.btn(variables.$clr-black, variables.$ff-secondary, variables.$fs-med, variables.$fw-semibold, variables.$clr-white);
+    width: 12rem;
+    height: 2.75rem;
     margin: auto;
 }
 
-.spacer{
-    margin-left: 7rem;
-    @include media-queries.respond-to(media-queries.$phone) {
-        margin-left: 0;
-        margin-top: 0.5rem;
-    }
-    @include media-queries.respond-to(media-queries.$tablet-landscape) {
-        margin-left: 0;
-        margin-top: 0.5rem;
-    }
-}
 
 .img-fit{
     height: 10.125rem;

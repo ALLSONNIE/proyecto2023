@@ -47,7 +47,7 @@
 .space-register{
     @include mixins.set-font(variables.$ff-primary, variables.$fs-sm, variables.$fw-semibold, variables.$clr-red);
     text-align: left;
-    width: 23.375rem;
+    width: 15.563rem;
     margin-top: 0.5rem;
     @include media-queries.respond-to(media-queries.$phone) {
         font-size: variables.$fs-sm;

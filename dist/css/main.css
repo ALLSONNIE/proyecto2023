@@ -13471,7 +13471,7 @@ body {
   font-weight: 600;
   color: hsl(355deg, 78%, 60%);
   text-align: left;
-  width: 23.375rem;
+  width: 15.563rem;
   margin-top: 0.5rem;
 }
 @media only screen and (max-width: 480px) {
@@ -13817,9 +13817,9 @@ body {
 }
 
 .input-size {
-  width: 29.5rem;
-  height: 4.75rem;
-  border-radius: 0.938rem;
+  width: 48.313rem;
+  height: 2.688rem;
+  border-radius: 0.625rem;
   background-color: hsl(0deg, 0%, 100%);
   border-color: hsl(355deg, 78%, 60%);
   border-width: 0.188rem;
@@ -13832,11 +13832,16 @@ body {
 }
 
 .textarea-size {
-  width: 29.5rem;
-  border-radius: 0.938rem;
+  width: 48.313rem;
+  border-radius: 0.625rem;
   background-color: hsl(0deg, 0%, 100%);
   border-color: hsl(355deg, 78%, 60%);
   border-width: 0.188rem;
+}
+
+.upload-img {
+  margin: auto;
+  width: 48.313rem;
 }
 
 .btn-add {
@@ -13847,29 +13852,13 @@ body {
   border-radius: 0.938rem;
   text-align: center;
   font-family: "IBM Plex Serif", serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   background-color: hsl(0deg, 0%, 0%);
   color: hsl(0deg, 0%, 100%);
-  width: 23.375rem;
-  height: 5.375rem;
+  width: 12rem;
+  height: 2.75rem;
   margin: auto;
-}
-
-.spacer {
-  margin-left: 7rem;
-}
-@media only screen and (max-width: 480px) {
-  .spacer {
-    margin-left: 0;
-    margin-top: 0.5rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  .spacer {
-    margin-left: 0;
-    margin-top: 0.5rem;
-  }
 }
 
 .img-fit {
