@@ -172,8 +172,8 @@
     border-color: variables.$clr-red;
     border-width: 0.188rem;
     @include media-queries.respond-to(media-queries.$phone) {
-        width: auto;
-        height: auto;
+       width: 15.563rem;
+       height: auto;
     }
 }
 
@@ -183,12 +183,18 @@
     background-color: variables.$clr-white;
     border-color: variables.$clr-red;
     border-width: 0.188rem;
+    @include media-queries.respond-to(media-queries.$phone) {
+        width: 15.563rem;
+        height: auto;
+     }
 }
 
 .upload-img{
     margin: auto;
     width: 48.313rem;
-
+    @include media-queries.respond-to(media-queries.$phone) {
+        width: 15.563rem;
+     }
 }
 
 .btn-add{
@@ -225,6 +231,9 @@
     @include mixins.btn(variables.$clr-black, variables.$ff-secondary, variables.$fs-med, variables.$fw-semibold, variables.$clr-white);
     width: 14rem;
     height: 2.75rem;
+    @include media-queries.respond-to(media-queries.$phone) {
+        width: 11.625rem;
+    }
 }
 
 .btn-close-modal{
@@ -335,6 +344,14 @@ table{
 
     .marg-bot{
         margin-bottom: 1rem;
+    }
+
+    .spacer{
+        margin-top: 0.5rem;
+    }
+    
+    .img-sizer{
+        width: 60%;
     }
 
     /*.center-comp {

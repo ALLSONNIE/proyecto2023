@@ -32,7 +32,7 @@
             <nav class="navbar p-0">
                 <div class="container-fluid">
                     <div class="col-8">
-                        <a href="#"><img src="./images/logo.png" class="position-relative logo logo-mb"
+                        <a href="#"><img src="./images/logo.png" class="position-relative logo"
                             alt="Graphic identifier"></a>
                     </div>
                     <div class="col-4 hide">
@@ -54,7 +54,7 @@
             <nav id="navbar-main" class="navbar navbar-expand-lg offcanvas-mb">
                 <div class="offcanvas-header">  
                     <button id="btn-close" class="btn btn-dark float-end me-3">X</button>
-                 </div>
+                 </div> 
 
                 <div class="container-fluid">
 
@@ -72,7 +72,7 @@
                             <a class="nav-link btn-navg ms-lg-5" href="#">Contacto</a>
                         </li>
                         <li>
-                            <form class="d-flex ms-lg-5 ms-5" role="search">
+                            <form class="d-flex ms-lg-5 push-bar" role="search">
                                 <input class="form-control s-bar p-0" type="search" placeholder="Buscar..." aria-label="Search">
                                 <button class="btn btn-search search-button-height" type="submit"><img
                                         src="./images/lupa.png" class="lens-icon" alt="Lense"></button>
@@ -92,13 +92,13 @@
             <p class="page-title text-center">Verificación del código</p>
             <div class="card card-style mt-5">
                 <div class="card-body m-auto">
-                    <div class="row align-menu text-center mt-4 d-flex">
+                    <div class="row align-menu text-center d-flex">
 
                         <form action="response.php" method="post" enctype="multipart/form-data">
 
-                            <div class="mb-4 mt-3 margin-content title-medium text-center">
+                            <div class="mb-4 mt-4 margin-content title-medium text-center">
 
-                                <div class="form-group mt-4 display-forms">
+                                <div class="form-group display-forms">
                                     <label for="codigo" class="col-md-4 d-flex space-register">Código de verificación:</label>
                                     <div class="col-md-5">
                                         <input type="text" name="codigo"

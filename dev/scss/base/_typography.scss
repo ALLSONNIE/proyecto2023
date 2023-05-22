@@ -63,8 +63,6 @@
     @include mixins.set-font(variables.$ff-primary, variables.$fs-sm, variables.$fw-semibold, variables.$clr-dark-gray);
     @include media-queries.respond-to(media-queries.$phone) {
         font-size: variables.$fs-sm;
-        width: 18.2rem !important;
-        margin-right: 11rem;
     }
     @include media-queries.respond-to(media-queries.$tablet-landscape) {
         font-size: variables.$fs-sm;
@@ -89,7 +87,7 @@
     @include mixins.set-font(variables.$ff-primary, variables.$fs-med, variables.$fw-semibold, variables.$clr-red);
     text-align: center;
     @include media-queries.respond-to(media-queries.$phone) {
-        width: 21.25rem;
+        width: 13.25rem;
         font-size: variables.$fs-sm;
     }
     @include media-queries.respond-to(media-queries.$tablet-landscape) {
@@ -105,7 +103,7 @@
     margin-top: 0.5rem;
     background-color: transparent;
     @include media-queries.respond-to(media-queries.$phone) {
-        width: 21.25rem;
+        width: 15rem;
         font-size: variables.$fs-sm;
     }
     @include media-queries.respond-to(media-queries.$tablet-landscape) {

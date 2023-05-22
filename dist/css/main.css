@@ -13497,8 +13497,6 @@ body {
 @media only screen and (max-width: 480px) {
   .box-register {
     font-size: 1rem;
-    width: 18.2rem !important;
-    margin-right: 11rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
@@ -13536,7 +13534,7 @@ body {
 }
 @media only screen and (max-width: 480px) {
   .users-titles {
-    width: 21.25rem;
+    width: 13.25rem;
     font-size: 1rem;
   }
 }
@@ -13559,7 +13557,7 @@ body {
 }
 @media only screen and (max-width: 480px) {
   .users-info {
-    width: 21.25rem;
+    width: 15rem;
     font-size: 1rem;
   }
 }
@@ -13814,7 +13812,7 @@ body {
 }
 @media only screen and (max-width: 480px) {
   .input-size {
-    width: auto;
+    width: 15.563rem;
     height: auto;
   }
 }
@@ -13826,10 +13824,21 @@ body {
   border-color: hsl(355deg, 78%, 60%);
   border-width: 0.188rem;
 }
+@media only screen and (max-width: 480px) {
+  .textarea-size {
+    width: 15.563rem;
+    height: auto;
+  }
+}
 
 .upload-img {
   margin: auto;
   width: 48.313rem;
+}
+@media only screen and (max-width: 480px) {
+  .upload-img {
+    width: 15.563rem;
+  }
 }
 
 .btn-add {
@@ -13889,6 +13898,11 @@ body {
   color: hsl(0deg, 0%, 100%);
   width: 14rem;
   height: 2.75rem;
+}
+@media only screen and (max-width: 480px) {
+  .btn-modal {
+    width: 11.625rem;
+  }
 }
 
 .btn-close-modal {
@@ -14039,6 +14053,12 @@ table {
   }
   .marg-bot {
     margin-bottom: 1rem;
+  }
+  .spacer {
+    margin-top: 0.5rem;
+  }
+  .img-sizer {
+    width: 60%;
   }
   /*.center-comp {
       align-items: center;
