@@ -13465,6 +13465,13 @@ body {
   color: hsl(0deg, 0%, 34%);
 }
 
+.link-password {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: hsl(0deg, 0%, 0%);
+}
+
 .space-register {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 1rem;
@@ -13530,9 +13537,7 @@ body {
   font-size: 1.25rem;
   font-weight: 600;
   color: hsl(355deg, 78%, 60%);
-  width: 40rem;
-  text-align: left;
-  margin-top: 0.5rem;
+  text-align: center;
 }
 @media only screen and (max-width: 480px) {
   .users-titles {
@@ -13553,7 +13558,7 @@ body {
   font-weight: 600;
   color: hsl(0deg, 0%, 0%);
   width: 40rem;
-  text-align: left;
+  text-align: center;
   margin-top: 0.5rem;
   background-color: transparent;
 }
@@ -13914,24 +13919,6 @@ body {
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .add-margin {
     margin-left: 0;
-  }
-}
-
-.users-img {
-  width: 11.063rem;
-  margin-top: 4.5rem;
-  margin-left: 5rem;
-}
-@media only screen and (max-width: 480px) {
-  .users-img {
-    margin-top: 1rem;
-    margin-left: 4.3rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  .users-img {
-    margin-top: 3rem;
-    margin-left: 2.3rem;
   }
 }
 

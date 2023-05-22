@@ -29,10 +29,10 @@
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
-                <div class="modal-content">
+                <div class="modal-content ps-5 pe-5 ">
                     <div class="modal-header">
-                        <div class="m-auto mb-5">
-                            <p class="mt-5 btn-badges" id="staticBackdropLabel">{{ recipes[selectedIndex].name }}</p>
+                        <div class="m-auto">
+                            <p class="page-title" id="staticBackdropLabel">{{ recipes[selectedIndex].name }}</p>
                         </div>
                     </div>
                     <div class="modal-body p-0 card card-style m-2">
@@ -113,7 +113,7 @@
 
                         </div>
 
-                        <div class="row mb-5 margin-content margin-right ms-5 me-5">
+                        <div class="row mb-4 margin-content margin-right ms-5 me-5">
 
                             <div class="mb-2 col-md">
                                 <p class="col-md-12 d-flex modal-titles mb-0">Instrucciones:</p>
@@ -126,37 +126,38 @@
 
                             <div class="mb-2 col-md text-center">
                                 <button type="button" class="btn-modal d-inline-block">Me gusta</button>
-                                <button type="button" class="btn-modal d-inline-block add-margin">Descargar</button>
+                                <button type="button" class="btn-modal d-inline-block add-margin">Coleccionar</button>
                             </div>
 
                         </div>
 
                     </div>
-                    <div class="row mt-5 justify-content-center">
-                        <p class="mt-5 mb-5 btn-badges">Recetas Relacionadas</p>
-                        <div class="row mt-5 mb-5">
-                            <div v-for="(item, index) in relatedRecipes" class="col-md-6 custom-col-modal mt-5">
+                    <div class="row justify-content-center">
+                        <p class="mt-5 page-title">Recetas Relacionadas</p>
+                        <div class="row mt-3 mb-5">
+                            <div v-for="(item, index) in relatedRecipes" class="col-md-4 custom-col-modal">
                                 <div class="card card-style display-forms">
                                     <img v-bind:src="item.image" class="img-cards img-resizer" alt="featured recipe">
-                                    <div class="card-body">
+                                    <div class="card-body m-2 padding-card">
                                         <h2 class="cards-title mb-1">{{ item.name }}</h2>
                                         <p class="cards-text mb-1">{{ item.category }}</p>
                                         <p class="cards-text mb-1">{{ item.ocassion }}</p>
                                         <p class="cards-text mb-1">{{ item.level }}</p>
                                         <button class="btn btn-view text-center mt-2" v-on:click="onClickViewRecipe(index)"
-                                            data-bs-toggle="modal" data-bs-target="#staticBackdrop">View Recipe</button>
+                                            data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver receta</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-navg" data-bs-dismiss="modal">X</button>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Modal -->
+
 
         <header class="container-fluid navbar1 bar-mb">
 
@@ -218,33 +219,21 @@
         </div>
         <!-- Navegación -->
 
-        <div class="row mt-5 justify-content-center ps-5 pe-5">
-            <p class="mt-5 mb-5 btn-badges">Perfil de Usuario</p>
+        <div class="mt-5 justify-content-center ps-5 pe-5">
+            <p class="page-title text-center">Perfil de Usuario</p>
             <div class="card card-style mt-5 mb-5">
                 <div class="card-body m-auto">
-                    <div class="row g-0">
-                        <div class="col-md-3">
-                            <img src="./images/user-black.png" class="img-fluid users-img" alt="...">
+                    <div class="">
+                        <div class="text-center">
+                            <img src="./images/user-black.png" class="img-fluid mt-4" alt="...">
                         </div>
-                        <div class="col-md-7 mt-2">
+                        <div class="mt-4 mb-4">
                             <div class="card-body p-0 m-auto">
-                                <div class="margin-user">
-    
                                     <div class="mb-2 col-md">
-                                        <p class="users-titles mb-0">Nombre del usuario:</p>
-                                        <p class="users-info mt-0">Allison Benavides Sánchez</p>
+                                        <p class="users-titles mb-0">Nombre de usuario</p>
+                                        <p class="users-info mt-4">Aquí podrá encontrar la lista de todas sus recetas coleccionadas
+                                            ¿Está preparado para cocinar?</p>
                                     </div>
-        
-                                </div>
-        
-                                <div class="margin-user">
-        
-                                    <div class="mb-2 col-md">
-                                        <p class="users-titles mb-0">Accesos permitidos al sistema:</p>
-                                        <p class="users-info mt-0">Página principal y perfil</p>
-                                    </div>
-        
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -253,28 +242,30 @@
 
         </div>
 
-        <div class="row mt-5 justify-content-center">
-            <p class="mt-5 mb-5 btn-badges">Recetas Coleccionadas</p>
-            <div class="row mt-5 mb-5">
-                <div v-for="(item, index) in colectedRecipes" class="col-md-4 p-cards">
+        <div class="row mt-3 justify-content-center">
+            <p class="page-title">Recetas Coleccionadas</p>
+
+            <div class="row mt-3 ps-5 pe-5">
+                <div v-for="(item, index) in colectedRecipes" class="col-md-3">
                     <div class="d-flex card card-style">
-                        <img v-bind:src="item.image" class="img-cards" alt="featured recipe">
-                        <div class="card-body">
+                        <img v-bind:src="item.image" class="img-cards mb-0" alt="featured recipe">
+                        <div class="card-body m-2 padding-card">
                             <h2 class="cards-title mb-1">{{ item.name }}</h2>
                             <p class="cards-text mb-1">{{ item.category }}</p>
                             <p class="cards-text mb-1">{{ item.ocassion }}</p>
                             <p class="cards-text mb-1">{{ item.level }}</p>
-                            <button class="btn btn-view text-center mt-2" v-on:click="onClickViewRecipe(index)"
-                                data-bs-toggle="modal" data-bs-target="#staticBackdrop">View Recipe</button>
+                            <button class="btn btn-view text-center mt-3" v-on:click="onClickViewRecipe(index)"
+                                data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver receta</button>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
 
 
         <!--Footer-->
-        <footer class="row mt-5 text-center ending-bar">
+        <footer class="row text-center ending-bar">
 
             <div class="mt-5 ms-xl-5">
                 <div class="row row-move">
