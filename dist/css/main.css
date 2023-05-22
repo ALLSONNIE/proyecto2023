@@ -13452,11 +13452,6 @@ body {
   font-weight: 500;
   color: hsl(0deg, 0%, 0%);
 }
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  .cards-title {
-    font-size: 1rem;
-  }
-}
 
 .cards-text {
   font-family: "IBM Plex Serif", serif;
@@ -13591,23 +13586,6 @@ body {
   background-color: hsl(355deg, 78%, 60%);
 }
 
-.logo {
-  width: 25%;
-  margin-left: 3rem;
-}
-@media only screen and (max-width: 480px) {
-  .logo {
-    width: 60%;
-    margin-left: 5rem;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  .logo {
-    width: 50%;
-    margin-left: 9rem;
-  }
-}
-
 .btn-navg {
   position: relative;
   display: block;
@@ -13625,10 +13603,11 @@ body {
 }
 @media only screen and (max-width: 480px) {
   .btn-navg {
+    background-color: transparent;
+    color: hsl(355deg, 78%, 60%);
     width: 9rem;
-    height: 3.438rem;
-    margin-top: 1rem;
-    margin-left: 0;
+    height: auto;
+    text-align: left;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
@@ -13637,6 +13616,16 @@ body {
     height: 3.438rem;
     margin-top: 1rem;
     margin-left: 0;
+  }
+}
+
+.push-bar {
+  margin-left: 3rem;
+}
+@media only screen and (max-width: 480px) {
+  .push-bar {
+    margin-left: 0;
+    margin-top: 1rem;
   }
 }
 
@@ -13691,8 +13680,8 @@ body {
 }
 @media only screen and (max-width: 480px) {
   .s-bar {
-    width: 12rem;
-    height: 3.438rem;
+    width: 15.688rem;
+    height: 2.688rem;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
@@ -13758,6 +13747,11 @@ body {
   width: auto;
   height: 9.688rem;
 }
+@media only screen and (max-width: 480px) {
+  .img-cards {
+    height: 11.581rem;
+  }
+}
 
 .btn-view {
   position: relative;
@@ -13773,17 +13767,6 @@ body {
   color: hsl(0deg, 0%, 100%);
   width: 100%;
   margin: auto;
-}
-
-.badge-red {
-  background-color: hsl(355deg, 78%, 60%);
-  color: hsl(0deg, 0%, 100%);
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  border-radius: 0.938rem;
-  height: 4.75rem;
-  width: 35.625rem;
 }
 
 .center-comp {
@@ -13979,6 +13962,15 @@ table {
   }
 }
 
+.minus-margin {
+  margin-top: 1.5rem;
+}
+@media only screen and (max-width: 480px) {
+  .minus-margin {
+    margin-top: 0;
+  }
+}
+
 .offcanvas-header {
   display: none;
 }
@@ -13998,9 +13990,7 @@ table {
     width: 100%;
   }
   .icon-mb {
-    width: 35%;
-    padding-bottom: 1.25rem;
-    padding-top: 1rem;
+    width: 30%;
     padding-left: 1rem;
   }
   .hide {
@@ -14031,21 +14021,25 @@ table {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
-  .center-comp {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .marg-bot {
+    margin-bottom: 1rem;
   }
+  /*.center-comp {
+      align-items: center;
+  }
+
   .nav-sizer {
-    height: 50px;
+      height: 50px;
   }
-  .margin-card-mb {
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
+
+  .margin-card-mb{
+      padding-left: 2rem !important;
+      padding-right: 2rem !important;
   }
-  .margin-bcard-mb {
-    padding: 0;
-  }
+
+  .margin-bcard-mb{
+      padding: 0;
+  }*/
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .col-md-4 {
@@ -14280,12 +14274,31 @@ table {
 }
 @media only screen and (max-width: 480px) {
   .navbar1 {
+    height: 4rem;
     padding: 0%;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .navbar1 {
     padding: 0%;
+  }
+}
+
+.logo {
+  width: 25%;
+  margin-left: 2rem;
+}
+@media only screen and (max-width: 480px) {
+  .logo {
+    width: 40%;
+    margin-left: 5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .logo {
+    width: 50%;
+    margin-left: 9rem;
   }
 }
 

@@ -141,7 +141,7 @@
                                     <div class="card-body m-2 padding-card">
                                         <h2 class="cards-title mb-1">{{ item.name }}</h2>
                                         <p class="cards-text mb-1">{{ item.category }}</p>
-                                        <p class="cards-text mb-1">{{ item.ocassion }}</p>
+                                        <p class="cards-text mb-1">{{ item.totaltime }}</p>
                                         <p class="cards-text mb-1">{{ item.level }}</p>
                                         <button class="btn btn-view text-center mt-2" v-on:click="onClickViewRecipe(index)"
                                             data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver receta</button>
@@ -163,7 +163,7 @@
             <nav class="navbar p-0">
                 <div class="container-fluid">
                     <div class="col-8">
-                        <a href="#"><img src="./images/logo.png" class="position-relative logo logo-mb"
+                        <a href="#"><img src="./images/logo.png" class="position-relative logo"
                             alt="Graphic identifier"></a>
                     </div>
                     <div class="col-4 hide">
@@ -185,7 +185,7 @@
             <nav id="navbar-main" class="navbar navbar-expand-lg offcanvas-mb">
                 <div class="offcanvas-header">  
                     <button id="btn-close" class="btn btn-dark float-end me-3">X</button>
-                 </div>
+                 </div> 
 
                 <div class="container-fluid">
 
@@ -203,7 +203,7 @@
                             <a class="nav-link btn-navg ms-lg-5" href="#">Contacto</a>
                         </li>
                         <li>
-                            <form class="d-flex ms-lg-5 ms-5" role="search">
+                            <form class="d-flex ms-lg-5 push-bar" role="search">
                                 <input class="form-control s-bar p-0" type="search" placeholder="Buscar..." aria-label="Search">
                                 <button class="btn btn-search search-button-height" type="submit"><img
                                         src="./images/lupa.png" class="lens-icon" alt="Lense"></button>
@@ -221,13 +221,13 @@
         <div class="ps-5 pe-5 margin-card-mb">
             <div class="card top-card-style mb-5">
                 <div class="row g-0">
-                    <div class="col-md-6 custom-col">
+                    <div class="col-md-6">
                         <img src="./images/pic1.png" class="img-fluid img-style" alt="...">
                     </div>
-                    <div class="col-md-6 custom-col mt-4">
+                    <div class="col-md-6 minus-margin">
                         <div class="card-body">
-                            <h2 class="info-title mb-3 mt-3">¡Despierta tu paladar!</h2>
-                            <p class="info-desc">Descubre todo tipo de recetas, desde desayunos, almuerzos y entradas <br> hasta postres, bebidas y sopas. En Receticas encontrarás todos los <br> platillos que necesites, independientemente de la categoría, ocasión o nivel.No esperes más, y empieza a cocinar.</p>
+                            <h2 class="info-title mb-3 minus-margin">¡Despierta tu paladar!</h2>
+                            <p class="info-desc">Descubre todo tipo de recetas, desde desayunos, almuerzos y entradas hasta postres, bebidas y sopas. En Receticas encontrarás todos los platillos que necesites, independientemente de la categoría, ocasión o nivel.No esperes más, y empieza a cocinar.</p>
                         </div>
                     </div>
                 </div>
@@ -244,9 +244,9 @@
                         <div class="card-body m-2 padding-card">
                             <h2 class="cards-title mb-1">{{ item.name }}</h2>
                             <p class="cards-text mb-1">{{ item.category }}</p>
-                            <p class="cards-text mb-1">{{ item.ocassion }}</p>
+                            <p class="cards-text mb-1">{{ item.totaltime }}</p>
                             <p class="cards-text mb-1">{{ item.level }}</p>
-                            <button class="btn btn-view text-center mt-3" v-on:click="onClickViewRecipe(index)"
+                            <button class="btn btn-view text-center mt-3 marg-bot" v-on:click="onClickViewRecipe(index)"
                                 data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver receta</button>
                         </div>
                     </div>
@@ -265,7 +265,7 @@
                         <div class="card-body m-2 padding-card">
                             <h2 class="cards-title mb-1">{{ item.name }}</h2>
                             <p class="cards-text mb-1">{{ item.category }}</p>
-                            <p class="cards-text mb-1">{{ item.ocassion }}</p>
+                            <p class="cards-text mb-1">{{ item.totaltime }}</p>
                             <p class="cards-text mb-1">{{ item.level }}</p>
                             <button class="btn btn-view text-center mt-3" v-on:click="onClickViewRecipe(index)"
                                 data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver receta</button>
@@ -280,10 +280,10 @@
         <!--Footer-->
         <footer class="row mt-5 text-center ending-bar">
 
-            <div class="mt-5 ms-xl-5">
+            <div class="mt-5 ms-xl-5 marg-bot">
                 <div class="row row-move">
                     <div class="col-md-4  footer-icon mb-5 d-flex justify-content-center align-items-center">
-                        <a href="#"><img src="./images/logo.png" class="logo-footer position-relative mt-4 margin-footer icon-move"
+                        <a href="#"><img src="./images/logo.png" class="logo-footer position-relative minus-margin margin-footer icon-move"
                                 alt="Graphic identifier"></a>
                     </div>
 

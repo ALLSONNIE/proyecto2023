@@ -4,34 +4,30 @@
 
 //top buttons-components
 
-.logo{
-    width: 25%;
-    margin-left: 3rem;
-    @include media-queries.respond-to(media-queries.$phone) {
-        width: 60%;
-        margin-left: 5rem;
-    }
-    @include media-queries.respond-to(media-queries.$tablet-landscape) {
-        width: 50%;
-        margin-left: 9rem;
-    }
-}
-
 .btn-navg{
     @include mixins.btn(variables.$clr-light-gray, variables.$ff-primary, variables.$fs-sm, variables.$fw-regular, variables.$clr-black);
     width: 8.688rem;
     height: 2.688rem;
     @include media-queries.respond-to(media-queries.$phone) {
+        background-color: transparent;
+        color: variables.$clr-red;
         width: 9rem;
-        height: 3.438rem;
-        margin-top: 1rem;
-        margin-left: 0;
+        height: auto;
+        text-align: left;
     }
     @include media-queries.respond-to(media-queries.$tablet-landscape) {
         width: 9rem;
         height: 3.438rem;
         margin-top: 1rem;
         margin-left: 0;
+    }
+}
+
+.push-bar{
+    margin-left: 3rem;
+    @include media-queries.respond-to(media-queries.$phone) {
+        margin-left: 0;
+        margin-top: 1rem;
     }
 }
 
@@ -64,8 +60,8 @@
     border-top-left-radius:0.938rem;
     border: none;
     @include media-queries.respond-to(media-queries.$phone) {
-        width: 12rem;
-        height: 3.438rem;
+        width: 15.688rem;
+        height: 2.688rem;
     }
     @include media-queries.respond-to(media-queries.$tablet-landscape) {
         width: 8rem;
@@ -126,6 +122,9 @@
     border-top-left-radius: 4.063rem;
     width: auto;
     height: 9.688rem;
+    @include media-queries.respond-to(media-queries.$phone) {
+        height: 11.581rem;
+    }
 }
 
 .btn-view{
@@ -137,17 +136,6 @@
 //modal style
 
 //miscellaneous
-
-.badge-red{
-    background-color: variables.$clr-red;
-    color: variables.$clr-white;
-    font-family: variables.$ff-primary;
-    font-size: variables.$fs-lg;
-    font-weight: variables.$fw-bold;
-    border-radius: 0.938rem;
-    height: 4.75rem;
-    width: 35.625rem;
-}
 
 .center-comp {
     align-items: center;
@@ -282,6 +270,13 @@ table{
     }
 }
 
+.minus-margin{
+    margin-top: 1.5rem;
+    @include media-queries.respond-to(media-queries.$phone) {
+        margin-top: 0;
+    }
+}
+
 //RESPONSIVE
 
 .offcanvas-header {
@@ -303,9 +298,7 @@ table{
     }
 
     .icon-mb {
-        width: 35%;
-        padding-bottom: 1.25rem;
-        padding-top: 1rem;
+        width: 30%;
         padding-left: 1rem;
     }
 
@@ -334,7 +327,11 @@ table{
         transform: translateX(0);
     }
 
-    .center-comp {
+    .marg-bot{
+        margin-bottom: 1rem;
+    }
+
+    /*.center-comp {
         align-items: center;
     }
 
@@ -349,7 +346,7 @@ table{
 
     .margin-bcard-mb{
         padding: 0;
-    }
+    }*/
 }
 
 @include media-queries.respond-to(media-queries.$tablet-landscape) {

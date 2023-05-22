@@ -6,10 +6,26 @@
     height: 5.813;
     background-color: variables.$clr-red;
     @include media-queries.respond-to(media-queries.$phone) {
+        height: 4rem;
         padding: 0%;
     }
     @include media-queries.respond-to(media-queries.$tablet-landscape) {
         padding: 0%;
+    }
+}
+
+
+.logo{
+    width: 25%;
+    margin-left: 2rem;
+    @include media-queries.respond-to(media-queries.$phone) {
+        width: 40%;
+        margin-left: 5rem;
+        margin-bottom: 1.5rem;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        width: 50%;
+        margin-left: 9rem;
     }
 }
 
