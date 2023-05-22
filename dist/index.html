@@ -32,21 +32,21 @@
                 <div class="modal-content ps-5 pe-5 ">
                     <div class="modal-header">
                         <div class="m-auto">
-                            <p class="page-title" id="staticBackdropLabel">{{ recipes[selectedIndex].name }}</p>
+                            <p class="mt-3 page-title" id="staticBackdropLabel">{{ recipes[selectedIndex].name }}</p>
                         </div>
                     </div>
                     <div class="modal-body p-0 card card-style m-2">
                         <img class="d-flex m-auto img-fluid img-modal" v-bind:src="recipes[selectedIndex].image" alt="{{ recipes[selectedIndex].name }}">
                         
 
-                        <div class="row mt-5 margin-content margin-right ms-5">
+                        <div class="row mt-3 ms-5">
 
-                            <div class="mb-2 col-md">
+                            <div class="mb-2 col-md p-0">
                                 <p class="col-md-6 d-flex modal-titles mb-0">Tiempo de preparación:</p>
                                 <p class="modal-info mt-0">{{ recipes[selectedIndex].preptime }}</p>
                             </div>
 
-                            <div class="mb-2 col-md spacer-modal">
+                            <div class="mb-2 col-md p-0 spacer-modal">
                                 <p class="col-md-6 d-flex modal-titles mb-0">Tiempo de la cocción:</p>
                                 <p class="modal-info mt-0">{{ recipes[selectedIndex].cooktime }}</p>
                             </div>
@@ -55,12 +55,12 @@
 
                         <div class="row margin-content margin-right ms-5">
 
-                            <div class="mb-2 col-md">
+                            <div class="mb-2 col-md p-0">
                                 <p class="col-md-6 d-flex modal-titles mb-0">Tiempo total de receta:</p>
                                 <p class="modal-info mt-0">{{ recipes[selectedIndex].totaltime }}</p>
                             </div>
 
-                            <div class="mb-2 col-md spacer-modal">
+                            <div class="mb-2 col-md p-0 spacer-modal">
                                 <p class="col-md-6 d-flex modal-titles mb-0">Total de las porciones:</p>
                                 <p class="modal-info mt-0">{{ recipes[selectedIndex].portions }}</p>
                             </div>
@@ -69,12 +69,12 @@
 
                         <div class="row margin-content margin-right ms-5">
 
-                            <div class="mb-2 col-md">
+                            <div class="mb-2 col-md p-0">
                                 <p class="col-md-6 d-flex modal-titles mb-0">Categoría de la receta:</p>
                                 <p class="modal-info mt-0">{{ recipes[selectedIndex].category }}</p>
                             </div>
 
-                            <div class="mb-2 col-md spacer-modal">
+                            <div class="mb-2 col-md p-0 spacer-modal">
                                 <p class="col-md-6 d-flex modal-titles mb-0">Ocasión de la receta:</p>
                                 <p class="modal-info mt-0">{{ recipes[selectedIndex].occasion }}</p>
                             </div>
@@ -83,12 +83,12 @@
 
                         <div class="row margin-content margin-right ms-5">
 
-                            <div class="mb-2 col-md">
+                            <div class="mb-2 col-md p-0">
                                 <p class="col-md-6 d-flex modal-titles mb-0">Nivel de complejidad:</p>
                                 <p class="modal-info mt-0">{{ recipes[selectedIndex].level }}</p>
                             </div>
 
-                            <div class="mb-2 col-md spacer-modal">
+                            <div class="mb-2 col-md p-0 spacer-modal">
                                 <p class="col-md-6 d-flex modal-titles mb-0">Cantidad de votos:</p>
                                 <p class="modal-info mt-0">{{ recipes[selectedIndex].likes }}</p>
                             </div>
@@ -97,7 +97,7 @@
 
                         <div class="row margin-content margin-right ms-5 me-5">
 
-                            <div class="mb-2 col-md">
+                            <div class="mb-2 col-md p-0">
                                 <p class="col-md-12 d-flex modal-titles mb-0">Descripción:</p>
                                 <p class="modal-info mt-0">{{ recipes[selectedIndex].description }}</p>
                             </div>
@@ -106,7 +106,7 @@
 
                         <div class="row margin-content margin-right ms-5 me-5">
 
-                            <div class="mb-2 col-md">
+                            <div class="mb-2 col-md p-0">
                                 <p class="col-md-12 d-flex modal-titles mb-0">Ingredientes:</p>
                                 <p class="modal-info mt-0">{{ recipes[selectedIndex].ingredients }}</p>
                             </div>
@@ -115,7 +115,7 @@
 
                         <div class="row mb-4 margin-content margin-right ms-5 me-5">
 
-                            <div class="mb-2 col-md">
+                            <div class="mb-2 col-md p-0">
                                 <p class="col-md-12 d-flex modal-titles mb-0">Instrucciones:</p>
                                 <p class="modal-info mt-0">{{ recipes[selectedIndex].steps }}</p>
                             </div>
@@ -124,8 +124,11 @@
 
                         <div class="row mb-5 ms-5 me-5">
 
-                            <div class="mb-2 col-md text-center">
+                            <div class="col-md p-0">
                                 <button type="button" class="btn-modal d-inline-block">Me gusta</button>
+                            </div>
+
+                            <div class="col-md p-0">
                                 <button type="button" class="btn-modal d-inline-block add-margin">Coleccionar</button>
                             </div>
 
@@ -133,25 +136,26 @@
 
                     </div>
                     <div class="row justify-content-center">
-                        <p class="mt-5 page-title">Recetas Relacionadas</p>
-                        <div class="row mt-3 mb-5">
-                            <div v-for="(item, index) in relatedRecipes" class="col-md-4 custom-col-modal">
-                                <div class="card card-style display-forms">
-                                    <img v-bind:src="item.image" class="img-cards img-resizer" alt="featured recipe">
+                        <p class="mt-4 page-title">Recetas Relacionadas</p>
+                        <div class="row mt-3 mb-4">
+                            <div v-for="(item, index) in relatedRecipes" class="col-md-6 custom-col-modal">
+                                <div class="d-flex card card-style mb-5">
+                                    <img v-bind:src="item.image" class="img-cards mb-0" alt="featured recipe">
                                     <div class="card-body m-2 padding-card">
                                         <h2 class="cards-title mb-1">{{ item.name }}</h2>
                                         <p class="cards-text mb-1">{{ item.category }}</p>
                                         <p class="cards-text mb-1">{{ item.totaltime }}</p>
                                         <p class="cards-text mb-1">{{ item.level }}</p>
-                                        <button class="btn btn-view text-center mt-2" v-on:click="onClickViewRecipe(index)"
+                                        <button class="btn btn-view text-center mt-3 marg-bot" v-on:click="onClickViewRecipe(index)"
                                             data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver receta</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-navg" data-bs-dismiss="modal">X</button>
+                        <button type="button" class="btn btn-close-modal" data-bs-dismiss="modal">X</button>
                     </div>
                 </div>
             </div>
