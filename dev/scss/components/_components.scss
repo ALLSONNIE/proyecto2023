@@ -180,6 +180,10 @@
        width: 15.563rem;
        height: auto;
     }
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        width: 25rem;
+        height: auto;
+     }
 }
 
 .textarea-size{
@@ -191,7 +195,11 @@
     @include media-queries.respond-to(media-queries.$phone) {
         width: 15.563rem;
         height: auto;
-     }
+    }
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        width: 25rem;
+        height: auto;
+    }
 }
 
 .upload-img{
@@ -199,6 +207,9 @@
     width: 48.313rem;
     @include media-queries.respond-to(media-queries.$phone) {
         width: 15.563rem;
+     }
+     @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        width: 25rem;
      }
 }
 
@@ -449,6 +460,10 @@
 
     .margin-header{
         margin-left: 6rem;
+    }
+
+    .img-sizer{
+        width: 40%;
     }
 
     /*.center-comp {

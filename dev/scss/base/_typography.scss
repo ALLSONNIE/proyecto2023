@@ -55,7 +55,6 @@
     }
     @include media-queries.respond-to(media-queries.$tablet-landscape) {
         font-size: variables.$fs-sm;
-        width: 23.375rem !important;
     }
 }
 
