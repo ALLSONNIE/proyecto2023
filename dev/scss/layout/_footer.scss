@@ -12,9 +12,6 @@
     @include media-queries.respond-to(media-queries.$phone) {
         height: auto;
     }
-    @include media-queries.respond-to(media-queries.$tablet-landscape) {
-        height: auto;
-    }
 }
 
 .logo-footer{
@@ -25,13 +22,6 @@
     @include mixins.set-font(variables.$ff-primary, variables.$fs-med, variables.$fw-bold, variables.$clr-white);
     text-align: left;
     @include media-queries.respond-to(media-queries.$phone) {
-        height: auto;
-        text-align: center;
-        margin: auto;
-        margin-top: 1rem;
-    }
-    @include media-queries.respond-to(media-queries.$tablet-landscape) {
-        font-size: variables.$fs-sm;
         height: auto;
         text-align: center;
         margin: auto;
@@ -56,11 +46,6 @@
         text-align: center;
         margin: auto;
     }
-    @include media-queries.respond-to(media-queries.$tablet-landscape) {
-        height: auto;
-        text-align: center;
-        margin: auto;
-    }
 }
 
 .footer-text:hover{
@@ -71,6 +56,9 @@
 .icon-sm{
     width: 27px;
     height: 26px;
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        display: none;
+    }
 }
 
 .row-move{
@@ -82,12 +70,12 @@
 }
 
 .margin-footer{
-    margin-left: 3rem !important;
+    margin-left: 3rem;
     @include media-queries.respond-to(media-queries.$phone) {
-        margin-left: 0 !important;
+        margin-left: 0;
     }
     @include media-queries.respond-to(media-queries.$tablet-landscape) {
-        margin-left: 0 !important;
+        margin-left: 0;
     }
 }
 
@@ -102,18 +90,11 @@
 }
 
 @include media-queries.respond-to(media-queries.$tablet-landscape) {
-    .text-start{
-        text-align: center !important;
+    .margin-footer-tablet{
+        margin-left: 3rem;
     }
 
-    .icon-move{
-        align-items: center;
-    }
-
-    .footer-icon{
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
-        width: 100%;
+    .me-3{
+        margin-right: 0.5rem !important;
     }
 }

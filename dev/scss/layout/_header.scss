@@ -19,9 +19,10 @@
     width: 25%;
     margin-left: 2rem;
     @include media-queries.respond-to(media-queries.$phone) {
-        width: 40%;
+        width: 60%;
         margin-left: 5rem;
         margin-bottom: 1.5rem;
+        margin-top: 0.35rem;
     }
     @include media-queries.respond-to(media-queries.$tablet-landscape) {
         width: 50%;

@@ -16,16 +16,21 @@
         text-align: left;
     }
     @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        background-color: transparent;
+        color: variables.$clr-red;
         width: 9rem;
-        height: 3.438rem;
-        margin-top: 1rem;
-        margin-left: 0;
+        height: auto;
+        text-align: left;
     }
 }
 
 .push-bar{
     margin-left: 3rem;
     @include media-queries.respond-to(media-queries.$phone) {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
         margin-left: 0;
         margin-top: 1rem;
     }
@@ -64,8 +69,8 @@
         height: 2.688rem;
     }
     @include media-queries.respond-to(media-queries.$tablet-landscape) {
-        width: 8rem;
-        height: 3.438rem;
+        width: 12rem;
+        height: 2.688rem;
     }
 }
 
@@ -103,11 +108,8 @@
         border-top-left-radius: 4.063rem;
     }
     @include media-queries.respond-to(media-queries.$tablet-landscape) {
-        height: auto;
-        border-bottom-right-radius: 0%;
-        border-top-right-radius: 4.063rem;
-        border-bottom-left-radius: 0%;
-        border-top-left-radius: 4.063rem;
+        height: 18.5rem;
+        width: auto;
     }
 }
 
@@ -124,6 +126,9 @@
     height: 9.688rem;
     @include media-queries.respond-to(media-queries.$phone) {
         height: 11.581rem;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        height: 13rem;
     }
 }
 
@@ -232,7 +237,10 @@
     width: 14rem;
     height: 2.75rem;
     @include media-queries.respond-to(media-queries.$phone) {
-        width: 11.625rem;
+        margin: auto;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        width: 10rem;
     }
 }
 
@@ -250,16 +258,7 @@
     @include media-queries.respond-to(media-queries.$tablet-landscape) {
         margin-left: 0;
     }
-}
-
-.custom-table{
-    background-color: variables.$clr-light-gray !important;
-    border-radius: 0.938rem;
-    border: variables.$clr-red;
-}
-
-table{
-    background-color: blue !important;
+    
 }
 
 .btn-register{
@@ -283,12 +282,18 @@ table{
     @include media-queries.respond-to(media-queries.$phone) {
         margin-left: 0;
     }
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        margin-left: 0;
+    }
 }
 
 .minus-margin{
     margin-top: 1.5rem;
     @include media-queries.respond-to(media-queries.$phone) {
         margin-top: 0;
+    }
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        margin-top: 0.5rem;
     }
 }
 
@@ -318,7 +323,7 @@ table{
     }
 
     .hide{
-        pointer-events: none;
+        display: none;
     }
 
     .offcanvas-mb {
@@ -374,7 +379,7 @@ table{
 
 @include media-queries.respond-to(media-queries.$tablet-landscape) {
 
-    .col-md-4{
+    .col-md-3{
         -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
         flex: 0 0 auto;
@@ -386,9 +391,7 @@ table{
     }
 
     .icon-mb {
-        width: 35%;
-        padding-bottom: 1.25rem;
-        padding-top: 1rem;
+        width: 40%;
         padding-left: 1rem;
     }
 
@@ -401,7 +404,7 @@ table{
         position: fixed;
         top: 0;
         left: 0;
-        width: 80%;
+        width: 40%;
         height: 100%;
         background-color: variables.$clr-white;
         box-shadow: 0px 73px 99px #00000017;
@@ -417,7 +420,38 @@ table{
         transform: translateX(0);
     }
 
-    .center-comp {
+    .marg-bot{
+        margin-bottom: 1rem;
+    }
+
+    .spacer{
+        margin-top: 0.5rem;
+    }
+    
+    .img-sizer{
+        width: 60%;
+    }
+
+    .ms-5{
+        margin-left: 1rem!important;
+    }
+
+    .me-5{
+        margin-right: 1rem!important;
+    }
+
+    .custom-col-modal{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .margin-header{
+        margin-left: 6rem;
+    }
+
+    /*.center-comp {
         align-items: center;
     }
 
@@ -434,9 +468,6 @@ table{
         padding: 0;
     }
 
-    .margin-header{
-        margin-left: 6rem;
-    }
 
     .col-md-2{
         -webkit-box-flex: 0;
@@ -465,5 +496,5 @@ table{
 
     .img-resizer{
         width: 24.438rem;
-    }
+    }*/
 }
