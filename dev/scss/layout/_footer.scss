@@ -79,6 +79,13 @@
     }
 }
 
+.blank-page{
+    margin-top: 3rem;
+    @include media-queries.respond-to(media-queries.$tablet-landscape) {
+        margin-top: 38rem;
+    }
+}
+
 @include media-queries.respond-to(media-queries.$phone) {
     .text-start{
         text-align: center !important;
