@@ -32,23 +32,23 @@
                 <div class="modal-content ps-5 pe-5 ">
                     <div class="modal-header">
                         <div class="m-auto">
-                            <p class="mt-3 page-title" id="staticBackdropLabel">{{ recipes[selectedIndex].name }}</p>
+                            <p class="mt-3 page-title" id="staticBackdropLabel">{{ allRecipes[selectedIndex].name }}</p>
                         </div>
                     </div>
                     <div class="modal-body p-0 card card-style m-2">
-                        <img class="d-flex m-auto img-fluid img-modal" v-bind:src="recipes[selectedIndex].image" alt="{{ recipes[selectedIndex].name }}">
+                        <img class="d-flex m-auto img-fluid img-modal" v-bind:src="allRecipes[selectedIndex].image" alt="{{ allRecipes[selectedIndex].name }}">
                         
 
                         <div class="row mt-3 ms-5">
 
                             <div class="mb-2 col-md p-0">
                                 <p class="col-md-6 d-flex modal-titles mb-0">Tiempo de preparación:</p>
-                                <p class="modal-info mt-0">{{ recipes[selectedIndex].preptime }}</p>
+                                <p class="modal-info mt-0">{{ allRecipes[selectedIndex].preptime }}</p>
                             </div>
 
                             <div class="mb-2 col-md p-0 spacer-modal">
                                 <p class="col-md-6 d-flex modal-titles mb-0">Tiempo de la cocción:</p>
-                                <p class="modal-info mt-0">{{ recipes[selectedIndex].cooktime }}</p>
+                                <p class="modal-info mt-0">{{ allRecipes[selectedIndex].cooktime }}</p>
                             </div>
 
                         </div>
@@ -57,12 +57,12 @@
 
                             <div class="mb-2 col-md p-0">
                                 <p class="col-md-6 d-flex modal-titles mb-0">Tiempo total de receta:</p>
-                                <p class="modal-info mt-0">{{ recipes[selectedIndex].totaltime }}</p>
+                                <p class="modal-info mt-0">{{ allRecipes[selectedIndex].totaltime }}</p>
                             </div>
 
                             <div class="mb-2 col-md p-0 spacer-modal">
                                 <p class="col-md-6 d-flex modal-titles mb-0">Total de las porciones:</p>
-                                <p class="modal-info mt-0">{{ recipes[selectedIndex].portions }}</p>
+                                <p class="modal-info mt-0">{{ allRecipes[selectedIndex].portions }}</p>
                             </div>
 
                         </div>
@@ -71,12 +71,12 @@
 
                             <div class="mb-2 col-md p-0">
                                 <p class="col-md-6 d-flex modal-titles mb-0">Categoría de la receta:</p>
-                                <p class="modal-info mt-0">{{ recipes[selectedIndex].category }}</p>
+                                <p class="modal-info mt-0">{{ allRecipes[selectedIndex].category }}</p>
                             </div>
 
                             <div class="mb-2 col-md p-0 spacer-modal">
                                 <p class="col-md-6 d-flex modal-titles mb-0">Ocasión de la receta:</p>
-                                <p class="modal-info mt-0">{{ recipes[selectedIndex].occasion }}</p>
+                                <p class="modal-info mt-0">{{ allRecipes[selectedIndex].occasion }}</p>
                             </div>
 
                         </div>
@@ -85,12 +85,12 @@
 
                             <div class="mb-2 col-md p-0">
                                 <p class="col-md-6 d-flex modal-titles mb-0">Nivel de complejidad:</p>
-                                <p class="modal-info mt-0">{{ recipes[selectedIndex].level }}</p>
+                                <p class="modal-info mt-0">{{ allRecipes[selectedIndex].level }}</p>
                             </div>
 
                             <div class="mb-2 col-md p-0 spacer-modal">
                                 <p class="col-md-6 d-flex modal-titles mb-0">Cantidad de votos:</p>
-                                <p class="modal-info mt-0">{{ recipes[selectedIndex].likes }}</p>
+                                <p class="modal-info mt-0">{{ allRecipes[selectedIndex].likes }}</p>
                             </div>
 
                         </div>
@@ -99,7 +99,7 @@
 
                             <div class="mb-2 col-md p-0">
                                 <p class="col-md-12 d-flex modal-titles mb-0">Descripción:</p>
-                                <p class="modal-info mt-0">{{ recipes[selectedIndex].description }}</p>
+                                <p class="modal-info mt-0">{{ allRecipes[selectedIndex].description }}</p>
                             </div>
 
                         </div>
@@ -108,7 +108,7 @@
 
                             <div class="mb-2 col-md p-0">
                                 <p class="col-md-12 d-flex modal-titles mb-0">Ingredientes:</p>
-                                <p class="modal-info mt-0">{{ recipes[selectedIndex].ingredients }}</p>
+                                <p class="modal-info mt-0">{{ allRecipes[selectedIndex].ingredients }}</p>
                             </div>
 
                         </div>
@@ -117,7 +117,7 @@
 
                             <div class="mb-2 col-md p-0">
                                 <p class="col-md-12 d-flex modal-titles mb-0">Instrucciones:</p>
-                                <p class="modal-info mt-0">{{ recipes[selectedIndex].steps }}</p>
+                                <p class="modal-info mt-0">{{ allRecipes[selectedIndex].steps }}</p>
                             </div>
 
                         </div>
@@ -170,18 +170,8 @@
             <p class="page-title">Mejores Recetas</p>
 
             <div class="row mt-3 ps-5 pe-5">
-                <div v-for="(item, index) in recipes" class="col-md-3">
-                    <div class="d-flex card card-style mb-5">
-                        <img v-bind:src="item.image" class="img-cards mb-0" alt="featured recipe">
-                        <div class="card-body m-2 padding-card">
-                            <h2 class="cards-title mb-1">{{ item.name }}</h2>
-                            <p class="cards-text mb-1">{{ item.category }}</p>
-                            <p class="cards-text mb-1">{{ item.totaltime }}</p>
-                            <p class="cards-text mb-1">{{ item.level }}</p>
-                            <button class="btn btn-view text-center mt-3 marg-bot" v-on:click="onClickViewRecipe(index)"
-                                data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver receta</button>
-                        </div>
-                    </div>
+                <div v-for="(item, index) in bestRecipes" class="col-md-3">
+                    <best-recipes :image="item.image" :name="item.name" :category="item.category" :totaltime="item.totaltime" :level="item.level" v-on:recipedetails="onClickRecipeDetails"></best-recipes>
                 </div>
             </div>
 
@@ -191,18 +181,8 @@
             <p class="page-title">Lo más nuevo</p>
 
             <div class="row mt-3 ps-5 pe-5">
-                <div v-for="(item, index) in recipes" class="col-md-3">
-                    <div class="d-flex card card-style mb-5">
-                        <img v-bind:src="item.image" class="img-cards" alt="featured recipe">
-                        <div class="card-body m-2 padding-card">
-                            <h2 class="cards-title mb-1">{{ item.name }}</h2>
-                            <p class="cards-text mb-1">{{ item.category }}</p>
-                            <p class="cards-text mb-1">{{ item.totaltime }}</p>
-                            <p class="cards-text mb-1">{{ item.level }}</p>
-                            <button class="btn btn-view text-center mt-3" v-on:click="onClickViewRecipe(index)"
-                                data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver receta</button>
-                        </div>
-                    </div>
+                <div v-for="(item, index) in allRecipes" class="col-md-3">
+                    <all-recipes :image="item.image" :name="item.name" :category="item.category" :totaltime="item.totaltime" :level="item.level" v-on:recipedetails="onClickRecipeDetails"></all-recipes>
                 </div>
             </div>
 
@@ -219,7 +199,8 @@
     <script src="./js/components/HeaderNav.js"></script>
     <script src="./js/components/FooterInfo.js"></script>
     <script src="./js/components/Page-Info.js"></script>
-
+    <script src="./js/components/BestRecipes.js"></script>
+    <script src="./js/components/AllRecipes.js"></script>
     <!-- mounted -->
     <script>
         const mountedApp = app.mount("#app");
