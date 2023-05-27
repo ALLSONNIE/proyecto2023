@@ -35,6 +35,8 @@
 
 .cards-title{
     @include mixins.set-font(variables.$ff-secondary, variables.$fs-med, variables.$fw-medium, variables.$clr-black);
+    max-width: 15rem;
+    max-height: 1.5rem;
 }
 
 .cards-text{

@@ -13451,6 +13451,8 @@ body {
   font-size: 1.25rem;
   font-weight: 500;
   color: hsl(0deg, 0%, 0%);
+  max-width: 15rem;
+  max-height: 1.5rem;
 }
 
 .cards-text {
