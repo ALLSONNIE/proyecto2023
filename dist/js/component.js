@@ -5,12 +5,13 @@ const app = Vue.createApp({
             all_recipes:[
             ],
             bestRecipes:[ //si hay llaves hay objetos
-            {id:102, image:"", name:"", totaltime:"", category:"", level:"", likes: 4, ingredients:"", steps:""},
+            {id:102, image:"", name:"", totaltime:"", category:"", level:"", likes: 4},
             ],
             allRecipes:[ //si hay llaves hay objetos
-            {id:102, image:"", name:"", totaltime:"", category:"", level:"", likes: 4, ingredients:"", steps:""},
+            {id:102, image:"", name:"", totaltime:"", category:"", level:"", likes: 4},
             ],
             recipe:{},
+            recipes:[],
         }
     },
     mounted:function(){
@@ -35,12 +36,10 @@ const app = Vue.createApp({
                          id: element.id,
                          image: element.image,
                          name: element.title,
-                         category: 'main course',
+                         category: element.dishTypes,
                          totaltime: "20 mins",
                          level: "Easy",
-                         likes: 18,
-                         ingredients: "NA",
-                         steps: "NA" })
+                         likes: element.aggregateLikes})
                 });
               
             }
@@ -50,7 +49,7 @@ const app = Vue.createApp({
         );
         axios({
             method: 'get',
-            url: 'https://api.spoonacular.com/recipes/complexSearch?type=maincourse&apiKey=8b98c06758fb474990b5b291d7137de2'
+            url: 'https://api.spoonacular.com/recipes/complexSearch?type=dessert&apiKey=8b98c06758fb474990b5b291d7137de2'
 
         })
         .then(
@@ -66,12 +65,10 @@ const app = Vue.createApp({
                          id: element.id,
                          image: element.image,
                          name: element.title,
-                         category: 'main course',
+                         category: element.dishTypes,
                          totaltime: "20 mins",
                          level: "Easy",
-                         likes: 18,
-                         ingredients: "NA",
-                         steps: "NA" })
+                         likes: element.aggregateLikes})
                 });
               
             }
@@ -98,10 +95,15 @@ const app = Vue.createApp({
                     this.recipe.id = index;
                     this.recipe.image = item.image;
                     this.recipe.name = item.title;
-                    this.recipe.category = "main course";
+                    this.recipe.category = item.dishTypes;
+                    this.recipe.preptime = item.preparationMinutes + " mins";
+                    this.recipe.cooktime = item.cookingMinutes + " mins";
                     this.recipe.totaltime = item.readyInMinutes + " mins";
+                    this.recipe.portions = item.servings + " servings";
+                    this.recipe.occasion = "All";
                     this.recipe.level = "Easy";
                     this.recipe.likes = item.aggregateLikes;
+                    this.recipe.description = item.summary;
                     this.recipe.steps = item.instructions;
 
                     let ingredientsList = "";
@@ -121,9 +123,10 @@ const app = Vue.createApp({
             this.selectedIndex = index;
         },
         onClickRecipeSearch(){
+            const searchTerm = this.$refs.searchInput.value;
             axios({
                 method: 'get',
-                url: 'https://api.spoonacular.com/recipes/search?query='+keyword+'&apiKey=8b98c06758fb474990b5b291d7137de2'
+                url: `https://api.spoonacular.com/recipes/complexSearch?query=${searchTerm}&apiKey=93d548ce31d7411eaecf08e61cd0be2d`
             })
             .then(
                 (response) => {
@@ -131,19 +134,14 @@ const app = Vue.createApp({
                     let items = response.data.results;
                     console.log(items);
     
-                    this.recipes = [];
-    
                     items.forEach(element => {
                         this.recipes.push({ 
-                             id: element.id,
-                             image: element.image,
-                             name: element.title,
-                             category: category,
-                             totaltime: "20 mins",
-                             level: "Easy",
-                             likes: 18,
-                             ingredients: "NA",
-                             steps: "NA" })
+                            id: element.id, 
+                            image: element.image,
+                            name: element.title,
+                            totaltime: element.readyInMinutes + " mins",
+                            level: "Easy",
+                            steps: element.instructions, })
                     });
                   
                 }
@@ -151,7 +149,14 @@ const app = Vue.createApp({
             .catch(
                 error => console.log(error)
             );
-        }
+            },
+            onClickRecipeLike(index){
+                console.log("btn - click");
+                this.likes += 1;
+                console.log("INDEX -> "+ index)
+
+                //this.bestRecipes[index].this.likes += 1;
+            }
     },
 });
 

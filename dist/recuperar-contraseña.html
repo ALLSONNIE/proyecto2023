@@ -27,7 +27,62 @@
 
     <section id="app" class="container p-0">
 
+        <modal-recipes :image="recipe.image" :name="recipe.name" :totaltime="recipe.totaltime"
+            :category="recipe.category" :level="recipe.level" :likes="recipe.likes" :ingredients="recipe.ingredients"
+            :steps="recipe.steps"></modal-recipes>
+
         <header-navbar></header-navbar>
+
+        <!-- Navegación -->
+        <div class="row mb-5">
+
+            <nav id="navbar-main" class="navbar navbar-expand-lg offcanvas-mb">
+                <div class="offcanvas-header">
+                    <button id="btn-close" class="btn btn-dark float-end me-3">X</button>
+                </div>
+
+                <div class="container-fluid">
+
+                    <ul class="navbar-nav me-auto mb-2 mt-3 mb-lg-0 cancel-margin">
+                        <li class="nav-item">
+                            <a class="nav-link btn-navg" aria-current="page" href="#">Categorías</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-navg ms-lg-5" href="#">Ocasiones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-navg ms-lg-5" href="#">Niveles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-navg ms-lg-5" href="#">Contacto</a>
+                        </li>
+                        <li>
+                            <form class="d-flex ms-lg-5 push-bar" role="search" @submit.prevent="onClickRecipeSearch">
+                                <input class="form-control s-bar p-0" type="search" placeholder="Buscar..."
+                                    aria-label="Search" ref="searchInput">
+                                <button class="btn btn-search search-button-height" type="submit"><img
+                                        src="./images/lupa.png" class="lens-icon" alt="Lense"></button>
+                            </form>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </nav>
+
+        </div>
+        <!-- Navegación -->
+
+        <div class="row mt-3 justify-content-center">
+            <p class="page-title">Recetas buscadas</p>
+            <div class="row mt-3 ps-5 pe-5">
+                <div v-for="(item, index) in recipes" class="col-md-3">
+                    <card-recipes :image="item.image" :name="item.name" :category="item.category"
+                        :totaltime="item.totaltime" :level="item.level" :index="item.id"
+                        v-on:recipedetails="onClickRecipeDetails"></card-recipes>
+                </div>
+            </div>
+        </div>
 
         <recuperar-contrasena></recuperar-contrasena>
 
@@ -38,11 +93,17 @@
 
     <!-- VueJS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- AXIOS Script -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- MITT -->
+    <script src="https://unpkg.com/mitt/dist/mitt.umd.js"></script>
     <!-- main script -->
-    <script src="./js/main.js"></script>
+    <script src="./js/component.js"></script>
     <script src="./js/components/HeaderNav.js"></script>
     <script src="./js/components/FooterInfo.js"></script>
     <script src="./js/components/RecuperarContrasena.js"></script>
+    <script src="./js/components/CardRecipes.js"></script>
+    <script src="./js/components/ModalRecipes.js"></script>
     <!-- mounted -->
     <script>
         const mountedApp = app.mount("#app");

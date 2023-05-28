@@ -6,10 +6,22 @@ app.component('modal-recipes', {
         name: {
             type: String
         },
+        preptime: {
+            type: Number
+        },
+        cooktime: {
+            type: Number
+        },
         totaltime: {
-            type: String
+            type: Number
+        },
+        portions: {
+            type: Number
         },
         category: {
+            type: String
+        },
+        occasion: {
             type: String
         },
         level: {
@@ -17,6 +29,9 @@ app.component('modal-recipes', {
         },
         likes: {
             type: Number
+        },
+        description: {
+            type: String
         },
         ingredients: {
             type: String
@@ -39,7 +54,10 @@ app.component('modal-recipes', {
         });
     },
     methods: {
-
+        onClickLike(){
+            console.log("LIKE");
+            this.$emit('recipelike', this.index);
+        }
     },
     template:
         /*html*/
@@ -60,12 +78,12 @@ app.component('modal-recipes', {
 
                 <div class="mb-2 col-md p-0">
                     <p class="col-md-6 d-flex modal-titles mb-0">Tiempo de preparación:</p>
-                    <p class="modal-info mt-0">preptime </p>
+                    <p class="modal-info mt-0">{{ preptime }}</p>
                 </div>
 
                 <div class="mb-2 col-md p-0 spacer-modal">
                     <p class="col-md-6 d-flex modal-titles mb-0">Tiempo de la cocción:</p>
-                    <p class="modal-info mt-0"> cooktime </p>
+                    <p class="modal-info mt-0">{{ cooktime }}</p>
                 </div>
 
             </div>
@@ -79,7 +97,7 @@ app.component('modal-recipes', {
 
                 <div class="mb-2 col-md p-0 spacer-modal">
                     <p class="col-md-6 d-flex modal-titles mb-0">Total de las porciones:</p>
-                    <p class="modal-info mt-0"> portions </p>
+                    <p class="modal-info mt-0">{{ portions }}</p>
                 </div>
 
             </div>
@@ -93,7 +111,7 @@ app.component('modal-recipes', {
 
                 <div class="mb-2 col-md p-0 spacer-modal">
                     <p class="col-md-6 d-flex modal-titles mb-0">Ocasión de la receta:</p>
-                    <p class="modal-info mt-0"> occasion </p>
+                    <p class="modal-info mt-0">{{ occasion }}</p>
                 </div>
 
             </div>
@@ -116,7 +134,7 @@ app.component('modal-recipes', {
 
                 <div class="mb-2 col-md p-0">
                     <p class="col-md-12 d-flex modal-titles mb-0">Descripción:</p>
-                    <p class="modal-info mt-0"> description </p>
+                    <p class="modal-info mt-0">{{ description }}</p>
                 </div>
 
             </div>
@@ -142,7 +160,7 @@ app.component('modal-recipes', {
             <div class="row mb-5 ms-5 me-5">
 
                 <div class="col-md p-0">
-                    <button type="button" class="btn-modal d-inline-block">Me gusta</button>
+                    <button type="button" class="btn-modal d-inline-block" v-on:click="onClickLike()">Me gusta</button>
                 </div>
 
                 <div class="col-md p-0">

@@ -15,8 +15,10 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
     <!-- Google Font -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="./css/main.css">
 
 </head>
@@ -162,18 +164,73 @@
         </div>
         Modal -->
 
-        <modal-recipes :image="recipe.image" :name="recipe.name" :totaltime="recipe.totaltime" :category="recipe.category" :level="recipe.level" :likes="recipe.likes" :ingredients="recipe.ingredients" :steps="recipe.steps"></modal-recipes>
+        <modal-recipes :image="recipe.image" :name="recipe.name" :preptime="recipe.preptime" :cooktime="recipe.cooktime" :totaltime="recipe.totaltime"
+        :portions="recipe.portions" :category="recipe.category" :occasion="recipe.occasion" :level="recipe.level" :likes="recipe.likes" :description="recipe.description" :ingredients="recipe.ingredients"
+            :steps="recipe.steps"></modal-recipes>
 
         <header-navbar></header-navbar>
 
+        <!-- Navegación -->
+        <div class="row mb-5">
+
+            <nav id="navbar-main" class="navbar navbar-expand-lg offcanvas-mb">
+                <div class="offcanvas-header">
+                    <button id="btn-close" class="btn btn-dark float-end me-3">X</button>
+                </div>
+
+                <div class="container-fluid">
+
+                    <ul class="navbar-nav me-auto mb-2 mt-3 mb-lg-0 cancel-margin">
+                        <li class="nav-item">
+                            <a class="nav-link btn-navg" aria-current="page" href="#">Categorías</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-navg ms-lg-5" href="#">Ocasiones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-navg ms-lg-5" href="#">Niveles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-navg ms-lg-5" href="#">Contacto</a>
+                        </li>
+                        <li>
+                            <form class="d-flex ms-lg-5 push-bar" role="search" @submit.prevent="onClickRecipeSearch">
+                                <input class="form-control s-bar p-0" type="search" placeholder="Buscar..."
+                                    aria-label="Search" ref="searchInput">
+                                <button class="btn btn-search search-button-height" type="submit"><img
+                                        src="./images/lupa.png" class="lens-icon" alt="Lense"></button>
+                            </form>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </nav>
+
+        </div>
+        <!-- Navegación -->
+
         <page-info></page-info>
+
+        <div class="row mt-3 justify-content-center">
+            <p class="page-title">Recetas buscadas</p>
+            <div class="row mt-3 ps-5 pe-5">
+                <div v-for="(item, index) in recipes" class="col-md-3">
+                    <card-recipes :image="item.image" :name="item.name" :category="item.category"
+                        :totaltime="item.totaltime" :level="item.level" :index="item.id"
+                        v-on:recipedetails="onClickRecipeDetails"></card-recipes>
+                </div>
+            </div>
+        </div>
 
         <div class="row mt-3 justify-content-center">
             <p class="page-title">Mejores Recetas</p>
 
             <div class="row mt-3 ps-5 pe-5">
                 <div v-for="(item, index) in bestRecipes" class="col-md-3">
-                    <best-recipes :image="item.image" :name="item.name" :category="item.category" :totaltime="item.totaltime" :level="item.level" :index="item.id" v-on:recipedetails="onClickRecipeDetails"></best-recipes>
+                    <card-recipes :image="item.image" :name="item.name" :category="item.category"
+                        :totaltime="item.totaltime" :level="item.level" :index="item.id"
+                        v-on:recipedetails="onClickRecipeDetails"></card-recipes>
                 </div>
             </div>
 
@@ -184,7 +241,9 @@
 
             <div class="row mt-3 ps-5 pe-5">
                 <div v-for="(item, index) in allRecipes" class="col-md-3">
-                    <all-recipes :image="item.image" :name="item.name" :category="item.category" :totaltime="item.totaltime" :level="item.level" :index="item.id" v-on:recipedetails="onClickRecipeDetails"></all-recipes>
+                    <card-recipes :image="item.image" :name="item.name" :category="item.category"
+                        :totaltime="item.totaltime" :level="item.level" :index="item.id"
+                        v-on:recipedetails="onClickRecipeDetails"></card-recipes>
                 </div>
             </div>
 
@@ -206,21 +265,20 @@
     <script src="./js/components/HeaderNav.js"></script>
     <script src="./js/components/FooterInfo.js"></script>
     <script src="./js/components/Page-Info.js"></script>
-    <script src="./js/components/BestRecipes.js"></script>
-    <script src="./js/components/AllRecipes.js"></script>
+    <script src="./js/components/CardRecipes.js"></script>
     <script src="./js/components/ModalRecipes.js"></script>
     <!-- mounted -->
     <script>
         const mountedApp = app.mount("#app");
     </script>
     <script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener("DOMContentLoaded", function () {
 
-            document.querySelector('.icon-mb').addEventListener('click', function(event){
+            document.querySelector('.icon-mb').addEventListener('click', function (event) {
                 document.getElementById('navbar-main').classList.add('show-mb-nav');
             });
 
-            document.querySelector('#btn-close').addEventListener('click', function(event){
+            document.querySelector('#btn-close').addEventListener('click', function (event) {
                 document.getElementById('navbar-main').classList.remove('show-mb-nav');
             });
         });
