@@ -7,19 +7,19 @@ app.component('modal-recipes', {
             type: String
         },
         preptime: {
-            type: Number
+            type: String
         },
         cooktime: {
-            type: Number
+            type: String
         },
         totaltime: {
-            type: Number
+            type: String
         },
         portions: {
-            type: Number
+            type: String
         },
         category: {
-            type: String
+            type: Array
         },
         occasion: {
             type: String
@@ -45,8 +45,9 @@ app.component('modal-recipes', {
     },
     data() {
         return {
-            counter: 0
-        }
+          localLikes: 0,
+
+        };
     },
     mounted() {
         this.$test.on('foo', function(data){
@@ -54,9 +55,13 @@ app.component('modal-recipes', {
         });
     },
     methods: {
-        onClickLike(){
-            console.log("LIKE");
+        onClickRecipeLike(){
+            this.localLikes += 1;
             this.$emit('recipelike', this.index);
+        },
+        onClickSaveRecipe(){
+            console.log("VIEW");
+            this.$emit('saverecipes', this.index);
         }
     },
     template:
@@ -125,7 +130,7 @@ app.component('modal-recipes', {
 
                 <div class="mb-2 col-md p-0 spacer-modal">
                     <p class="col-md-6 d-flex modal-titles mb-0">Cantidad de votos:</p>
-                    <p class="modal-info mt-0">{{ likes }}</p>
+                    <p class="modal-info mt-0">{{ localLikes }}</p>
                 </div>
 
             </div>
@@ -160,15 +165,36 @@ app.component('modal-recipes', {
             <div class="row mb-5 ms-5 me-5">
 
                 <div class="col-md p-0">
-                    <button type="button" class="btn-modal d-inline-block" v-on:click="onClickLike()">Me gusta</button>
+                    <button type="button" class="btn-modal d-inline-block" v-on:click="onClickRecipeLike()">Me gusta</button>
                 </div>
 
                 <div class="col-md p-0">
-                    <button type="button" class="btn-modal d-inline-block add-margin">Coleccionar</button>
+                    <button type="button" class="btn-modal d-inline-block add-margin" v-on:click="onClickSaveRecipe()" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Coleccionar</button>
                 </div>
 
             </div>
 
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-close-modal" data-bs-dismiss="modal">X</button>
+        </div>
+    </div>
+    </div>
+    </div>
+    
+    <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content ps-5 pe-5 ">
+        <div class="modal-header">
+            <div class="m-auto">
+                <p class="mt-3 page-title" id="staticBackdropLabel">¡Coleccionada!</p>
+            </div>
+        </div>
+        <div class="modal-body p-0 card card-style m-2">
+        <p class="m-auto">¡La receta ha sido coleccionada con éxito!</p>
+        <p class="m-auto">Échale un vistazo en tu perfil</p>
         </div>
 
         <div class="modal-footer">

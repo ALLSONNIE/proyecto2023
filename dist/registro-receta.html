@@ -73,7 +73,7 @@
         </div>
         <!-- Navegación -->
 
-        <div class="row mt-3 justify-content-center">
+        <div v-if="recipes.length > 0" class="row mt-3 justify-content-center">
             <p class="page-title">Recetas buscadas</p>
             <div class="row mt-3 ps-5 pe-5">
                 <div v-for="(item, index) in recipes" class="col-md-3">

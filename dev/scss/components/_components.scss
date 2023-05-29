@@ -220,6 +220,12 @@
     margin: auto;
 }
 
+.btn-more{
+    @include mixins.btn(variables.$clr-light-gray, variables.$ff-secondary, variables.$fs-med, variables.$fw-semibold, variables.$clr-black);
+    width: 12rem;
+    height: 2.75rem;
+}
+
 
 .img-fit{
     height: 10.125rem;

@@ -13885,6 +13885,22 @@ body {
   margin: auto;
 }
 
+.btn-more {
+  position: relative;
+  display: block;
+  place-items: center;
+  text-decoration: none;
+  border-radius: 0.938rem;
+  text-align: center;
+  font-family: "IBM Plex Serif", serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  background-color: hsl(0deg, 0%, 93%);
+  color: hsl(0deg, 0%, 0%);
+  width: 12rem;
+  height: 2.75rem;
+}
+
 .img-fit {
   height: 10.125rem;
 }

@@ -166,7 +166,7 @@
 
         <modal-recipes :image="recipe.image" :name="recipe.name" :preptime="recipe.preptime" :cooktime="recipe.cooktime" :totaltime="recipe.totaltime"
         :portions="recipe.portions" :category="recipe.category" :occasion="recipe.occasion" :level="recipe.level" :likes="recipe.likes" :description="recipe.description" :ingredients="recipe.ingredients"
-            :steps="recipe.steps"></modal-recipes>
+            :steps="recipe.steps" :index="recipe.id" v-on:saverecipes="onClickSaveRecipe"></modal-recipes>
 
         <header-navbar></header-navbar>
 
@@ -212,7 +212,7 @@
 
         <page-info></page-info>
 
-        <div class="row mt-3 justify-content-center">
+        <div v-if="recipes.length > 0" class="row mt-3 justify-content-center">
             <p class="page-title">Recetas buscadas</p>
             <div class="row mt-3 ps-5 pe-5">
                 <div v-for="(item, index) in recipes" class="col-md-3">
@@ -223,7 +223,7 @@
             </div>
         </div>
 
-        <div class="row mt-3 justify-content-center">
+        <div v-if="recipes.length === 0" class="row mt-3 justify-content-center">
             <p class="page-title">Mejores Recetas</p>
 
             <div class="row mt-3 ps-5 pe-5">
@@ -240,12 +240,14 @@
             <p class="page-title">Lo más nuevo</p>
 
             <div class="row mt-3 ps-5 pe-5">
-                <div v-for="(item, index) in allRecipes" class="col-md-3">
+                <div v-for="(item, index) in allRecipes.slice(0, showRecipes)" class="col-md-3">
                     <card-recipes :image="item.image" :name="item.name" :category="item.category"
                         :totaltime="item.totaltime" :level="item.level" :index="item.id"
                         v-on:recipedetails="onClickRecipeDetails"></card-recipes>
                 </div>
             </div>
+
+            <button class="btn btn-more text-center mt-3 marg-bot m-auto" @click="onClickShowRecipes">Ver más</button>
 
         </div>
 
