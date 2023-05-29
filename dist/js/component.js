@@ -25,7 +25,7 @@ const app = Vue.createApp({
 
         axios({
             method: 'get',
-            url: 'https://api.spoonacular.com/recipes/complexSearch?type=maincourse&apiKey=64be024ac1a849ae82643ae3a1cec5d6&number=10'
+            url: 'https://api.spoonacular.com/recipes/complexSearch?type=maincourse&apiKey=06b8fa1bf5434029aa2e3c0f9b139afd&number=10'
 
         })
         .then(
@@ -54,7 +54,7 @@ const app = Vue.createApp({
         );
         axios({
             method: 'get',
-            url: 'https://api.spoonacular.com/recipes/random?&apiKey=64be024ac1a849ae82643ae3a1cec5d6&number=64'
+            url: 'https://api.spoonacular.com/recipes/random?&apiKey=06b8fa1bf5434029aa2e3c0f9b139afd&number=64'
 
         })
         .then(
@@ -93,7 +93,7 @@ const app = Vue.createApp({
             //get recipe details
             axios({
                 method: 'get',
-                url: 'https://api.spoonacular.com/recipes/'+index+'/information?includeNutrition=false&apiKey=64be024ac1a849ae82643ae3a1cec5d6'
+                url: 'https://api.spoonacular.com/recipes/'+index+'/information?includeNutrition=false&apiKey=06b8fa1bf5434029aa2e3c0f9b139afd'
             })
             .then(
                 (response) => {
@@ -134,7 +134,7 @@ const app = Vue.createApp({
             const searchTerm = this.$refs.searchInput.value;
             axios({
                 method: 'get',
-                url: `https://api.spoonacular.com/recipes/complexSearch?query=${searchTerm}&apiKey=64be024ac1a849ae82643ae3a1cec5d6`
+                url: `https://api.spoonacular.com/recipes/complexSearch?query=${searchTerm}&apiKey=06b8fa1bf5434029aa2e3c0f9b139afd`
             })
             .then(
                 (response) => {
@@ -169,7 +169,7 @@ const app = Vue.createApp({
                 console.log("recipe id - " + index);
                 axios({
                     method: 'get',
-                    url: 'https://api.spoonacular.com/recipes/'+index+'/information?includeNutrition=false&apiKey=64be024ac1a849ae82643ae3a1cec5d6'
+                    url: 'https://api.spoonacular.com/recipes/'+index+'/information?includeNutrition=false&apiKey=06b8fa1bf5434029aa2e3c0f9b139afd'
                 })
                 .then(
                     (response) => {
