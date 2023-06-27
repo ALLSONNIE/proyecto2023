@@ -33,9 +33,6 @@ app.component('modal-recipes', {
         description: {
             type: String
         },
-        ingredients: {
-            type: String
-        },
         steps: {
             type: String
         },
@@ -144,14 +141,14 @@ app.component('modal-recipes', {
 
             </div>
 
-            <div class="row margin-content margin-right ms-5 me-5">
+            <!--<div class="row margin-content margin-right ms-5 me-5">
 
                 <div class="mb-2 col-md p-0">
                     <p class="col-md-12 d-flex modal-titles mb-0">Ingredientes:</p>
                     <p class="modal-info mt-0">{{ ingredients }}</p>
                 </div>
 
-            </div>
+            </div>-->
 
             <div class="row mb-4 margin-content margin-right ms-5 me-5">
 

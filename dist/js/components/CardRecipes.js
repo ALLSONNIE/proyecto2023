@@ -7,7 +7,7 @@ app.component('card-recipes', {
             type: String
         },
         category: {
-            type: Array
+            type: String
         },
         totaltime: {
             type: String

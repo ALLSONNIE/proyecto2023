@@ -5,10 +5,10 @@ const app = Vue.createApp({
             all_recipes:[
             ],
             bestRecipes:[ //si hay llaves hay objetos
-            {id:102, image:"", name:"", totaltime:"", category:[], level:"", likes: 4},
+            {id:102, image:"", name:"", totaltime:"", category: "", level:"", likes: 4},
             ],
             allRecipes:[ //si hay llaves hay objetos
-            {id:102, image:"", name:"", totaltime:"", category:[], level:"", likes: 4},
+            {id:102, image:"", name:"", totaltime:"", category: "", level:"", likes: 4},
             ],
             recipe:{},
             recipes:[
@@ -25,13 +25,13 @@ const app = Vue.createApp({
 
         axios({
             method: 'get',
-            url: 'https://api.spoonacular.com/recipes/complexSearch?type=maincourse&apiKey=06b8fa1bf5434029aa2e3c0f9b139afd&number=10'
+            url: 'http://localhost/prueba/public/api/recipes/top10'
 
         })
         .then(
             (response) => {
 
-                let items = response.data.results;
+                let items = response.data;
                 console.log(items);
 
                 this.bestRecipes = [];
@@ -39,12 +39,12 @@ const app = Vue.createApp({
                 items.forEach(element => {
                     this.bestRecipes.push({ 
                          id: element.id,
-                         image: element.image,
-                         name: element.title,
-                         category: element.dishTypes,
+                         image: "http://localhost/prueba/public/storage/imgs/" + element.image,
+                         name: element.name,
+                         category: element.category,
                          totaltime: "20 mins",
-                         level: "Easy",
-                         likes: element.aggregateLikes})
+                         level: element.level,
+                         likes: element.likes})
                 });
               
             }
@@ -54,26 +54,26 @@ const app = Vue.createApp({
         );
         axios({
             method: 'get',
-            url: 'https://api.spoonacular.com/recipes/random?&apiKey=06b8fa1bf5434029aa2e3c0f9b139afd&number=64'
+            url: 'http://localhost/prueba/public/api/recipes/all'
 
         })
         .then(
             (response) => {
 
-                let items = response.data.recipes;
+                let items = response.data;
                 console.log(items);
 
                 this.allRecipes = [];
 
                 items.forEach(element => {
                     this.allRecipes.push({ 
-                         id: element.id,
-                         image: element.image,
-                         name: element.title,
-                         category: element.dishTypes,
-                         totaltime: "20 mins",
-                         level: "Easy",
-                         likes: element.aggregateLikes})
+                        id: element.id,
+                        image: "http://localhost/prueba/public/storage/imgs/" + element.image,
+                        name: element.name,
+                        category: element.category,
+                        totaltime: "20 mins",
+                        level: element.level,
+                        likes: element.likes})
                 });
               
             }
@@ -93,7 +93,7 @@ const app = Vue.createApp({
             //get recipe details
             axios({
                 method: 'get',
-                url: 'https://api.spoonacular.com/recipes/'+index+'/information?includeNutrition=false&apiKey=06b8fa1bf5434029aa2e3c0f9b139afd'
+                url: 'http://localhost/prueba/public/api/recipes/recipe/' + index,
             })
             .then(
                 (response) => {
@@ -101,24 +101,24 @@ const app = Vue.createApp({
                     let item = response.data;
 
                     this.recipe.id = index;
-                    this.recipe.image = item.image;
-                    this.recipe.name = item.title;
-                    this.recipe.category = item.dishTypes;
-                    this.recipe.preptime = item.preparationMinutes + " mins";
-                    this.recipe.cooktime = item.cookingMinutes + " mins";
-                    this.recipe.totaltime = item.readyInMinutes + " mins";
-                    this.recipe.portions = item.servings + " servings";
-                    this.recipe.occasion = "All";
-                    this.recipe.level = "Easy";
-                    this.recipe.likes = item.aggregateLikes;
-                    this.recipe.description = item.summary;
-                    this.recipe.steps = item.instructions;
+                    this.recipe.image = "http://localhost/prueba/public/storage/imgs/" + item.image;
+                    this.recipe.name = item.name;
+                    this.recipe.category = item.category;
+                    this.recipe.preptime = item.preparation_time + " mins";
+                    this.recipe.cooktime = item.cooking_time + " mins";
+                    this.recipe.totaltime = item.total_time + " mins";
+                    this.recipe.portions = item.portions + " servings";
+                    this.recipe.occasion = item.occasion;
+                    this.recipe.level = item.level;
+                    this.recipe.likes = item.likes;
+                    this.recipe.description = item.description;
+                    this.recipe.steps = item.preparation_instructions;
 
-                    let ingredientsList = "";
+                    /*let ingredientsList = "";
                     for(let i = 0; i <item.extendedIngredients.length; i++){
                         ingredientsList += item.extendedIngredients[i].original + "\n";
                     }
-                    this.recipe.ingredients = ingredientsList;
+                    this.recipe.ingredients = ingredientsList;*/
 
                 }
             )
