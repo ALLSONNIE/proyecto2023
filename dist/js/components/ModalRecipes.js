@@ -41,10 +41,6 @@ app.component('modal-recipes', {
         },
     },
     data() {
-        return {
-          localLikes: 0,
-
-        };
     },
     mounted() {
         this.$test.on('foo', function(data){
@@ -127,7 +123,7 @@ app.component('modal-recipes', {
 
                 <div class="mb-2 col-md p-0 spacer-modal">
                     <p class="col-md-6 d-flex modal-titles mb-0">Cantidad de votos:</p>
-                    <p class="modal-info mt-0">{{ localLikes }}</p>
+                    <p class="modal-info mt-0">{{ likes }}</p>
                 </div>
 
             </div>

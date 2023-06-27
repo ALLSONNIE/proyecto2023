@@ -21,7 +21,7 @@ const app = Vue.createApp({
     },
     mounted:function(){
 
-        this.colectedRecipes = JSON.parse(localStorage.getItem('colectedRecipes'));
+        //this.colectedRecipes = JSON.parse(localStorage.getItem('colectedRecipes'));
 
         axios({
             method: 'get',
@@ -93,12 +93,12 @@ const app = Vue.createApp({
             //get recipe details
             axios({
                 method: 'get',
-                url: 'http://localhost/prueba/public/api/recipes/recipe/' + index,
+                url: 'http://localhost/prueba/public/api/recipes/recipe/' + index 
             })
             .then(
                 (response) => {
-                    //console.log(response.data.meals);
-                    let item = response.data;
+                    console.log(response);
+                    let item = response.data[0][0];
 
                     this.recipe.id = index;
                     this.recipe.image = "http://localhost/prueba/public/storage/imgs/" + item.image;
@@ -134,21 +134,21 @@ const app = Vue.createApp({
             const searchTerm = this.$refs.searchInput.value;
             axios({
                 method: 'get',
-                url: `https://api.spoonacular.com/recipes/complexSearch?query=${searchTerm}&apiKey=06b8fa1bf5434029aa2e3c0f9b139afd`
+                url: 'http://localhost/prueba/public/api/recipes/searchbyname/' + searchTerm
             })
             .then(
                 (response) => {
     
-                    let items = response.data.results;
+                    let items = response.data;
                     console.log(items);
     
                     items.forEach(element => {
                         this.recipes.push({ 
                             id: element.id, 
-                            image: element.image,
-                            name: element.title,
-                            totaltime: element.readyInMinutes + " mins",
-                            level: "Easy",
+                            image: "http://localhost/prueba/public/storage/imgs/" + element.image,
+                            name: element.name,
+                            totaltime: " mins",
+                            level: element.level,
                          })
                     });
                   
@@ -169,7 +169,7 @@ const app = Vue.createApp({
                 console.log("recipe id - " + index);
                 axios({
                     method: 'get',
-                    url: 'https://api.spoonacular.com/recipes/'+index+'/information?includeNutrition=false&apiKey=06b8fa1bf5434029aa2e3c0f9b139afd'
+                    url: 'http://localhost/prueba/public/api/users/savedrecipes/1'
                 })
                 .then(
                     (response) => {
@@ -179,14 +179,14 @@ const app = Vue.createApp({
 
                             this.colectedRecipes.push({ 
                                 id: items.id, 
-                                image: items.image,
-                                name: items.title,
-                                totaltime: items.readyInMinutes + " mins",
-                                level: "Easy",
-                                steps: items.instructions,
-                                category: items.dishTypes })
+                                image: "http://localhost/prueba/public/storage/imgs/" + items.image,
+                                name: items.name,
+                                totaltime: " mins",
+                                level: items.level,
+                                steps: items.preparation_instructions,
+                                category: items.category })
                             
-                            localStorage.setItem('colectedRecipes', JSON.stringify(this.colectedRecipes));
+                            //localStorage.setItem('colectedRecipes', JSON.stringify(this.colectedRecipes));
                       
                     }
                 )
